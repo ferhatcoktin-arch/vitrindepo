@@ -1,4 +1,4 @@
-/* Vitrin Arayüz 1.1 — arama kutusu + kategori rafları */
+/* Vitrin Arayüz 1.1.1 — arama kutusu + kategori rafları */
 
 /* ---------- Üst şerit: büyük arama ---------- */
 .va-serit{--va-zemin:#faf7f2;--va-cizgi:#ece6dc;--va-yazi:#2b2b2b;--va-soluk:#77736d;background:var(--va-zemin);border-bottom:1px solid var(--va-cizgi);position:relative;z-index:30}
@@ -30,7 +30,7 @@
 html[data-iqv="night"] .vr-raf{--bg:#111a28;--card:#1c2735;--line:#344052;--text:#e9e4d7;--muted:#a9b4c3;--accent:#e5bb77;--pill:#ddb875;--pill-text:#192232;--btn:#e5bb77;--btn-text:#192232;--btn-ic:rgba(25,34,50,.14)}
 
 #vr-raflar{max-width:1180px;margin:18px auto 0}
-.vr-raf{background:var(--bg);color:var(--text);border-radius:24px;padding:24px 18px 18px;margin:0 0 18px;font-family:inherit}
+.vr-raf{background:var(--bg);color:var(--text);border-radius:24px;padding:24px 18px 18px;margin:0 0 18px;font-family:inherit;overflow:hidden}
 .vr-raf *{box-sizing:border-box}
 .vr-raf[hidden]{display:none}
 .vr-bas{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:16px}
@@ -53,7 +53,7 @@ html[data-iqv="night"] .vr-raf{--bg:#111a28;--card:#1c2735;--line:#344052;--text
 .vr-az .vr-ok{display:none}
 
 /* Raf */
-.vr-ray{position:relative;display:flex;gap:15px;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;scroll-behavior:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:2px 1px 12px;cursor:grab;outline:0}
+.vr-ray{position:relative;display:flex;gap:15px;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;scroll-behavior:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;margin:0 -18px;padding:2px 18px 14px;cursor:grab;outline:0}
 .vr-ray::-webkit-scrollbar{display:none}
 .vr-ray.suruk{cursor:grabbing;user-select:none;-webkit-user-select:none}
 .vr-ray.suruk .vr-kart{pointer-events:none}
@@ -95,7 +95,7 @@ html[data-iqv="night"] .vr-raf{--bg:#111a28;--card:#1c2735;--line:#344052;--text
   .vr-tum{height:40px;gap:8px;padding:0 5px 0 14px;font-size:13px}
   .vr-tum i{width:30px;height:30px}
   .vr-tum svg{width:16px;height:16px}
-  .vr-ray{gap:10px;padding:2px 14px 8px;cursor:auto}
+  .vr-ray{gap:10px;margin:0;padding:2px 14px 8px;cursor:auto}
   .vr-kart{flex:0 0 44%;min-width:0;border-radius:14px;box-shadow:0 8px 18px rgba(10,30,50,.10)}
   .vr-kart:hover{transform:none}
   .vr-foto{height:auto;aspect-ratio:1/1}
