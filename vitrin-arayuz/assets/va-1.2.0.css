@@ -1,4 +1,4 @@
-/* Vitrin Arayüz 1.1.1 — arama kutusu + kategori rafları */
+/* Vitrin Arayüz 1.2.0 — arama kutusu + kategori rafları */
 
 /* ---------- Üst şerit: büyük arama ---------- */
 .va-serit{--va-zemin:#faf7f2;--va-cizgi:#ece6dc;--va-yazi:#2b2b2b;--va-soluk:#77736d;background:var(--va-zemin);border-bottom:1px solid var(--va-cizgi);position:relative;z-index:30}
@@ -25,9 +25,8 @@
 }
 
 /* ---------- Kategori rafları (Çok Satanlar tasarımı) ---------- */
-/* Gündüz/gece renkleri mevcut "Saatli Mavi Stüdyo / Gece Galerisi" snippet'inin html[data-iqv] değeriyle aynı */
-.vr-raf{--bg:#eaf1f8;--card:#fff;--line:#d0ddeb;--text:#243750;--muted:#70839c;--accent:#547dab;--pill:#cce1f5;--pill-text:#23446d;--btn:#1f4f86;--btn-text:#fff;--btn-ic:rgba(255,255,255,.18)}
-html[data-iqv="night"] .vr-raf{--bg:#111a28;--card:#1c2735;--line:#344052;--text:#e9e4d7;--muted:#a9b4c3;--accent:#e5bb77;--pill:#ddb875;--pill-text:#192232;--btn:#e5bb77;--btn-text:#192232;--btn-ic:rgba(25,34,50,.14)}
+/* Sabit gökyüzü mavisi tema (gece/gündüz yok) */
+.vr-raf{--bg:linear-gradient(165deg,#9fd8f7 0%,#c4e9fc 55%,#e3f5ff 100%);--card:#fff;--line:#cfe6f5;--text:#0f2f4f;--muted:#5f7f9c;--accent:#155e96;--pill:#e8f5ff;--pill-text:#0f4a7a;--btn:#0b4f8a;--btn-text:#fff;--btn-ic:rgba(255,255,255,.18)}
 
 #vr-raflar{max-width:1180px;margin:18px auto 0}
 .vr-raf{background:var(--bg);color:var(--text);border-radius:24px;padding:24px 18px 18px;margin:0 0 18px;font-family:inherit;overflow:hidden}
@@ -47,7 +46,7 @@ html[data-iqv="night"] .vr-raf{--bg:#111a28;--card:#1c2735;--line:#344052;--text
 .vr-tum:hover svg{transform:translateX(3px)}
 .vr-tum:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 
-.vr-ok{display:grid;place-items:center;width:42px;height:42px;min-height:0;margin:0;padding:0;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--text);cursor:pointer;transition:border-color .2s,color .2s}
+.vr-ok{display:grid;place-items:center;width:42px;height:42px;min-height:0;margin:0;padding:0;border-radius:50%;border:1px solid rgba(255,255,255,.8);background:var(--card);box-shadow:0 6px 16px -8px rgba(11,79,138,.45);color:var(--text);cursor:pointer;transition:border-color .2s,color .2s}
 .vr-ok svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
 .vr-ok:hover{border-color:var(--accent);color:var(--accent)}
 .vr-az .vr-ok{display:none}
@@ -60,9 +59,9 @@ html[data-iqv="night"] .vr-raf{--bg:#111a28;--card:#1c2735;--line:#344052;--text
 .vr-az .vr-ray{cursor:auto}
 
 /* Kart */
-.vr-kart{flex:0 0 min(24%,250px);min-width:190px;display:block;background:var(--card);color:var(--text)!important;border:1px solid var(--line);border-radius:17px;overflow:hidden;text-decoration:none!important;box-shadow:0 10px 25px rgba(10,30,50,.12);transition:transform .25s ease,border-color .25s ease}
+.vr-kart{flex:0 0 clamp(200px,17vw,280px);min-width:0;display:block;background:var(--card);color:var(--text)!important;border:1px solid var(--line);border-radius:17px;overflow:hidden;text-decoration:none!important;box-shadow:0 12px 26px -10px rgba(11,79,138,.28);transition:transform .25s ease,border-color .25s ease}
 .vr-kart:hover{transform:translateY(-3px);border-color:var(--accent)}
-.vr-foto{position:relative;height:225px;background:#fff;overflow:hidden}
+.vr-foto{position:relative;aspect-ratio:1/1;background:#fff;overflow:hidden}
 .vr-foto img{display:block;width:100%;height:100%;margin:0;object-fit:cover;object-position:center;-webkit-user-drag:none}
 .vr-kart.tukendi .vr-foto img{opacity:.55;filter:grayscale(.35)}
 .vr-rozet{position:absolute;top:10px;left:10px;padding:5px 8px;background:var(--pill);color:var(--pill-text);font-size:10px;font-weight:850;letter-spacing:.04em;border-radius:5px;line-height:1.2}
@@ -80,8 +79,12 @@ html[data-iqv="night"] .vr-raf{--bg:#111a28;--card:#1c2735;--line:#344052;--text
 .vr-cizgi.kisa{width:55%;height:18px;margin-top:12px}
 @keyframes vr-parla{to{background-position:-200% 0}}
 
-@media (max-width:900px){
-  .vr-kart{flex-basis:32%}
+/* ---------- Masaüstü: sayfayı tam kaplayan gökyüzü bandı ---------- */
+@media (min-width:769px){
+  #vr-raflar{max-width:none;margin:18px 0 0;background:var(--vr-gok,linear-gradient(180deg,#9fd8f7 0%,#bfe6fb 50%,#e0f4ff 100%))}
+  .vr-raf{background:transparent;border-radius:0;margin:0;padding:30px 40px 22px}
+  .vr-raf + .vr-raf{border-top:1px solid rgba(255,255,255,.65)}
+  .vr-ray{margin:0 -40px;padding:2px 40px 16px}
 }
 
 /* ---------- Mobil ---------- */

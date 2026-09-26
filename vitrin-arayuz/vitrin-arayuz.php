@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Vitrin Arayüz
  * Description: iqosvitrin.com.tr için büyük arama kutusu ve ana sayfada kategori rafları (Çok Satanlar tasarımında, yavaşça kendiliğinden kayan, elle kaydırılabilen). Flatsome + mevcut WPCode snippet'leriyle çalışır; eklenti kapatılınca site eski haline döner.
- * Version: 1.1.1
+ * Version: 1.2.0
  * Author: IQOS Vitrin
  * Requires Plugins: woocommerce
  * Text Domain: vitrin-arayuz
@@ -10,7 +10,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'VA_VER', '1.1.1' );
+define( 'VA_VER', '1.2.0' );
 // SiteGround Optimizer küçültülmüş dosyayı tutamaç adıyla (handle.min.css) kaydediyor ve sorgu dizesini siliyor;
 // güncellemeden sonra eski dosya gelmesin diye tutamaç ve dosya adında sürüm var.
 define( 'VA_H', 'vitrin-arayuz-' . str_replace( '.', '', VA_VER ) );
@@ -56,6 +56,10 @@ add_action( 'admin_init', function () {
 	add_settings_field( 'va_canli', 'Vitrin Arayüz canlı', function () {
 		echo '<label><input type="checkbox" name="va_canli" value="1" ' . checked( 1, (int) get_option( 'va_canli' ), false ) . '> Arama kutusu ve ana sayfa rafları tüm ziyaretçilere gösterilsin (işaretli değilse sadece yöneticiler görür)</label>';
 	}, 'reading' );
+} );
+// REST'ten de açılıp kapatılabilsin (/wp-json/wp/v2/settings → va_canli)
+add_action( 'init', function () {
+	register_setting( 'va', 'va_canli', array( 'type' => 'boolean', 'default' => false, 'show_in_rest' => true, 'description' => 'Vitrin Arayüz canlı' ) );
 } );
 add_action( 'update_option_va_canli', function () {
 	if ( function_exists( 'sg_cachepress_purge_cache' ) ) {
