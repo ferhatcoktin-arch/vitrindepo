@@ -5,6 +5,7 @@ The target structure and the product -> category rules live in
 kategori-yapisi.json. Every command that writes is a dry run unless --yes
 is given, and `apply` always takes a backup first.
 
+  inspect                     show WordPress/WooCommerce versions, theme, plugins, products and categories
   backup                      save products, categories and attributes to yedek/<timestamp>/
   plan [--out plan.csv]       propose a category for every product (writes nothing to the site)
   setup [--yes]               create the categories and attributes from kategori-yapisi.json
@@ -27,6 +28,7 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
+from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -42,6 +44,10 @@ FOLD = str.maketrans("çğıİöşüÇĞÖŞÜ", "cgiiosucgosu")
 def fold(text):
     """Lowercase and strip Turkish diacritics so 'Kılıf', 'KILIF' and 'kilif' compare equal."""
     return html.unescape(text).translate(FOLD).lower()
+
+
+class ApiError(Exception):
+    pass
 
 
 class Api:
@@ -76,7 +82,10 @@ class Api:
                 self.query_auth = True
                 return self.request(method, path, params, body)
             detail = e.read()[:500].decode(errors="replace")
-            sys.exit(f"{method} {path} -> HTTP {e.code}: {detail}")
+            raise ApiError(f"{method} {path} -> HTTP {e.code}: {detail}") from None
+        except urllib.error.URLError as e:
+            host = urllib.parse.urlsplit(self.base).hostname
+            raise ApiError(f"cannot reach {host}: {e.reason} (is {host} in the environment's network allowlist?)") from None
 
     def get_all(self, path, params=None):
         items, page = [], 1
@@ -137,6 +146,78 @@ def classify(name, rules):
     return UNSURE, ""
 
 
+def resolve_categories(structure, categories):
+    """Map every slug of kategori-yapisi.json to its site category, or None if it does not exist yet.
+
+    A category matches by slug, or else by name under the same parent, so that an existing
+    "TEREA" with another slug is reused instead of getting a second category with the same name.
+    """
+    by_slug = {c["slug"]: c for c in categories}
+    by_name = {(fold(c["name"]), c["parent"]): c for c in categories}
+    found = {}
+
+    def walk(defs, parent_id):
+        for d in defs:
+            cat = by_slug.get(d["slug"])
+            if cat is None and parent_id is not None:
+                cat = by_name.get((fold(d["name"]), parent_id))
+            found[d["slug"]] = cat
+            walk(d.get("children", []), cat["id"] if cat else None)
+
+    walk(structure["categories"], 0)
+    return found
+
+
+def recount_terms(api):
+    """Refresh WooCommerce's product counts per category (WooCommerce > Status > Tools > Term counts)."""
+    try:
+        resp, _ = api.request("PUT", "system_status/tools/recount_terms")
+        print(f"term counts: {resp.get('message') or 'recounted'}")
+    except ApiError as e:
+        print(f"term counts not refreshed ({e}); run WooCommerce > Status > Tools > Term counts")
+
+
+def print_tree(categories):
+    children = {}
+    for c in categories:
+        children.setdefault(c["parent"], []).append(c)
+
+    def walk(parent, depth):
+        for c in sorted(children.get(parent, []), key=lambda c: (c.get("menu_order", 0), fold(c["name"]))):
+            print(f"{'  ' * depth}{html.unescape(c['name'])} [{c['slug']}] {c['count']}")
+            walk(c["id"], depth + 1)
+
+    walk(0, 1)
+
+
+def cmd_inspect(api, args):
+    status, _ = api.request("GET", "system_status")
+    env, theme = status.get("environment", {}), status.get("theme", {})
+    print(f"WordPress {env.get('wp_version')}, WooCommerce {env.get('version')}, PHP {env.get('php_version')}")
+    line = f"theme: {theme.get('name')} {theme.get('version')}"
+    if theme.get("is_child_theme"):
+        line += f" (child of {theme.get('parent_name')} {theme.get('parent_version')})"
+    if theme.get("overrides"):
+        line += f", overrides {len(theme['overrides'])} WooCommerce templates"
+    print(line)
+    plugins = sorted(status.get("active_plugins", []), key=lambda p: fold(p.get("name", "")))
+    print(f"active plugins ({len(plugins)}):")
+    for p in plugins:
+        print(f"  {html.unescape(p.get('name', ''))} {p.get('version', '')}")
+
+    products = api.get_all("products", {"status": "any"})
+
+    def tally(key):
+        return ", ".join(f"{n} {value}" for value, n in Counter(p[key] for p in products).most_common())
+
+    print(f"products: {len(products)} ({tally('status')}; {tally('type')}; {tally('stock_status')})")
+    categories = api.get_all("products/categories")
+    print(f"categories ({len(categories)}, product counts):")
+    print_tree(categories)
+    attributes, _ = api.request("GET", "products/attributes")
+    print("attributes: " + (", ".join(html.unescape(a["name"]) for a in attributes) or "none"))
+
+
 def take_backup(api):
     target = BACKUP_DIR / time.strftime("%Y%m%d-%H%M%S")
     target.mkdir(parents=True)
@@ -187,24 +268,28 @@ def cmd_plan(api, args):
     print(f"plan: {len(rows)} products, {len(unsure)} need a manual category -> {rel(out)}")
 
 
-def ensure_categories(api, defs, existing, parent, apply):
-    """Create the missing categories of `defs` under `parent` (a category dict, or None for top level)."""
-    for d in defs:
-        cat = existing.get(d["slug"])
+def ensure_categories(api, defs, found, parent, apply):
+    """Create the categories of `defs` that have no site category in `found`, under `parent` (a category dict, or None for top level)."""
+    for position, d in enumerate(defs):
+        cat = found.get(d["slug"])
         parent_id = parent["id"] if parent else 0
         where = parent["slug"] if parent else "top level"
         if cat:
-            note = "" if cat["parent"] == parent_id else f"  (warning: expected under {where})"
-            print(f"exists        {d['slug']}{note}")
+            notes = []
+            if cat["slug"] != d["slug"]:
+                notes.append(f"same name, slug {cat['slug']}")
+            if cat["parent"] != parent_id:
+                notes.append(f"warning: expected under {where}")
+            print(f"exists        {d['slug']}" + (f"  ({'; '.join(notes)})" if notes else ""))
         elif apply:
-            cat, _ = api.request("POST", "products/categories",
-                                 body={"name": d["name"], "slug": d["slug"], "parent": parent_id})
-            existing[cat["slug"]] = cat
+            cat, _ = api.request("POST", "products/categories", body={
+                "name": d["name"], "slug": d["slug"], "parent": parent_id, "menu_order": position})
+            found[d["slug"]] = cat
             print(f"created       {d['slug']} under {where}")
         else:
             cat = {"id": 0, "slug": d["slug"], "parent": parent_id}
             print(f"would create  {d['slug']} under {where}")
-        ensure_categories(api, d.get("children", []), existing, cat, apply)
+        ensure_categories(api, d.get("children", []), found, cat, apply)
 
 
 def ensure_attributes(api, defs, apply):
@@ -235,8 +320,8 @@ def ensure_attributes(api, defs, apply):
 
 def cmd_setup(api, args):
     structure = load_structure()
-    existing = {c["slug"]: c for c in api.get_all("products/categories")}
-    ensure_categories(api, structure["categories"], existing, None, args.yes)
+    found = resolve_categories(structure, api.get_all("products/categories"))
+    ensure_categories(api, structure["categories"], found, None, args.yes)
     ensure_attributes(api, structure["attributes"], args.yes)
     if not args.yes:
         print("dry run - nothing changed; add --yes to create")
@@ -245,16 +330,19 @@ def cmd_setup(api, args):
 def cmd_apply(api, args):
     with open(args.plan, newline="", encoding="utf-8") as f:
         rows = list(csv.DictReader(f))
-    categories = {c["slug"]: c for c in api.get_all("products/categories")}
+    site = api.get_all("products/categories")
+    found = resolve_categories(load_structure(), site)
+    by_slug = {c["slug"]: c for c in site}
     updates, skipped = [], []
     for r in rows:
         slug = r["new"].strip()
         if not slug or slug == UNSURE:
             skipped.append(r)
             continue
-        if slug not in categories:
+        cat = found.get(slug) or by_slug.get(slug)
+        if not cat:
             sys.exit(f"category {slug!r} (product #{r['id']}) does not exist on the site - run setup --yes first")
-        updates.append({"id": int(r["id"]), "categories": [{"id": categories[slug]["id"]}]})
+        updates.append({"id": int(r["id"]), "categories": [{"id": cat["id"]}]})
 
     print(f"{len(updates)} products to move, {len(skipped)} left as they are (no category in plan)")
     for r in skipped:
@@ -268,6 +356,7 @@ def cmd_apply(api, args):
     for u in failed:
         print(f"  failed #{u.get('id')}: {u['error'].get('message')}")
     print(f"moved {len(updates) - len(failed)} products, {len(failed)} failed")
+    recount_terms(api)
     print(f"undo with: python3 tools/woo_kategori.py restore {rel(backup)} --yes")
 
 
@@ -282,11 +371,13 @@ def cmd_restore(api, args):
     for u in failed:
         print(f"  failed #{u.get('id')}: {u['error'].get('message')}")
     print(f"restored {len(updates) - len(failed)} products, {len(failed)} failed")
+    recount_terms(api)
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = parser.add_subparsers(dest="command", required=True)
+    sub.add_parser("inspect")
     sub.add_parser("backup")
     p = sub.add_parser("plan")
     p.add_argument("--out", default=str(ROOT / "plan.csv"))
@@ -299,8 +390,12 @@ def main():
     p.add_argument("backup")
     p.add_argument("--yes", action="store_true")
     args = parser.parse_args()
-    commands = {"backup": cmd_backup, "plan": cmd_plan, "setup": cmd_setup, "apply": cmd_apply, "restore": cmd_restore}
-    commands[args.command](Api(), args)
+    commands = {"inspect": cmd_inspect, "backup": cmd_backup, "plan": cmd_plan, "setup": cmd_setup,
+                "apply": cmd_apply, "restore": cmd_restore}
+    try:
+        commands[args.command](Api(), args)
+    except ApiError as e:
+        sys.exit(str(e))
 
 
 if __name__ == "__main__":
