@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Vitrin Arayüz
  * Description: iqosvitrin.com.tr için büyük arama kutusu ve ana sayfada kategori rafları (Çok Satanlar tasarımında, yavaşça kendiliğinden kayan, elle kaydırılabilen). Flatsome + mevcut WPCode snippet'leriyle çalışır; eklenti kapatılınca site eski haline döner.
- * Version: 1.3.1
+ * Version: 1.4.0
  * Author: IQOS Vitrin
  * Requires Plugins: woocommerce
  * Text Domain: vitrin-arayuz
@@ -10,7 +10,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'VA_VER', '1.3.1' );
+define( 'VA_VER', '1.4.0' );
 // SiteGround Optimizer küçültülmüş dosyayı tutamaç adıyla (handle.min.css) kaydediyor ve sorgu dizesini siliyor;
 // güncellemeden sonra eski dosya gelmesin diye tutamaç ve dosya adında sürüm var.
 define( 'VA_H', 'vitrin-arayuz-' . str_replace( '.', '', VA_VER ) );
@@ -23,6 +23,9 @@ function va_ayar( $k ) {
 	$a = array(
 		// Ana sayfa rafları, yukarıdan aşağıya: [başlık, kategori slug'ları, üst etiket, "Tümünü Gör" adresi (boşsa kategori sayfası)]
 		// Kategori listesi boşsa raf "Çok Satanlar" olur (en çok satan, stoktaki ürünler).
+		// Bu kategorilerin sayfasında ürünlerin üstünde "Markalar" kayan şeridi gösterilir
+		// (şerit "Kayan Şeritler (Marka + TEREA)" WPCode snippet'inden gelir; TEREA kategorilerindeki TEREA şeridine dokunulmaz)
+		'marka_kategorileri' => array( 'iqos-cihazlar', 'iluma-i-serisi', 'iluma-serisi', 'yeni-iqos-iluma-i-one', 'yeni-iqos-uluma-i-duo', 'yeni-iqos-iluma-i-prime' ),
 		'raflar' => array(
 			array( 'IQOS ILUMA i ONE', array( 'yeni-iqos-iluma-i-one' ), 'Cihaz', '' ),
 			array( 'IQOS ILUMA i DUO', array( 'yeni-iqos-uluma-i-duo' ), 'Cihaz', '' ),
@@ -158,3 +161,16 @@ add_action( 'wp_body_open', function () {
 		va_ust_serit();
 	}
 }, 20 );
+
+/* ------------------------------------------------------------------
+ * Cihaz kategorilerinde "Markalar" kayan şeridi
+ * ---------------------------------------------------------------- */
+add_action( 'woocommerce_before_shop_loop', function () {
+	if ( ! va_gorunur() || ! function_exists( 'ivs_marka_seridi' ) || ! is_product_category() ) {
+		return;
+	}
+	$t = get_queried_object();
+	if ( $t && ! empty( $t->slug ) && in_array( $t->slug, (array) va_ayar( 'marka_kategorileri' ), true ) ) {
+		echo ivs_marka_seridi(); // phpcs:ignore -- snippet kendi çıktısını kaçışlıyor
+	}
+}, 4 );
