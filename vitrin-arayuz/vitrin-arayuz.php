@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Vitrin Arayüz
  * Description: iqosvitrin.com.tr için hızlı ve sade arayüz: büyük arama kutusu, 5 başlıklı menü, ana sayfa blokları ([vitrin_ana]) ve mobil alt menü çubuğu. Flatsome ile çalışır; eklenti kapatılınca site eski haline döner.
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: IQOS Vitrin
  * Requires Plugins: woocommerce
  * Text Domain: vitrin-arayuz
@@ -10,7 +10,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'VA_VER', '1.0.1' );
+define( 'VA_VER', '1.0.2' );
 define( 'VA_URL', plugin_dir_url( __FILE__ ) );
 define( 'VA_DIR', plugin_dir_path( __FILE__ ) );
 
@@ -129,11 +129,11 @@ add_action( 'wp_enqueue_scripts', function () {
 	if ( ! va_gorunur() ) {
 		return;
 	}
-	wp_enqueue_style( 'vitrin-arayuz', VA_URL . 'assets/va.css', array(), VA_VER );
+	wp_enqueue_style( 'vitrin-arayuz', VA_URL . 'assets/va-' . VA_VER . '.css', array(), VA_VER );
 	if ( va_ayar( 'bar_gizle' ) ) {
 		wp_add_inline_style( 'vitrin-arayuz', '.wp-bottom-menu{display:none!important}' );
 	}
-	wp_enqueue_script( 'vitrin-arayuz', VA_URL . 'assets/va.js', array(), VA_VER, array( 'strategy' => 'defer', 'in_footer' => true ) );
+	wp_enqueue_script( 'vitrin-arayuz', VA_URL . 'assets/va-' . VA_VER . '.js', array(), VA_VER, array( 'strategy' => 'defer', 'in_footer' => true ) );
 	wp_localize_script( 'vitrin-arayuz', 'VA', array(
 		'api'    => esc_url_raw( rest_url( 'wc/store/v1/products' ) ),
 		'arama'  => esc_url_raw( home_url( '/' ) ),
