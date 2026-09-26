@@ -59,13 +59,13 @@ Yapı ve "hangi ürün hangi kategoriye" kuralları `kategori-yapisi.json` dosya
 - Aynı ürünün renk / paket-karton kopyalarını tek "değişken ürün"de birleştirme — ürün listesi görüldükten sonra ayrıca planlanacak.
 - 18+ yaş doğrulama penceresi.
 
-## Vitrin Arayüz eklentisi (`vitrin-arayuz/`)
+## Vitrin Arayüz eklentisi (`vitrin-arayuz/`, 1.1.x)
 
-Flatsome üzerine çalışan hafif eklenti. Bağımlılığı yok. JS ~4 KB, CSS ~10 KB.
+Flatsome üzerinde çalışan hafif bir eklenti, bağımlılığı yok.
 
-- **Üst şerit:** Büyük arama kutusu (WooCommerce Store API ile canlı öneri) ve 5 başlıklı menü (IQOS Cihazlar, TEREA, Setler & Kampanyalar, Vozol, Çok Satanlar).
-- **`[vitrin_ana]` kısa kodu:** Kategori kutuları, aroma seçici ve çok satanlar bölümünden oluşur. Aroma seçicide ilk sekme sunucuda basılır, diğer sekmeler tıklanınca yüklenir. Bölümler tek tek de eklenebilir: `[vitrin_kutular]`, `[vitrin_aroma]`, `[vitrin_cok_satan]`.
-- **Mobil alt çubuk:** Ana Sayfa, Kategoriler (çekmece), Ara, WhatsApp, Sepet (sepet sayısıyla). Bu çubuk WP Bottom Menu'nün çubuğunu gizler.
-- **Önizleme modu:** Etkinleştirildiğinde arayüzü sadece yöneticiler görür. Canlıya almak için: **Ayarlar → Okuma → "Vitrin Arayüz canlı"**.
-- **Ayarlar:** Menü, kutular, aroma sekmeleri ve WhatsApp numarası `va_ayar()` fonksiyonunda.
+- **Büyük arama kutusu:** Header'ın altında durur. Yazdıkça WooCommerce Store API'den canlı öneri getirir.
+- **Ana sayfa kategori rafları:** Eski "Çok Satanlar" tasarımıyla 14 kategori rafı ve en altta Çok Satanlar rafı var (Vozol'un altında). Raflar yavaşça kendiliğinden kayar ve sonsuz döngüyle başa sarar. Masaüstünde fare üstüne gelince durur, sürükleyerek veya oklarla kaydırılır. Mobilde parmakla kaydırılır, bırakınca 3 saniye sonra kaymaya devam eder. Ürünler raf ekrana yaklaşınca API'den yüklenir, bu yüzden ana sayfa HTML'i büyümez. Gündüz/gece renkleri mevcut "Saatli Mavi Stüdyo" snippet'inden gelir.
+- **Eski blokların durumu:** Kategori kataloğu (`#ivk-katalog`) ve eski Çok Satanlar (`#iqv-best`) CSS ile gizlendi. WPCode snippet'leri silinmedi. Eklenti kapatılınca ikisi de geri gelir.
+- **Rafların listesi ve sırası:** `va_ayar( 'raflar' )` içinde tutuluyor.
+- **Önizleme modu:** Etkinken arayüzü sadece yöneticiler görür. Canlıya almak için **Ayarlar → Okuma → "Vitrin Arayüz canlı"** seçeneğini işaretle.
 - **Güncelleme:** `VA_VER` değerini artır ve `assets/va-<sürüm>.css` / `.js` dosyalarını yeniden adlandır. Sonra zip'i yükle ve **Purge SG Cache** yap. SiteGround küçültülmüş dosyayı tutamaç adıyla sakladığı için sürüm numarası artırılmazsa ziyaretçiye eski dosya gider.
