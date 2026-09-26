@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Vitrin Arayüz
  * Description: iqosvitrin.com.tr için hızlı ve sade arayüz: büyük arama kutusu, 5 başlıklı menü, ana sayfa blokları ([vitrin_ana]) ve mobil alt menü çubuğu. Flatsome ile çalışır; eklenti kapatılınca site eski haline döner.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: IQOS Vitrin
  * Requires Plugins: woocommerce
  * Text Domain: vitrin-arayuz
@@ -10,7 +10,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'VA_VER', '1.0.0' );
+define( 'VA_VER', '1.0.1' );
 define( 'VA_URL', plugin_dir_url( __FILE__ ) );
 define( 'VA_DIR', plugin_dir_path( __FILE__ ) );
 
