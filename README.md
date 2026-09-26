@@ -69,3 +69,8 @@ Flatsome üzerinde çalışan hafif bir eklenti, bağımlılığı yok.
 - **Rafların listesi ve sırası:** `va_ayar( 'raflar' )` içinde tutuluyor.
 - **Önizleme modu:** Etkinken arayüzü sadece yöneticiler görür. Canlıya almak için **Ayarlar → Okuma → "Vitrin Arayüz canlı"** seçeneğini işaretle.
 - **Güncelleme:** `VA_VER` değerini artır ve `assets/va-<sürüm>.css` / `.js` dosyalarını yeniden adlandır. Sonra zip'i yükle ve **Purge SG Cache** yap. SiteGround küçültülmüş dosyayı tutamaç adıyla sakladığı için sürüm numarası artırılmazsa ziyaretçiye eski dosya gider.
+
+### 26 Eyl 2026: yayına alındı
+- `va_canli` açık, tüm ziyaretçiler görüyor. REST'ten kapatmak için `POST /wp-json/wp/v2/settings {"va_canli": false}` gönder ya da Ayarlar → Okuma'dan kutuyu kaldır.
+- Raflar sabit gökyüzü mavisi temada. Masaüstünde sayfanın tam genişliğini kaplıyor.
+- Gece/gündüz teması kapatıldı: WPCode snippet 3165'te `data-iqv` artık hep `'day'`. Eski ifade (`n>=420&&n<=1140?'day':'night'`) kodun içinde yorum satırı olarak duruyor. Geri almak için o ifadeyi yerine koymak yeterli.
