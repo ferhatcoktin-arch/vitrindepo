@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Vitrin Arayüz
  * Description: iqosvitrin.com.tr için büyük arama kutusu ve ana sayfada kategori rafları (Çok Satanlar tasarımında, yavaşça kendiliğinden kayan, elle kaydırılabilen). Flatsome + mevcut WPCode snippet'leriyle çalışır; eklenti kapatılınca site eski haline döner.
- * Version: 1.2.0
+ * Version: 1.3.0
  * Author: IQOS Vitrin
  * Requires Plugins: woocommerce
  * Text Domain: vitrin-arayuz
@@ -10,7 +10,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'VA_VER', '1.2.0' );
+define( 'VA_VER', '1.3.0' );
 // SiteGround Optimizer küçültülmüş dosyayı tutamaç adıyla (handle.min.css) kaydediyor ve sorgu dizesini siliyor;
 // güncellemeden sonra eski dosya gelmesin diye tutamaç ve dosya adında sürüm var.
 define( 'VA_H', 'vitrin-arayuz-' . str_replace( '.', '', VA_VER ) );
@@ -138,8 +138,18 @@ function va_ust_serit() {
 				<button type="submit">Ara</button>
 				<div class="va-oneri" id="va-oneri" role="listbox" hidden></div>
 			</form>
+			<?php if ( is_front_page() ) : ?>
+			<ul class="va-guven" aria-label="Alışveriş güvenceleri">
+				<li class="ana"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></svg><span><b>Kapıda Ödeme</b><small>Ön ödeme yok</small></span></li>
+				<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="17.5" r="1.6"/><circle cx="17" cy="17.5" r="1.6"/></svg><span><b>Aynı Gün Teslim</b><small>İstanbul içi</small></span></li>
+				<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg><span><b>%100 Orijinal</b><small>Garantili ürün</small></span></li>
+			</ul>
+			<?php endif; ?>
 		</div>
 	</div>
+	<?php if ( is_front_page() ) : ?>
+	<div id="vr-raflar-yer"></div><?php // mobilde raflar buraya, arama + güven şeridinin hemen altına yerleşir ?>
+	<?php endif; ?>
 	<?php
 }
 add_action( 'flatsome_after_header', 'va_ust_serit' );

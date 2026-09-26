@@ -245,7 +245,14 @@
   kap.id = 'vr-raflar';
   V.raflar.forEach(function (c) { kap.appendChild(rafKur(c)); });
 
+  var mobil = window.matchMedia ? window.matchMedia('(max-width: 768px)') : null;
   function yerlestir() {
+    // Mobil: arama + güven şeridinin hemen altı (tanıtım kutusunun üstü)
+    var yer = d.getElementById('vr-raflar-yer');
+    if (mobil && mobil.matches && yer) {
+      if (kap.parentNode !== yer) yer.appendChild(kap);
+      return;
+    }
     var katalog = d.getElementById('ivk-katalog');
     if (katalog && katalog.parentNode) {
       if (kap.nextElementSibling !== katalog) katalog.parentNode.insertBefore(kap, katalog);
@@ -261,6 +268,10 @@
   yerlestir();
   if (d.readyState === 'loading') d.addEventListener('DOMContentLoaded', yerlestir);
   window.addEventListener('load', yerlestir);
+  if (mobil) {
+    var degisti = function () { yerlestir(); raflar.forEach(function (r) { if (klonVar(r)) { olcu(r); sar(r); } }); };
+    if (mobil.addEventListener) mobil.addEventListener('change', degisti); else if (mobil.addListener) mobil.addListener(degisti);
+  }
 
   if ('IntersectionObserver' in window) {
     var yakin = new IntersectionObserver(function (es) {

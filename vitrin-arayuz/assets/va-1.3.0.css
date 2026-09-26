@@ -1,4 +1,4 @@
-/* Vitrin Arayüz 1.2.0 — arama kutusu + kategori rafları */
+/* Vitrin Arayüz 1.3.0 — arama kutusu + kategori rafları */
 
 /* ---------- Üst şerit: büyük arama ---------- */
 .va-serit{--va-zemin:#faf7f2;--va-cizgi:#ece6dc;--va-yazi:#2b2b2b;--va-soluk:#77736d;background:var(--va-zemin);border-bottom:1px solid var(--va-cizgi);position:relative;z-index:30}
@@ -17,6 +17,28 @@
 .va-oneri .fy{font-weight:700;white-space:nowrap}
 .va-oneri .yok{padding:14px;color:var(--va-soluk);font-size:14px}
 .va-oneri .tum{justify-content:center;font-weight:600;color:#0f9d94}
+/* Güven şeridi (sadece mobil ana sayfa) */
+.va-guven{display:none}
+#vr-raflar-yer{display:none}
+@media (max-width:768px){
+  .va-guven{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;list-style:none;margin:8px 0 0;padding:0}
+  .va-guven li{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-width:0;margin:0;padding:7px 4px 6px;background:#fff;border:1px solid var(--va-cizgi);border-radius:12px;line-height:1.15;text-align:center}
+  .va-guven li.ana{background:#e8f7ee;border-color:#9fdcb5}
+  .va-guven svg{width:18px;height:18px;flex:none;fill:none;stroke:#0b4f8a;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .va-guven li.ana svg{stroke:#138a4a}
+  .va-guven span{display:flex;flex-direction:column;min-width:0;max-width:100%}
+  .va-guven b{font-size:11.5px;font-weight:800;color:#15314f;white-space:nowrap}
+  .va-guven li.ana b{color:#0f6b39}
+  .va-guven small{font-size:10px;color:#6a7c8f;white-space:nowrap}
+  /* Raflar mobilde en üstte: JS gelene kadar yer ayrılır, tanıtım kutusu zıplamaz */
+  #vr-raflar-yer{display:block}
+  .js #vr-raflar-yer:empty{min-height:100vh}
+}
+@media (max-width:359px){
+  .va-guven small{display:none}
+  .va-guven b{font-size:10.5px}
+}
+
 @media (max-width:849px){
   .va-kap{padding:10px 12px}
   .va-ara{height:48px;padding-left:14px}
