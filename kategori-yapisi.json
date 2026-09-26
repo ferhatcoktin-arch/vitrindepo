@@ -1,0 +1,49 @@
+{
+  "categories": [
+    {
+      "name": "IQOS Cihazlar",
+      "slug": "iqos-cihazlar",
+      "children": [
+        {"name": "ILUMA i Serisi", "slug": "iluma-i-serisi"},
+        {"name": "ILUMA Serisi", "slug": "iluma-serisi"}
+      ]
+    },
+    {
+      "name": "TEREA",
+      "slug": "terea",
+      "children": [
+        {"name": "Tütün Aromalı", "slug": "terea-tutun-aromali"},
+        {"name": "Mentollü", "slug": "terea-mentollu"},
+        {"name": "Kapsüllü / Meyveli", "slug": "terea-kapsullu-meyveli"}
+      ]
+    },
+    {"name": "Setler & Kampanyalar", "slug": "setler-kampanyalar"},
+    {
+      "name": "Aksesuarlar",
+      "slug": "aksesuarlar",
+      "children": [
+        {"name": "Kılıf & Kapak", "slug": "kilif-kapak"},
+        {"name": "Şarj & Kablo", "slug": "sarj-kablo"}
+      ]
+    }
+  ],
+
+  "attributes": [
+    {"name": "Aroma", "slug": "aroma", "terms": ["Tütün", "Mentol", "Kapsüllü / Meyveli"]},
+    {"name": "Yoğunluk", "slug": "yogunluk", "terms": ["Hafif", "Orta", "Sert"]},
+    {"name": "Paket", "slug": "paket", "terms": ["Paket (20 çubuk)", "Karton (10 paket)"]},
+    {"name": "Renk", "slug": "renk", "terms": []}
+  ],
+
+  "rules": [
+    {"category": "setler-kampanyalar", "all": ["iluma", "terea"]},
+    {"category": "setler-kampanyalar", "any": ["set", "kampanya"]},
+    {"category": "kilif-kapak", "any": ["kılıf", "kapak", "sleeve", "wrap", "çanta"]},
+    {"category": "sarj-kablo", "any": ["şarj", "kablo", "adaptör", "charger", "usb"]},
+    {"category": "terea-kapsullu-meyveli", "all": ["terea"], "any": ["pearl", "wave", "zing", "tropical", "purple", "berry", "meyve", "kapsül"]},
+    {"category": "terea-mentollu", "all": ["terea"], "any": ["mentol", "menthol", "turquoise", "green", "mint", "blue", "black"]},
+    {"category": "terea-tutun-aromali", "all": ["terea"], "any": ["amber", "bronze", "sienna", "teak", "russet", "yellow", "silver", "regular"]},
+    {"category": "iluma-i-serisi", "regex": "\\biluma\\s+i\\b"},
+    {"category": "iluma-serisi", "any": ["iluma"]}
+  ]
+}
