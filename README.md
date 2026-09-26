@@ -74,3 +74,4 @@ Flatsome üzerinde çalışan hafif bir eklenti, bağımlılığı yok.
 - `va_canli` açık, tüm ziyaretçiler görüyor. REST'ten kapatmak için `POST /wp-json/wp/v2/settings {"va_canli": false}` gönder ya da Ayarlar → Okuma'dan kutuyu kaldır.
 - Raflar sabit gökyüzü mavisi temada. Masaüstünde sayfanın tam genişliğini kaplıyor.
 - Gece/gündüz teması kapatıldı: WPCode snippet 3165'te `data-iqv` artık hep `'day'`. Eski ifade (`n>=420&&n<=1140?'day':'night'`) kodun içinde yorum satırı olarak duruyor. Geri almak için o ifadeyi yerine koymak yeterli.
+- 1.3.0 (sadece mobil ana sayfa): Arama kutusunun altına "Kapıda Ödeme · Aynı Gün Teslim · %100 Orijinal" güven şeridi eklendi. Ürün rafları en üste (`#vr-raflar-yer`) taşındı. Büyük tanıtım kutusu silinmedi, rafların altına iner. Masaüstü değişmedi.
