@@ -75,3 +75,9 @@ Flatsome üzerinde çalışan hafif bir eklenti, bağımlılığı yok.
 - Raflar sabit gökyüzü mavisi temada. Masaüstünde sayfanın tam genişliğini kaplıyor.
 - Gece/gündüz teması kapatıldı: WPCode snippet 3165'te `data-iqv` artık hep `'day'`. Eski ifade (`n>=420&&n<=1140?'day':'night'`) kodun içinde yorum satırı olarak duruyor. Geri almak için o ifadeyi yerine koymak yeterli.
 - 1.3.0 (sadece mobil ana sayfa): Arama kutusunun altına "Kapıda Ödeme · Aynı Gün Teslim · %100 Orijinal" güven şeridi eklendi. Ürün rafları en üste (`#vr-raflar-yer`) taşındı. Büyük tanıtım kutusu silinmedi, rafların altına iner. Masaüstü değişmedi.
+
+### 28 Eyl 2026: 1.5.1 (iqosvitrin.com.tr + iqossepeti.com)
+- **Kartlarda Sepete Ekle:** Basit ürünler ana sayfadan sayfa yenilenmeden sepete eklenir (`?wc-ajax=add_to_cart`, ardından `added_to_cart` olayı, yani Flatsome sepet paneli açılır). Seçenekli ürünlerde "Seçenekleri Gör", tükenmişte gri "Tükendi" gösterilir.
+- **Stok rozetleri:** Ürün sayfasındaki şeridin aynısı (Hızlı Teslimat / Tükeniyor! / En Çok Ziyaret Edilen / En Çok Değerlendirilen) fotoğrafın altına basılır. Kaynak, WPCode snippet 2893'teki `iqv_sales_badges` AJAX ucu. Snippet kapatılırsa rozetler sessizce kaybolur.
+- **Mobil sepet paneli:** Panel `100dvh` ile ölçülüyor, böylece iPhone'da "Kapıda ödeme ile siparişi tamamla" butonu araç çubuğunun altında kalmıyor. Panel açıkken ürün sayfasındaki sabit Sepete Ekle çubuğu, WhatsApp butonu ve alt menü gizleniyor.
+- **Yükleme:** Zip dosyası GitHub raw'dan tarayıcı panelinde indirilip `update.php?action=upload-plugin` adresine gönderildi, ardından `overwrite=update-plugin` ile güncellendi. İki sitede de aynı zip kullanıldı.
