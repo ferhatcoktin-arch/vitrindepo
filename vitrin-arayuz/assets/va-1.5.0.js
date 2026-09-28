@@ -90,11 +90,97 @@
     else if (p.on_sale) rozet = 'İNDİRİM';
     var pr = p.prices || {}, fiyat = pr.price ? tutar(p, pr.price) : '';
     if (p.on_sale && pr.regular_price && pr.regular_price !== pr.price) fiyat = '<del>' + tutar(p, pr.regular_price) + '</del>' + fiyat;
-    return '<a class="vr-kart' + (p.is_in_stock ? '' : ' tukendi') + '" href="' + esc(p.permalink) + '" draggable="false">' +
+    // 1.5.0: Sepete Ekle butonu. Basit ürün doğrudan sepete gider, seçenekli ürün ürün sayfasına.
+    var buton;
+    if (!p.is_in_stock) buton = '<span class="vr-sepet pasif">Tükendi</span>';
+    else if (p.type === 'simple' && p.is_purchasable !== false && V.wc) buton = '<button type="button" class="vr-sepet" data-id="' + p.id + '">' + SEPET + '<span>Sepete Ekle</span></button>';
+    else buton = '<a class="vr-sepet" href="' + esc(p.permalink) + '" draggable="false"><span>Seçenekleri Gör</span></a>';
+    return '<div class="vr-kart' + (p.is_in_stock ? '' : ' tukendi') + '" data-urun="' + p.id + '">' +
+      '<a class="vr-link" href="' + esc(p.permalink) + '" draggable="false">' +
       '<div class="vr-foto">' + (img ? '<img src="' + esc(img.thumbnail || img.src) + '" alt="' + esc(dec(img.alt || p.name)) + '" width="300" height="300" loading="lazy" decoding="async" draggable="false">' : '') +
-      (rozet ? '<span class="vr-rozet' + (rozet === 'TÜKENDİ' ? ' gri' : '') + '">' + rozet + '</span>' : '') + '</div>' +
-      '<div class="vr-yazi"><div class="vr-kat">' + esc(dec(kat || 'IQOS Vitrin')) + '</div><div class="vr-ad">' + esc(dec(p.name)) + '</div><div class="vr-fiyat">' + fiyat + '</div></div></a>';
+      (rozet ? '<span class="vr-rozet' + (rozet === 'TÜKENDİ' ? ' gri' : '') + '">' + rozet + '</span>' : '') + satisRozeti(p.id) + '</div>' +
+      '<div class="vr-yazi"><div class="vr-kat">' + esc(dec(kat || 'IQOS Vitrin')) + '</div><div class="vr-ad">' + esc(dec(p.name)) + '</div><div class="vr-fiyat">' + fiyat + '</div></div></a>' +
+      '<div class="vr-alt">' + buton + '</div></div>';
   }
+
+  /* ---------- 1.5.0: Stok rozetleri (ürün sayfasındakiyle aynı kural) ----------
+   * iqv_sales_badges AJAX ucu WPCode "IQOS Ürün Yorumları ve Renk Seçici" snippet'inden gelir.
+   * Uç yoksa sessizce hiçbir şey göstermez. Tükendi zaten gri rozet + buton ile gösteriliyor. */
+  var SEPET = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.4 10.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 1.9-1.5L21 8H6.2"/><circle cx="10" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg>';
+  var rozetler = {}, bekleyen = [], rozetZam = null;
+  function satisRozeti(id) {
+    var b = rozetler[id];
+    if (!b || !b.label || b.key === 'out') return '';
+    return '<span class="vr-satis vr-satis--' + esc(b.key) + '">' + esc(b.label) + '</span>';
+  }
+  function rozetIste(ids) {
+    if (!V.ajax) return;
+    ids.forEach(function (id) { if (!(id in rozetler) && bekleyen.indexOf(id) < 0) bekleyen.push(id); });
+    if (!bekleyen.length) return;
+    clearTimeout(rozetZam);
+    rozetZam = setTimeout(function () {
+      var gonder = bekleyen.splice(0, 250), fd = new URLSearchParams();
+      fd.append('action', 'iqv_sales_badges');
+      gonder.forEach(function (id) { fd.append('ids[]', id); rozetler[id] = null; });
+      fetch(V.ajax, { method: 'POST', body: fd, credentials: 'same-origin' }).then(function (r) { return r.json(); }).then(function (j) {
+        if (!j || !j.success || !j.data) return;
+        Object.keys(j.data).forEach(function (id) { rozetler[id] = j.data[id]; });
+        rozetBas();
+      }).catch(function () {});
+    }, 120);
+  }
+  function rozetBas() {
+    [].forEach.call(d.querySelectorAll('.vr-kart[data-urun]'), function (k) {
+      var f = k.querySelector('.vr-foto');
+      if (!f || f.querySelector('.vr-satis')) return;
+      var h = satisRozeti(k.getAttribute('data-urun'));
+      if (h) f.insertAdjacentHTML('beforeend', h);
+    });
+  }
+
+  /* ---------- 1.5.0: Sepete Ekle (WooCommerce wc-ajax, sayfa yenilenmez) ---------- */
+  function sepetBildir(ad) {
+    var t = d.getElementById('vr-bildirim');
+    if (!t) {
+      t = d.createElement('div');
+      t.id = 'vr-bildirim';
+      t.setAttribute('role', 'status');
+      d.body.appendChild(t);
+    }
+    t.innerHTML = '<span class="vr-tik">✓</span><span class="vr-bmetin"><b>Sepete eklendi</b>' + esc(ad) + '</span>' +
+      (V.sepet ? '<a href="' + esc(V.sepet) + '">Sepete Git</a>' : '');
+    t.classList.add('acik');
+    clearTimeout(t._z);
+    t._z = setTimeout(function () { t.classList.remove('acik'); }, 3800);
+  }
+  d.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('button.vr-sepet[data-id]');
+    if (!b) return;
+    e.preventDefault();
+    if (b.classList.contains('yukleniyor')) return;
+    var id = b.getAttribute('data-id'), kart = b.closest('.vr-kart'), ad = kart ? (kart.querySelector('.vr-ad') || {}).textContent || '' : '';
+    var yazi = b.querySelector('span'), eski = yazi.textContent;
+    b.classList.add('yukleniyor'); yazi.textContent = 'Ekleniyor…';
+    var fd = new URLSearchParams();
+    fd.append('product_id', id); fd.append('quantity', '1');
+    fetch(V.wc, { method: 'POST', body: fd, credentials: 'same-origin', headers: { 'X-Requested-With': 'XMLHttpRequest' } })
+      .then(function (r) { return r.json(); })
+      .then(function (j) {
+        if (!j || j.error) { location.href = (j && j.product_url) || kart.querySelector('.vr-link').href; return; }
+        var $ = window.jQuery;
+        if (j.fragments) {
+          Object.keys(j.fragments).forEach(function (sel) {
+            if ($) $(sel).replaceWith(j.fragments[sel]);
+            else [].forEach.call(d.querySelectorAll(sel), function (el) { el.outerHTML = j.fragments[sel]; });
+          });
+        }
+        if ($) $(d.body).trigger('added_to_cart', [j.fragments, j.cart_hash, $(b)]);
+        b.classList.remove('yukleniyor'); b.classList.add('eklendi'); yazi.textContent = 'Sepete Eklendi';
+        setTimeout(function () { b.classList.remove('eklendi'); yazi.textContent = eski; }, 2200);
+        sepetBildir(ad);
+      })
+      .catch(function () { location.href = kart.querySelector('.vr-link').href; });
+  });
 
   function rafKur(cfg) {
     var sec = d.createElement('section');
@@ -133,6 +219,7 @@
       if (r.cfg.k) r.sec.querySelector('.vr-ust').textContent = r.cfg.u + ' · ' + res.total + ' ürün';
       r.bant.innerHTML = list.map(function (p, i) { return kart(p, i, r.cfg); }).join('');
       donguKur(r);
+      rozetIste(list.filter(function (p) { return p.is_in_stock; }).map(function (p) { return String(p.id); }));
     }).catch(function () { r.sec.hidden = true; });
   }
 
@@ -148,6 +235,7 @@
       c.classList.add('vr-kopya');
       c.setAttribute('aria-hidden', 'true');
       c.setAttribute('tabindex', '-1');
+      [].forEach.call(c.querySelectorAll('a,button'), function (x) { x.setAttribute('tabindex', '-1'); });
       parca.appendChild(c);
     });
     bant.appendChild(parca);

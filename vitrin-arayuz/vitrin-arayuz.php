@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Vitrin Arayüz
  * Description: iqosvitrin.com.tr için büyük arama kutusu ve ana sayfada kategori rafları (Çok Satanlar tasarımında, yavaşça kendiliğinden kayan, elle kaydırılabilen). Flatsome + mevcut WPCode snippet'leriyle çalışır; eklenti kapatılınca site eski haline döner.
- * Version: 1.4.0
+ * Version: 1.5.0
  * Author: IQOS Vitrin
  * Requires Plugins: woocommerce
  * Text Domain: vitrin-arayuz
@@ -10,7 +10,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'VA_VER', '1.4.0' );
+define( 'VA_VER', '1.5.0' );
 // SiteGround Optimizer küçültülmüş dosyayı tutamaç adıyla (handle.min.css) kaydediyor ve sorgu dizesini siliyor;
 // güncellemeden sonra eski dosya gelmesin diye tutamaç ve dosya adında sürüm var.
 define( 'VA_H', 'vitrin-arayuz-' . str_replace( '.', '', VA_VER ) );
@@ -113,6 +113,11 @@ add_action( 'wp_enqueue_scripts', function () {
 	$veri = array(
 		'api'   => esc_url_raw( rest_url( 'wc/store/v1/products' ) ),
 		'arama' => esc_url_raw( home_url( '/' ) ),
+		// 1.5.0: kartlarda Sepete Ekle + stok rozetleri (iqv_sales_badges ucu WPCode snippet'inden)
+		'ajax'  => esc_url_raw( admin_url( 'admin-ajax.php' ) ),
+		'wc'    => class_exists( 'WC_AJAX' ) ? esc_url_raw( WC_AJAX::get_endpoint( 'add_to_cart' ) ) : '',
+		'sepet' => function_exists( 'wc_get_cart_url' ) ? esc_url_raw( wc_get_cart_url() ) : '',
+		'odeme' => function_exists( 'wc_get_checkout_url' ) ? esc_url_raw( wc_get_checkout_url() ) : '',
 	);
 	if ( is_front_page() ) {
 		$veri['raflar'] = va_raflar();
