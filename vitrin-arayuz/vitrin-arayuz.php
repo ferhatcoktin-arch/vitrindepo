@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Vitrin Arayüz
  * Description: iqosvitrin.com.tr için büyük arama kutusu ve ana sayfada kategori rafları (Çok Satanlar tasarımında, yavaşça kendiliğinden kayan, elle kaydırılabilen). Flatsome + mevcut WPCode snippet'leriyle çalışır; eklenti kapatılınca site eski haline döner.
- * Version: 1.5.1
+ * Version: 1.5.2
  * Author: IQOS Vitrin
  * Requires Plugins: woocommerce
  * Text Domain: vitrin-arayuz
@@ -10,7 +10,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'VA_VER', '1.5.1' );
+define( 'VA_VER', '1.5.2' );
 // SiteGround Optimizer küçültülmüş dosyayı tutamaç adıyla (handle.min.css) kaydediyor ve sorgu dizesini siliyor;
 // güncellemeden sonra eski dosya gelmesin diye tutamaç ve dosya adında sürüm var.
 define( 'VA_H', 'vitrin-arayuz-' . str_replace( '.', '', VA_VER ) );
@@ -27,15 +27,16 @@ function va_ayar( $k ) {
 		// (şerit "Kayan Şeritler (Marka + TEREA)" WPCode snippet'inden gelir; TEREA kategorilerindeki TEREA şeridine dokunulmaz)
 		'marka_kategorileri' => array( 'iqos-cihazlar', 'iluma-i-serisi', 'iluma-serisi', 'yeni-iqos-iluma-i-one', 'yeni-iqos-uluma-i-duo', 'yeni-iqos-iluma-i-prime' ),
 		'raflar' => array(
+			// 28 Eyl 2026: kullanıcının verdiği sıra (iqosvitrin, iqossepeti ve smartcorestick'te aynı)
 			array( 'IQOS ILUMA i ONE', array( 'yeni-iqos-iluma-i-one' ), 'Cihaz', '' ),
 			array( 'IQOS ILUMA i DUO', array( 'yeni-iqos-uluma-i-duo' ), 'Cihaz', '' ),
 			array( 'IQOS ILUMA i PRIME', array( 'yeni-iqos-iluma-i-prime' ), 'Cihaz', '' ),
-			array( "IQOS Karışık 10'lu Paket", array( 'karisik-terea-cesitleri', 'karisik-remix-terea-cesitleri' ), 'TEREA', '/magaza/?product_cat=karisik-terea-cesitleri,karisik-remix-terea-cesitleri' ),
-			array( 'IQOS Avrupa TEREA', array( 'avrupa-terea-cesitleri' ), 'TEREA', '' ),
-			array( 'IQOS Japonya TEREA', array( 'japonya-terea-cesitleri' ), 'TEREA', '' ),
 			array( 'IQOS Dubai TEREA', array( 'dubai-terea-cesitleri' ), 'TEREA', '' ),
+			array( 'IQOS Avrupa TEREA', array( 'avrupa-terea-cesitleri' ), 'TEREA', '' ),
+			array( "IQOS Karışık 10'lu Paket", array( 'karisik-terea-cesitleri', 'karisik-remix-terea-cesitleri' ), 'TEREA', '/magaza/?product_cat=karisik-terea-cesitleri,karisik-remix-terea-cesitleri' ),
 			array( 'IQOS Kıbrıs TEREA', array( 'kibris-terea-cesitleri' ), 'TEREA', '' ),
 			array( 'IQOS Patlatmalı TEREA', array( 'patlatmali-ozel-seri-terea-cesitleri' ), 'TEREA', '' ),
+			array( 'IQOS Japonya TEREA', array( 'japonya-terea-cesitleri' ), 'TEREA', '' ),
 			array( 'IQOS Premium TEREA', array( 'premium-ozel-seri-terea-cesitleri' ), 'TEREA', '' ),
 			array( 'IQOS i ONE + Karton', array( 'kampanyali-urunler-iqos-iluma-i-one-1-karton-karisik-terea' ), 'Kampanya', '' ),
 			array( 'IQOS i DUO + Karton', array( 'kampanyali-urunler-iqos-iluma-i-duo-1-karton-karisik-terea' ), 'Kampanya', '' ),
