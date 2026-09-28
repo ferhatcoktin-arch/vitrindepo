@@ -81,3 +81,12 @@ Flatsome üzerinde çalışan hafif bir eklenti, bağımlılığı yok.
 - **Stok rozetleri:** Ürün sayfasındaki şeridin aynısı (Hızlı Teslimat / Tükeniyor! / En Çok Ziyaret Edilen / En Çok Değerlendirilen) fotoğrafın altına basılır. Kaynak, WPCode snippet 2893'teki `iqv_sales_badges` AJAX ucu. Snippet kapatılırsa rozetler sessizce kaybolur.
 - **Mobil sepet paneli:** Panel `100dvh` ile ölçülüyor, böylece iPhone'da "Kapıda ödeme ile siparişi tamamla" butonu araç çubuğunun altında kalmıyor. Panel açıkken ürün sayfasındaki sabit Sepete Ekle çubuğu, WhatsApp butonu ve alt menü gizleniyor.
 - **Yükleme:** Zip dosyası GitHub raw'dan tarayıcı panelinde indirilip `update.php?action=upload-plugin` adresine gönderildi, ardından `overwrite=update-plugin` ile güncellendi. İki sitede de aynı zip kullanıldı.
+
+### 28 Eyl 2026: yeni IQOS Vitrin logosu (IV monogram + IQOS VİTRİN)
+- Kaynak görseller `gorseller/` klasöründe. Medya ID'leri: ikon 3251, header webp 3252, paylaşım jpg 3253, tam logo png 3254.
+- **Site ikonu:** 3251. WordPress `site_icon` ayarı; Google sonuçlarında, sekmede ve WhatsApp'ta görünen küçük ikon.
+- **Paylaşım görseli:** 3253 (1200×630). Ana sayfada (sayfa 212) Rank Math facebook görseli ve öne çıkan görsel olarak ayarlı; ayrıca Rank Math > Başlıklar & Meta > Genel > OpenGraph Küçük Resmi (varsayılan).
+- **Kurum logosu:** 3254. Rank Math > Local SEO > Logo alanında; Organization schema için.
+- **Header logosu:** Yazı kilidi (`ivg-kilit`) yerine `<img class="ivg-logo-img">` (3252) basılıyor. Bunu iki WPCode snippet'i yapıyor:
+  - **3237** (sunucu tarafı, `$kilit` satırı): eski hali `yedek/snippet/3237-acilis-titremesi-eski.php` dosyasında.
+  - **2953** (tarayıcı tarafı `var kilit` + CSS): `#logo img.ivg-logo-img` kuralı eklendi. Yükseklik masaüstünde 58px, mobilde 50px. Mobilde logo header'ın ortasına alınıyor (`position:absolute; left:50%`). JS'deki atlama kontrolü `.ivg-kilit` yerine `.ivg-resim` oldu. Geri almak için bu satırlar silinip eski `kilit` metni konur.
