@@ -91,3 +91,8 @@ Flatsome üzerinde çalışan hafif bir eklenti, bağımlılığı yok.
   - **3237** (sunucu tarafı, `$kilit` satırı): eski hali `yedek/snippet/3237-acilis-titremesi-eski.php` dosyasında.
   - **2953** (tarayıcı tarafı `var kilit` + CSS): `#logo img.ivg-logo-img` kuralı eklendi. Yükseklik masaüstünde 58px, mobilde 50px. Mobilde logo header'ın ortasına alınıyor (`position:absolute; left:50%`). JS'deki atlama kontrolü `.ivg-kilit` yerine `.ivg-resim` oldu. Geri almak için bu satırlar silinip eski `kilit` metni konur.
 - **Güncelleme (aynı gün):** Logo halkalı IV amblemli sürümle değişti. Dosyalar `-v3` adlarıyla yeniden yüklendi (WhatsApp/SG önbelleği için): ikon 3255, header webp 3256, paylaşım jpg 3257, tam logo png 3258. Site ikonu, sayfa 212 OG + öne çıkan görsel, Rank Math varsayılan OG, Local SEO logosu ve snippet 3237/2953'teki header adresi yenilerine çevrildi. Eski medya (3250–3254) silinmedi.
+
+### 28 Eyl 2026: yeni IQOS Sepeti logosu (bordo zemin, altın sepet ikonu)
+- Dosyalar `gorseller/iqos-sepeti-*-v3.*`. iqossepeti.com medya ID'leri: ikon 3282, header webp 3283 (533×140, koyu bordo, köşeleri yuvarlatılmış), paylaşım jpg 3284, tam logo png 3285.
+- `site_icon` 3282'ye çevrildi. Sayfa 212'nin OG ve öne çıkan görseli ile Rank Math varsayılan OG görseli 3284 yapıldı; Local SEO logosu 3285.
+- **Header:** Snippet 3239 ("Bordo Şampanya Renkler ve Logo") `$logo` img'sini 3283'e çeviriyor. Genişlik masaüstünde 240px, mobilde 175px; mobilde logo ortalanıyor. Aynı genişlikler snippet 3279'daki (Kritik CSS) kurallarda da güncellendi. Eski logo dosyası `iqos-sepeti-logo.webp` (1400×583) silinmedi.
