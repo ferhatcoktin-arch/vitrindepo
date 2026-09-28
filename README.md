@@ -97,3 +97,6 @@ Flatsome üzerinde çalışan hafif bir eklenti, bağımlılığı yok.
 - `site_icon` 3282'ye çevrildi. Sayfa 212'nin OG ve öne çıkan görseli ile Rank Math varsayılan OG görseli 3284 yapıldı; Local SEO logosu 3285.
 - **Header:** Snippet 3239 ("Bordo Şampanya Renkler ve Logo") `$logo` img'sini 3283'e çeviriyor. Genişlik masaüstünde 240px, mobilde 175px; mobilde logo ortalanıyor. Aynı genişlikler snippet 3279'daki (Kritik CSS) kurallarda da güncellendi. Eski logo dosyası `iqos-sepeti-logo.webp` (1400×583) silinmedi.
 - **Aynı gün, 2. tur (kullanıcı beyaz header'ı "cırtlak" buldu):** Header logosu v4 (medya 3286, 572×150): kenarları yumuşak geçişle şeffafa eriyor, kutu görünmüyor. Snippet 3239'a `ivs-header-bordo` bloğu eklendi: header zemini bordo radyal geçiş, menü/kullanıcı/sepet ikonları şampanya (#f1dcb4). Logo genişliği masaüstünde 290px, 849px altında 225px; 480px altında 200px ve `left:46%` (kullanıcı ikonuna değmesin diye).
+
+### 28 Eyl 2026: iqosvitrin header zemini gökyüzü mavisi
+- Snippet 2953'e `ivg-header-gok` bloğu eklendi: `.header-bg-color` için #bfe7fc→#a6dcf8 geçişi. Logo yüksekliği masaüstünde 64px, 849px altında 54px; 480px altında 50px ve `left:46%` (kullanıcı ikonuna değmesin diye).
