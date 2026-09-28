@@ -191,6 +191,7 @@ a.vr-sepet{background:transparent;color:var(--btn)!important;box-shadow:inset 0 
 }
 .cart-popup-inner--sticky .ux-mini-cart-footer{padding-bottom:calc(12px + env(safe-area-inset-bottom))}
 html.has-off-canvas .iqv-mobile-cart,
+html.has-off-canvas body.single-product form.cart.iqv-mobile-cart,
 html.has-off-canvas #simple-chat-button--container,
 html.has-off-canvas .wp-bottom-menu,
 html.has-off-canvas #vr-bildirim{display:none!important}
