@@ -118,3 +118,9 @@ Flatsome üzerinde çalışan hafif bir eklenti, bağımlılığı yok.
 - WPCode snippet 1203 (elle eklenmiş ikinci GA4 etiketi G-W4Y3G9RNRW) PASİF yapıldı: Site Kit'in GT-PHCGQVVZ etiketi aynı mülkü zaten yüklüyordu, sayfa görüntülemeleri çift sayılıyordu. Silinmedi.
 - Search Console'da doğrulama başlatıldı: Satıcı girişleri (image, hasMerchantReturnPolicy, shippingDetails, validFrom, gtin/marka, description), Ürün snippet'leri (offers/review/aggregateRating), Sayfa dizine ekleme (5xx). image/description/offers hataları 10 Eyl'de silinen puro/sigara sayfalarından geliyor; o sayfalar 404 olduğu için kendiliğinden düşecek.
 - Kalan (bilerek yapılmadı): aggregateRating/review uyarısı gerçek müşteri yorumu gerektirir (sahte yorum yok); Merchant Center/Alışveriş sekmesi tütün ürünlerine kapalı; mobil performansı asıl tutan Flatsome + jQuery + birleşik 215 KB CSS, trustindex yorum widget'ı ve Google etiketi.
+
+### iqossepeti'ye aynısı (30 Eyl 2026)
+- vitrin-arayuz 1.5.8 yüklendi (1.5.8 = 1.5.7 + ürün schema eklemeleri iqossepeti.com için de açık; kargo bölgeleri vitrinle birebir aynı, iade: kabul edilmiyor).
+- 5 blog kapağı PNG → WebP (3205–3209 → 3290–3294). TEREA/marka şeridi 700px sürümleri (3295–3300, snippet 2946 slug'ları `-700`). `luxury-category-background.png` (2,2 MB) → `luxury-category-background-1280.webp` (217 KB, 3302); snippet 3279, 3165, 2944'te adres değişti. Eski medya silinmedi. Logo zaten 17 KB, dokunulmadı. Çift GA etiketi yok (sadece Site Kit GT-MKTBJ4RJ).
+- PageSpeed ana sayfa: önce Erişilebilirlik 84 → mobil 66 / 100 / 100 / 100, masaüstü 99 / 100 / 100 / 100.
+- Search Console: sepeti mülkü URL önekli (`https://iqossepeti.com/`), veriler hâlâ işleniyor; raporlar gelince doğrulama yapılacak.
