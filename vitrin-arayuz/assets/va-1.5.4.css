@@ -202,6 +202,7 @@ html.has-off-canvas #vr-bildirim{display:none!important}
 
 /* 1.5.3 — PageSpeed erişilebilirlik düzeltmeleri (renk kontrastı, dokunma hedefleri, bağlantı ayırt edilebilirliği) */
 .ivs-gkart small{color:#55657a!important}
-.iv-om-tamam{background:#0369a1!important}
+.iv-om-kutu button.iv-om-tamam.iv-om-tamam{background:#0369a1!important}
+.iv-om-kutu button.iv-om-tamam.iv-om-tamam:hover{background:#075985!important}
 span>a[href^="tel:"]{display:inline-block;min-height:24px;padding:4px 2px}
 body.home .section-content .col-inner.text-left ul li>a:not(.button){text-decoration:underline;text-underline-offset:2px}
