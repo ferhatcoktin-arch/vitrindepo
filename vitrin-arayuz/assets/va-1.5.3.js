@@ -1,4 +1,4 @@
-/* Vitrin Arayüz 1.1 — canlı arama + kayan kategori rafları (bağımlılıksız) */
+/* Vitrin Arayüz 1.5.3 — canlı arama + kayan kategori rafları (bağımlılıksız) */
 (function () {
   'use strict';
   var V = window.VA || {};
@@ -80,7 +80,7 @@
     if (x !== r.cizilen) { r.cizilen = x; r.bant.style.transform = 'translate3d(' + (-x) + 'px,0,0)'; }
   }
 
-  function kart(p, i, cfg) {
+  function kart(p, i, cfg, oncelik) {
     var img = p.images && p.images[0], ids = (cfg.k || '').split(','), kat = '';
     (p.categories || []).some(function (c) { if (ids.indexOf(String(c.id)) < 0) { kat = c.name; return true; } return false; });
     if (!kat && p.categories && p.categories[0]) kat = p.categories[0].name;
@@ -97,7 +97,7 @@
     else buton = '<a class="vr-sepet" href="' + esc(p.permalink) + '" draggable="false"><span>Seçenekleri Gör</span></a>';
     return '<div class="vr-kart' + (p.is_in_stock ? '' : ' tukendi') + '" data-urun="' + p.id + '">' +
       '<a class="vr-link" href="' + esc(p.permalink) + '" draggable="false">' +
-      '<div class="vr-foto">' + (img ? '<img src="' + esc(img.thumbnail || img.src) + '" alt="' + esc(dec(img.alt || p.name)) + '" width="300" height="300" loading="lazy" decoding="async" draggable="false">' : '') +
+      '<div class="vr-foto">' + (img ? '<img src="' + esc(img.thumbnail || img.src) + '" alt="' + esc(dec(img.alt || p.name)) + '" width="300" height="300" ' + (oncelik ? 'loading="eager" fetchpriority="high"' : 'loading="lazy" decoding="async"') + ' draggable="false">' : '') +
       (rozet ? '<span class="vr-rozet' + (rozet === 'TÜKENDİ' ? ' gri' : '') + '">' + rozet + '</span>' : '') + satisRozeti(p.id) + '</div>' +
       '<div class="vr-yazi"><div class="vr-kat">' + esc(dec(kat || 'IQOS Vitrin')) + '</div><div class="vr-ad">' + esc(dec(p.name)) + '</div><div class="vr-fiyat">' + fiyat + '</div></div></a>' +
       '<div class="vr-alt">' + buton + '</div></div>';
@@ -190,7 +190,7 @@
       '<div class="vr-araclar"><a class="vr-tum" href="' + esc(cfg.l) + '"><span>Tümünü Gör</span><i>' + OK + '</i></a>' +
       '<button type="button" class="vr-ok" data-yon="-1" aria-label="Önceki ürünler">' + GERI + '</button>' +
       '<button type="button" class="vr-ok" data-yon="1" aria-label="Sonraki ürünler">' + ILERI + '</button></div></div>' +
-      '<div class="vr-ray" tabindex="0" aria-label="' + esc(cfg.b) + ' ürünleri"><div class="vr-bant">' +
+      '<div class="vr-ray" role="region" tabindex="0" aria-label="' + esc(cfg.b) + ' ürünleri"><div class="vr-bant">' +
       new Array(6).join('<div class="vr-kart vr-iskelet" aria-hidden="true"><div class="vr-foto"></div><div class="vr-yazi"><div class="vr-cizgi"></div><div class="vr-cizgi"></div><div class="vr-cizgi kisa"></div></div></div>') +
       '</div></div>';
     var r = {
@@ -208,7 +208,9 @@
     if (r.yuklendi) return;
     r.yuklendi = true;
     var q = 'orderby=popularity&order=desc&per_page=' + (r.cfg.k ? 24 : 16) + (r.cfg.k ? '&category=' + r.cfg.k : '');
-    api(q).then(function (res) {
+    var ilk = r === raflar[0] && V.ilk && V.ilk.list && V.ilk.list.length;
+    var kaynak = ilk ? Promise.resolve({ list: V.ilk.list, total: Number(V.ilk.total) || V.ilk.list.length }) : api(q);
+    kaynak.then(function (res) {
       var list = res.list.filter(function (p) { return p.permalink; });
       if (r.cfg.k) {
         list = list.filter(function (p) { return p.is_in_stock; }).concat(list.filter(function (p) { return !p.is_in_stock; }));
@@ -217,7 +219,7 @@
       }
       if (!list.length) { r.sec.hidden = true; return; }
       if (r.cfg.k) r.sec.querySelector('.vr-ust').textContent = r.cfg.u + ' · ' + res.total + ' ürün';
-      r.bant.innerHTML = list.map(function (p, i) { return kart(p, i, r.cfg); }).join('');
+      r.bant.innerHTML = list.map(function (p, i) { return kart(p, i, r.cfg, ilk && i < 2); }).join('');
       donguKur(r);
       rozetIste(list.filter(function (p) { return p.is_in_stock; }).map(function (p) { return String(p.id); }));
     }).catch(function () { r.sec.hidden = true; });
@@ -412,6 +414,7 @@
       es.forEach(function (e) { e.target._raf.gorunur = e.isIntersecting; });
     }, { rootMargin: '0px' });
     raflar.forEach(function (r) { yakin.observe(r.sec); ekranda.observe(r.sec); });
+    if (V.ilk && raflar[0]) yukle(raflar[0]);
   } else {
     raflar.forEach(function (r) { r.gorunur = true; yukle(r); });
   }

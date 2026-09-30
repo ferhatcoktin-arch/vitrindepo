@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Vitrin Arayüz
  * Description: iqosvitrin.com.tr için büyük arama kutusu ve ana sayfada kategori rafları (Çok Satanlar tasarımında, yavaşça kendiliğinden kayan, elle kaydırılabilen). Flatsome + mevcut WPCode snippet'leriyle çalışır; eklenti kapatılınca site eski haline döner.
- * Version: 1.5.2
+ * Version: 1.5.3
  * Author: IQOS Vitrin
  * Requires Plugins: woocommerce
  * Text Domain: vitrin-arayuz
@@ -10,7 +10,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'VA_VER', '1.5.2' );
+define( 'VA_VER', '1.5.3' );
 // SiteGround Optimizer küçültülmüş dosyayı tutamaç adıyla (handle.min.css) kaydediyor ve sorgu dizesini siliyor;
 // güncellemeden sonra eski dosya gelmesin diye tutamaç ve dosya adında sürüm var.
 define( 'VA_H', 'vitrin-arayuz-' . str_replace( '.', '', VA_VER ) );
@@ -103,6 +103,169 @@ function va_raflar() {
 }
 
 /* ------------------------------------------------------------------
+ * 1.5.3: İlk raf sunucuda hazırlanır (mobilde LCP görseli bu raftan).
+ * Tarayıcı ayrıca API'ye gitmeden ilk rafı hemen basar, ilk iki görsel
+ * <head>'de önceden yüklenir. Sonuç 10 dk saklanır, ürün kaydedilince silinir.
+ * ---------------------------------------------------------------- */
+function va_ilk_raf() {
+	static $sonuc = null;
+	if ( null !== $sonuc ) {
+		return $sonuc;
+	}
+	$sonuc  = false;
+	$raflar = va_raflar();
+	if ( empty( $raflar[0]['k'] ) || ! function_exists( 'rest_do_request' ) ) {
+		return $sonuc;
+	}
+	$anahtar = 'va_ilk_' . md5( VA_VER . '|' . $raflar[0]['k'] );
+	$kayit   = get_transient( $anahtar );
+	if ( is_array( $kayit ) ) {
+		return $sonuc = $kayit;
+	}
+	try {
+		$istek = new WP_REST_Request( 'GET', '/wc/store/v1/products' );
+		$istek->set_query_params( array( 'orderby' => 'popularity', 'order' => 'desc', 'per_page' => 24, 'category' => $raflar[0]['k'] ) );
+		$yanit = rest_do_request( $istek );
+		if ( $yanit->is_error() ) {
+			return $sonuc;
+		}
+		$liste = array();
+		foreach ( (array) $yanit->get_data() as $p ) {
+			$p   = json_decode( wp_json_encode( $p ), true ); // nesneleri diziye çevir
+			$img = ! empty( $p['images'][0] ) ? $p['images'][0] : null;
+			$liste[] = array(
+				'id'            => $p['id'],
+				'name'          => $p['name'],
+				'permalink'     => $p['permalink'],
+				'type'          => $p['type'],
+				'is_in_stock'   => ! empty( $p['is_in_stock'] ),
+				'is_purchasable'=> ! empty( $p['is_purchasable'] ),
+				'on_sale'       => ! empty( $p['on_sale'] ),
+				'prices'        => array_intersect_key( (array) $p['prices'], array_flip( array( 'price', 'regular_price', 'currency_minor_unit' ) ) ),
+				'categories'    => array_map( function ( $c ) { return array( 'id' => $c['id'], 'name' => $c['name'] ); }, (array) $p['categories'] ),
+				'images'        => $img ? array( array( 'thumbnail' => $img['thumbnail'], 'src' => $img['src'], 'alt' => $img['alt'] ) ) : array(),
+			);
+		}
+		$basliklar = $yanit->get_headers();
+		$kayit     = array( 'list' => $liste, 'total' => (int) ( $basliklar['X-WP-Total'] ?? count( $liste ) ) );
+		set_transient( $anahtar, $kayit, 10 * MINUTE_IN_SECONDS );
+		return $sonuc = $kayit;
+	} catch ( Throwable $e ) {
+		return $sonuc;
+	}
+}
+add_action( 'woocommerce_update_product', 'va_ilk_raf_sil' );
+add_action( 'woocommerce_product_set_stock_status', 'va_ilk_raf_sil' );
+function va_ilk_raf_sil() {
+	global $wpdb;
+	$wpdb->query( "DELETE FROM {$wpdb->options} WHERE option_name LIKE '\\_transient\\_va\\_ilk\\_%' OR option_name LIKE '\\_transient\\_timeout\\_va\\_ilk\\_%'" );
+}
+
+// Mobilde en üstteki rafın ilk iki görseli: tarayıcı HTML'i okurken indirmeye başlasın
+add_action( 'wp_head', function () {
+	if ( ! is_front_page() || ! va_gorunur() ) {
+		return;
+	}
+	$ilk = va_ilk_raf();
+	if ( ! $ilk ) {
+		return;
+	}
+	$n = 0;
+	foreach ( $ilk['list'] as $p ) {
+		if ( empty( $p['is_in_stock'] ) || empty( $p['images'][0] ) ) {
+			continue;
+		}
+		$u = $p['images'][0]['thumbnail'] ?: $p['images'][0]['src'];
+		echo '<link rel="preload" as="image" href="' . esc_url( $u ) . '" fetchpriority="high" media="(max-width: 768px)">' . "\n";
+		if ( ++$n >= 2 ) {
+			break;
+		}
+	}
+}, 2 );
+
+// Ana sayfadaki blog kartı başlıkları h5 → h4 ("blog yazıları" h3'ünün altında sıra atlamasın)
+add_filter( 'do_shortcode_tag', function ( $html, $tag ) {
+	if ( 'blog_posts' !== $tag || ! is_front_page() ) {
+		return $html;
+	}
+	return preg_replace( '#<h5(\s+class="post-title[^"]*")([^>]*)>(.*?)</h5>#s', '<h4$1$2>$3</h4>', $html );
+}, 10, 2 );
+
+/* ------------------------------------------------------------------
+ * 1.5.3: Ürün schema'sı (Search Console "Satıcı girişleri" uyarıları)
+ * Rank Math'in Product verisine marka, kargo, iade politikası ve validFrom eklenir.
+ * Sadece iqosvitrin.com.tr'de çalışır (kargo/iade bilgisi o sitenin).
+ *  - Kargo: en ucuz genel ücret 300 ₺ (İstanbul kargo / il dışı), Türkiye geneli
+ *  - İade: kabul edilmiyor (kullanıcı kararı, 30 Eyl 2026)
+ * ---------------------------------------------------------------- */
+add_filter( 'rank_math/json_ld', function ( $data ) {
+	if ( ! is_array( $data ) || ! function_exists( 'is_product' ) || ! is_product() ) {
+		return $data;
+	}
+	if ( 'iqosvitrin.com.tr' !== wp_parse_url( home_url(), PHP_URL_HOST ) ) {
+		return $data;
+	}
+	$urun = wc_get_product( get_queried_object_id() );
+	if ( ! $urun ) {
+		return $data;
+	}
+	$kargo = array(
+		'@type'               => 'OfferShippingDetails',
+		'shippingRate'        => array( '@type' => 'MonetaryAmount', 'value' => 300, 'currency' => 'TRY' ),
+		'shippingDestination' => array( '@type' => 'DefinedRegion', 'addressCountry' => 'TR' ),
+		'deliveryTime'        => array(
+			'@type'        => 'ShippingDeliveryTime',
+			'handlingTime' => array( '@type' => 'QuantitativeValue', 'minValue' => 0, 'maxValue' => 1, 'unitCode' => 'DAY' ),
+			'transitTime'  => array( '@type' => 'QuantitativeValue', 'minValue' => 0, 'maxValue' => 3, 'unitCode' => 'DAY' ),
+		),
+	);
+	$iade = array(
+		'@type'                => 'MerchantReturnPolicy',
+		'applicableCountry'    => 'TR',
+		'returnPolicyCategory' => 'https://schema.org/MerchantReturnNotPermitted',
+	);
+	$tarih     = $urun->get_date_on_sale_from() ?: $urun->get_date_created();
+	$baslangic = $tarih ? $tarih->date( 'c' ) : null;
+	$ad      = $urun->get_name();
+	$marka   = false !== stripos( $ad, 'vozol' ) ? 'Vozol' : ( false !== stripos( $ad, 'terea' ) ? 'TEREA' : 'IQOS' );
+
+	foreach ( $data as $k => $ent ) {
+		if ( ! is_array( $ent ) || empty( $ent['@type'] ) || ! in_array( 'Product', (array) $ent['@type'], true ) ) {
+			continue;
+		}
+		if ( empty( $ent['brand'] ) ) {
+			$ent['brand'] = array( '@type' => 'Brand', 'name' => $marka );
+		}
+		// Google: açıklama 1–5000 karakter olmalı
+		$aciklama = isset( $ent['description'] ) ? trim( (string) $ent['description'] ) : '';
+		if ( '' === $aciklama ) {
+			$aciklama = trim( wp_strip_all_tags( $urun->get_short_description() ?: $urun->get_description() ) ) ?: $ad;
+		}
+		if ( mb_strlen( $aciklama ) > 5000 ) {
+			$aciklama = rtrim( mb_substr( $aciklama, 0, 4990 ) ) . '…';
+		}
+		$ent['description'] = $aciklama;
+		if ( ! empty( $ent['offers'] ) && is_array( $ent['offers'] ) ) {
+			$tekil  = isset( $ent['offers']['@type'] );
+			$teklif = $tekil ? array( $ent['offers'] ) : $ent['offers'];
+			foreach ( $teklif as $i => $o ) {
+				if ( ! is_array( $o ) ) {
+					continue;
+				}
+				$o += array( 'shippingDetails' => $kargo, 'hasMerchantReturnPolicy' => $iade );
+				if ( $baslangic && empty( $o['validFrom'] ) ) {
+					$o['validFrom'] = $baslangic;
+				}
+				$teklif[ $i ] = $o;
+			}
+			$ent['offers'] = $tekil ? $teklif[0] : $teklif;
+		}
+		$data[ $k ] = $ent;
+	}
+	return $data;
+}, 99 );
+
+/* ------------------------------------------------------------------
  * CSS / JS
  * ---------------------------------------------------------------- */
 add_action( 'wp_enqueue_scripts', function () {
@@ -122,6 +285,10 @@ add_action( 'wp_enqueue_scripts', function () {
 	);
 	if ( is_front_page() ) {
 		$veri['raflar'] = va_raflar();
+		$ilk            = va_ilk_raf();
+		if ( $ilk ) {
+			$veri['ilk'] = $ilk; // iç içe dizi olduğu için wp_localize_script dokunmadan JSON'a çevirir
+		}
 		// Eski kategori kataloğu ve eski Çok Satanlar yerini raflara bırakır (snippet'ler silinmedi, sadece gizli)
 		wp_add_inline_style( VA_H, 'body.home #ivk-katalog,body.home #iqv-best{display:none!important}' );
 	}

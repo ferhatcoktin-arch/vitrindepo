@@ -29,7 +29,7 @@
   .va-guven span{display:flex;flex-direction:column;min-width:0;max-width:100%}
   .va-guven b{font-size:11.5px;font-weight:800;color:#15314f;white-space:nowrap}
   .va-guven li.ana b{color:#0f6b39}
-  .va-guven small{font-size:10px;color:#6a7c8f;white-space:nowrap}
+  .va-guven small{font-size:10px;color:#4a5b6d;white-space:nowrap}
   /* Raflar mobilde en üstte: JS gelene kadar yer ayrılır, tanıtım kutusu zıplamaz */
   #vr-raflar-yer{display:block}
   .js #vr-raflar-yer:empty{min-height:100vh}
@@ -88,7 +88,7 @@
 .vr-foto img{display:block;width:100%;height:100%;margin:0;object-fit:cover;object-position:center;-webkit-user-drag:none}
 .vr-kart.tukendi .vr-foto img{opacity:.55;filter:grayscale(.35)}
 .vr-rozet{position:absolute;top:10px;left:10px;padding:5px 8px;background:var(--pill);color:var(--pill-text);font-size:10px;font-weight:850;letter-spacing:.04em;border-radius:5px;line-height:1.2}
-.vr-rozet.gri{background:#8a93a0;color:#fff}
+.vr-rozet.gri{background:#5b6472;color:#fff}
 .vr-yazi{padding:12px 13px 15px}
 .vr-kat{font-size:10px;font-weight:850;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .vr-ad{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.6em;margin:5px 0 8px;font-size:14px;line-height:1.3;font-weight:750;color:var(--text)}
@@ -153,17 +153,17 @@
 .vr-sepet:active{transform:scale(.97)}
 .vr-sepet:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 a.vr-sepet{background:transparent;color:var(--btn)!important;box-shadow:inset 0 0 0 2px var(--btn)}
-.vr-sepet.pasif{background:#e6e9ee;color:#6b7280!important;box-shadow:none;cursor:default}
+.vr-sepet.pasif{background:#e6e9ee;color:#4b5563!important;box-shadow:none;cursor:default}
 .vr-sepet.yukleniyor{opacity:.75;cursor:progress}
 .vr-sepet.eklendi{background:#0f9d58}
 .vr-sepet.eklendi svg{display:none}
 .vr-sepet.eklendi span:before{content:"✓ "}
 /* Stok rozeti: ürün sayfasındaki şeritle aynı renkler, fotoğrafın altına yapışık */
-.vr-satis{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:7px 6px;background:#08b957;color:#fff;font-size:12px;font-weight:800;line-height:1.25;text-align:center;letter-spacing:.01em}
-.vr-satis--low{background:#e32636}
-.vr-satis--fast{background:#08b957}
-.vr-satis--rated{background:linear-gradient(90deg,#d62828,#f77f00)}
-.vr-satis--popular{background:linear-gradient(90deg,#f47b20,#ffb400)}
+.vr-satis{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:7px 6px;background:#067a3a;color:#fff;font-size:12px;font-weight:800;line-height:1.25;text-align:center;letter-spacing:.01em}
+.vr-satis--low{background:#c81d2c}
+.vr-satis--fast{background:#067a3a}
+.vr-satis--rated{background:linear-gradient(90deg,#b91c1c,#b45309)}
+.vr-satis--popular{background:linear-gradient(90deg,#c2410c,#a16207)}
 /* Sepete eklendi bildirimi */
 #vr-bildirim{position:fixed;left:50%;bottom:24px;z-index:100002;display:flex;align-items:center;gap:12px;width:min(92vw,420px);padding:12px 12px 12px 14px;background:#0f2f4f;color:#fff;border-radius:14px;box-shadow:0 14px 34px rgba(0,0,0,.28);transform:translate(-50%,140%);opacity:0;transition:transform .3s ease,opacity .3s ease;pointer-events:none}
 #vr-bildirim.acik{transform:translate(-50%,0);opacity:1;pointer-events:auto}
@@ -199,3 +199,9 @@ html.has-off-canvas #vr-bildirim{display:none!important}
   .cart-popup-inner--sticky .ux-mini-cart-footer .woocommerce-mini-cart__total{margin:0 0 10px;padding-top:10px}
   .cart-popup-inner--sticky .ux-mini-cart-footer .woocommerce-mini-cart__buttons .button{margin:0 0 8px!important;padding:11px 10px!important;min-height:0;line-height:1.25;font-size:13px}
 }
+
+/* 1.5.3 — PageSpeed erişilebilirlik düzeltmeleri (renk kontrastı, dokunma hedefleri, bağlantı ayırt edilebilirliği) */
+.ivs-gkart small{color:#55657a!important}
+.iv-om-tamam{background:#0369a1!important}
+span>a[href^="tel:"]{display:inline-block;min-height:24px;padding:4px 2px}
+body.home .section-content .col-inner.text-left ul li>a:not(.button){text-decoration:underline;text-underline-offset:2px}
