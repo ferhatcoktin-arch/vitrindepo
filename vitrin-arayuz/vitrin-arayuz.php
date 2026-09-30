@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Vitrin Arayüz
  * Description: iqosvitrin.com.tr için büyük arama kutusu ve ana sayfada kategori rafları (Çok Satanlar tasarımında, yavaşça kendiliğinden kayan, elle kaydırılabilen). Flatsome + mevcut WPCode snippet'leriyle çalışır; eklenti kapatılınca site eski haline döner.
- * Version: 1.5.4
+ * Version: 1.5.5
  * Author: IQOS Vitrin
  * Requires Plugins: woocommerce
  * Text Domain: vitrin-arayuz
@@ -10,7 +10,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'VA_VER', '1.5.4' );
+define( 'VA_VER', '1.5.5' );
 // SiteGround Optimizer küçültülmüş dosyayı tutamaç adıyla (handle.min.css) kaydediyor ve sorgu dizesini siliyor;
 // güncellemeden sonra eski dosya gelmesin diye tutamaç ve dosya adında sürüm var.
 define( 'VA_H', 'vitrin-arayuz-' . str_replace( '.', '', VA_VER ) );
@@ -296,6 +296,80 @@ add_action( 'wp_enqueue_scripts', function () {
 }, 20 );
 
 /* ------------------------------------------------------------------
+ * 1.5.5: İlk raf HTML olarak sayfayla birlikte gelir (mobilde LCP).
+ * İşaretleme va-*.js içindeki kart() / rafKur() ile birebir aynı; JS bu bölümü
+ * yeniden çizmez, sadece sonsuz akışı ve rozetleri ekler.
+ * ---------------------------------------------------------------- */
+function va_tutar( $p, $v ) {
+	$u = (int) ( $p['prices']['currency_minor_unit'] ?? 0 );
+	return '₺' . number_format( (float) $v / pow( 10, $u ), 2, ',', '.' );
+}
+function va_ilk_raf_html() {
+	$ilk    = va_ilk_raf();
+	$raflar = va_raflar();
+	if ( ! $ilk || empty( $ilk['list'] ) || empty( $raflar[0]['k'] ) ) {
+		return '';
+	}
+	$cfg   = $raflar[0];
+	$ids   = explode( ',', $cfg['k'] );
+	$liste = array_merge(
+		array_values( array_filter( $ilk['list'], function ( $p ) { return ! empty( $p['permalink'] ) && $p['is_in_stock']; } ) ),
+		array_values( array_filter( $ilk['list'], function ( $p ) { return ! empty( $p['permalink'] ) && ! $p['is_in_stock']; } ) )
+	);
+	if ( ! $liste ) {
+		return '';
+	}
+	$sepet_svg = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.4 10.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 1.9-1.5L21 8H6.2"/><circle cx="10" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg>';
+	$wc        = class_exists( 'WC_AJAX' );
+	$d         = function ( $t ) { return esc_html( html_entity_decode( (string) $t, ENT_QUOTES, 'UTF-8' ) ); };
+	$kartlar   = '';
+	foreach ( $liste as $i => $p ) {
+		$img = $p['images'][0] ?? null;
+		$kat = '';
+		foreach ( $p['categories'] as $c ) {
+			if ( ! in_array( (string) $c['id'], $ids, true ) ) {
+				$kat = $c['name'];
+				break;
+			}
+		}
+		if ( ! $kat && ! empty( $p['categories'][0] ) ) {
+			$kat = $p['categories'][0]['name'];
+		}
+		$rozet = ! $p['is_in_stock'] ? 'TÜKENDİ' : ( $p['on_sale'] ? 'İNDİRİM' : '' );
+		$pr    = $p['prices'];
+		$fiyat = ! empty( $pr['price'] ) ? va_tutar( $p, $pr['price'] ) : '';
+		if ( $p['on_sale'] && ! empty( $pr['regular_price'] ) && $pr['regular_price'] !== $pr['price'] ) {
+			$fiyat = '<del>' . va_tutar( $p, $pr['regular_price'] ) . '</del>' . $fiyat;
+		}
+		if ( ! $p['is_in_stock'] ) {
+			$buton = '<span class="vr-sepet pasif">Tükendi</span>';
+		} elseif ( 'simple' === $p['type'] && false !== $p['is_purchasable'] && $wc ) {
+			$buton = '<button type="button" class="vr-sepet" data-id="' . (int) $p['id'] . '">' . $sepet_svg . '<span>Sepete Ekle</span></button>';
+		} else {
+			$buton = '<a class="vr-sepet" href="' . esc_url( $p['permalink'] ) . '" draggable="false"><span>Seçenekleri Gör</span></a>';
+		}
+		$oncelik = $i < 2 && $p['is_in_stock'];
+		$foto    = $img ? '<img src="' . esc_url( $img['thumbnail'] ?: $img['src'] ) . '" alt="' . esc_attr( html_entity_decode( $img['alt'] ?: $p['name'], ENT_QUOTES, 'UTF-8' ) ) . '" width="300" height="300" ' . ( $oncelik ? 'loading="eager" fetchpriority="high"' : 'loading="lazy" decoding="async"' ) . ' draggable="false">' : '';
+		$kartlar .= '<div class="vr-kart' . ( $p['is_in_stock'] ? '' : ' tukendi' ) . '" data-urun="' . (int) $p['id'] . '">'
+			. '<a class="vr-link" href="' . esc_url( $p['permalink'] ) . '" draggable="false">'
+			. '<div class="vr-foto">' . $foto . ( $rozet ? '<span class="vr-rozet' . ( 'TÜKENDİ' === $rozet ? ' gri' : '' ) . '">' . $rozet . '</span>' : '' ) . '</div>'
+			. '<div class="vr-yazi"><div class="vr-kat">' . $d( $kat ?: 'IQOS Vitrin' ) . '</div><div class="vr-ad">' . $d( $p['name'] ) . '</div><div class="vr-fiyat">' . $fiyat . '</div></div></a>'
+			. '<div class="vr-alt">' . $buton . '</div></div>';
+	}
+	$ok    = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+	$geri  = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>';
+	$ileri = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>';
+	$b     = esc_html( $cfg['b'] );
+	return '<div id="vr-raflar"><section class="vr-raf" aria-label="' . esc_attr( $cfg['b'] ) . '" data-ssr="1">'
+		. '<div class="vr-bas"><div class="vr-baslik"><div class="vr-ust">' . esc_html( $cfg['u'] . ' · ' . $ilk['total'] . ' ürün' ) . '</div><h2>' . $b . '</h2></div>'
+		. '<div class="vr-araclar"><a class="vr-tum" href="' . esc_url( $cfg['l'] ) . '"><span>Tümünü Gör</span><i>' . $ok . '</i></a>'
+		. '<button type="button" class="vr-ok" data-yon="-1" aria-label="Önceki ürünler">' . $geri . '</button>'
+		. '<button type="button" class="vr-ok" data-yon="1" aria-label="Sonraki ürünler">' . $ileri . '</button></div></div>'
+		. '<div class="vr-ray" role="region" tabindex="0" aria-label="' . esc_attr( $cfg['b'] . ' ürünleri' ) . '"><div class="vr-bant">' . $kartlar . '</div></div>'
+		. '</section></div>';
+}
+
+/* ------------------------------------------------------------------
  * Üst şerit: büyük arama kutusu
  * ---------------------------------------------------------------- */
 function va_ust_serit() {
@@ -324,7 +398,7 @@ function va_ust_serit() {
 		</div>
 	</div>
 	<?php if ( is_front_page() ) : ?>
-	<div id="vr-raflar-yer"></div><?php // mobilde raflar buraya, arama + güven şeridinin hemen altına yerleşir ?>
+	<div id="vr-raflar-yer"><?php echo va_ilk_raf_html(); // phpcs:ignore -- içeride kaçışlanıyor ?></div><?php // mobilde raflar buraya, arama + güven şeridinin hemen altına yerleşir ?>
 	<?php endif; ?>
 	<?php
 }

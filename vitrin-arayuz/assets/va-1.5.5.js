@@ -1,4 +1,4 @@
-/* Vitrin Arayüz 1.5.3 — canlı arama + kayan kategori rafları (bağımlılıksız) */
+/* Vitrin Arayüz 1.5.5 — canlı arama + kayan kategori rafları (bağımlılıksız) */
 (function () {
   'use strict';
   var V = window.VA || {};
@@ -182,8 +182,10 @@
       .catch(function () { location.href = kart.querySelector('.vr-link').href; });
   });
 
-  function rafKur(cfg) {
-    var sec = d.createElement('section');
+  function rafKur(cfg, hazir) {
+    // 1.5.5: ilk raf sunucudan hazır gelir (hazir); o zaman sadece olaylar bağlanır
+    var sec = hazir || d.createElement('section');
+    if (!hazir) {
     sec.className = 'vr-raf';
     sec.setAttribute('aria-label', cfg.b);
     sec.innerHTML = '<div class="vr-bas"><div class="vr-baslik"><div class="vr-ust">' + esc(cfg.u) + '</div><h2>' + esc(cfg.b) + '</h2></div>' +
@@ -193,10 +195,11 @@
       '<div class="vr-ray" role="region" tabindex="0" aria-label="' + esc(cfg.b) + ' ürünleri"><div class="vr-bant">' +
       new Array(6).join('<div class="vr-kart vr-iskelet" aria-hidden="true"><div class="vr-foto"></div><div class="vr-yazi"><div class="vr-cizgi"></div><div class="vr-cizgi"></div><div class="vr-cizgi kisa"></div></div></div>') +
       '</div></div>';
+    }
     var r = {
       cfg: cfg, sec: sec, ray: sec.querySelector('.vr-ray'), bant: sec.querySelector('.vr-bant'),
       x: 0, v: 0, hiz: 0, setW: 0, dongu: false, gorunur: false, fare: false, surukle: false,
-      bekle: 0, yuklendi: false, anim: null, cizilen: null
+      bekle: 0, yuklendi: !!hazir, anim: null, cizilen: null
     };
     sec._raf = r;
     olaylar(r);
@@ -378,9 +381,13 @@
   }
 
   /* Yerleşim */
-  var kap = d.createElement('div');
-  kap.id = 'vr-raflar';
-  V.raflar.forEach(function (c) { kap.appendChild(rafKur(c)); });
+  var kap = d.getElementById('vr-raflar');
+  var hazirRaf = kap && kap.querySelector('section.vr-raf[data-ssr]');
+  if (!kap) { kap = d.createElement('div'); kap.id = 'vr-raflar'; }
+  V.raflar.forEach(function (c, i) {
+    if (i === 0 && hazirRaf) rafKur(c, hazirRaf);
+    else kap.appendChild(rafKur(c));
+  });
 
   var mobil = window.matchMedia ? window.matchMedia('(max-width: 768px)') : null;
   function yerlestir() {
@@ -403,6 +410,13 @@
     }
   }
   yerlestir();
+  if (hazirRaf && raflar[0]) {
+    var hazirKur = function () {
+      donguKur(raflar[0]);
+      rozetIste([].map.call(hazirRaf.querySelectorAll('.vr-kart[data-urun]:not(.tukendi)'), function (k) { return k.getAttribute('data-urun'); }));
+    };
+    if (kap.offsetParent || d.readyState !== 'loading') hazirKur(); else d.addEventListener('DOMContentLoaded', hazirKur);
+  }
   if (d.readyState === 'loading') d.addEventListener('DOMContentLoaded', yerlestir);
   window.addEventListener('load', yerlestir);
 
