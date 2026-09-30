@@ -1,8 +1,11 @@
-/* Vitrin Arayüz 1.5.5 — canlı arama + kayan kategori rafları (bağımlılıksız) */
+/* Vitrin Arayüz 1.5.7 — canlı arama + kayan kategori rafları (bağımlılıksız) */
 (function () {
   'use strict';
   var V = window.VA || {};
   var d = document;
+
+  // 1.5.7: Flatsome başlık aramasındaki kategori seçicisinin etiketi yok (erişilebilirlik)
+  [].forEach.call(d.querySelectorAll('select.search_categories:not([aria-label])'), function (s) { s.setAttribute('aria-label', 'Ürün kategorisi'); });
 
   function dec(s) { var t = d.createElement('textarea'); t.innerHTML = s || ''; return t.value; }
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }

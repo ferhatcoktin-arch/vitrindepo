@@ -208,3 +208,5 @@ span>a[href^="tel:"]{display:inline-block;min-height:24px;padding:4px 2px}
 body.home .section-content .col-inner.text-left ul li>a:not(.button){text-decoration:underline;text-underline-offset:2px}
 /* 1.5.6 — ilk raf sunucudan geliyor; diğer raflar JS ile eklenince alttaki tanıtım kutusu ekranda kaymasın diye yer ayrılır */
 @media (max-width:768px){html.js body.home #vr-raflar-yer{min-height:170vh}}
+/* 1.5.7 — masaüstü mavi menü şeridinde yazılar tam beyaz (kontrast) */
+#wide-nav.nav-dark .nav>li>a,#wide-nav.nav-dark .nav>li>a span{color:#fff}
