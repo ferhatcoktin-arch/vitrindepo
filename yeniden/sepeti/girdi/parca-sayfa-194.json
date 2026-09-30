@@ -1,0 +1,425 @@
+{
+ "id": 194,
+ "tur": "sayfa",
+ "slug": "faq",
+ "baslik": "IQOS ve TEREA Sık Sorulan Sorular",
+ "rm": {},
+ "excerpt": "",
+ "parcalar": [
+  {
+   "id": 0,
+   "tur": "metin",
+   "metin": "IQOS ve TEREA Sık Sorulan Sorular"
+  },
+  {
+   "id": 1,
+   "tur": "metin",
+   "metin": "İstanbul İçi Aynı Gün Teslimat"
+  },
+  {
+   "id": 2,
+   "tur": "metin",
+   "metin": "İstanbul İçi Kapıda Ödeme"
+  },
+  {
+   "id": 3,
+   "tur": "metin",
+   "metin": "7/24 WhatsApp Desteği"
+  },
+  {
+   "id": 4,
+   "tur": "metin",
+   "metin": "Sipariş, Kargo ve Teslimat"
+  },
+  {
+   "id": 5,
+   "tur": "kod:title",
+   "metin": "Siparişim ne zaman kargoya verilir, teslimat ne kadar sürer?"
+  },
+  {
+   "id": 6,
+   "tur": "metin",
+   "metin": "Siparişleriniz ödeme onayının ardından genellikle aynı gün (mesai saatleri içinde), en geç 24 saat içinde kargoya teslim edilir. Türkiye genelinde teslimat süresi bulunduğunuz bölgeye göre 1–3 iş günü arasında değişir. İstanbul içindeki siparişler ise moto kuryeyle aynı gün teslim edilir."
+  },
+  {
+   "id": 7,
+   "tur": "kod:title",
+   "metin": "Kargo takibi yapabilir miyim, paketler nasıl hazırlanıyor?"
+  },
+  {
+   "id": 8,
+   "tur": "metin",
+   "metin": "Evet. Siparişiniz kargoya verildiğinde takip numaranız SMS ya da e-posta ile tarafınıza iletilir. Paketler, içeriği dışarıdan anlaşılmayacak şekilde gizli ve sağlam ambalajlarla hazırlanır."
+  },
+  {
+   "id": 9,
+   "tur": "kod:title",
+   "metin": "Kapıda ödeme seçeneğiniz var mı, ek ücret alınıyor mu?"
+  },
+  {
+   "id": 10,
+   "tur": "metin",
+   "metin": "Kapıda nakit ödeme, İstanbul içindeki moto kurye teslimatlarında geçerlidir; ödemeyi ürün elinize ulaştığında kuryeye yaparsınız. İstanbul dışındaki siparişlerde ödeme Havale/EFT ile alınır ve banka bilgileri sipariş sonrasında size iletilir. Ek bir ücret olup olmadığını sipariş sırasında destek hattımızdan teyit edebilirsiniz."
+  },
+  {
+   "id": 11,
+   "tur": "metin",
+   "metin": "Orijinallik & Saklama Koşulları"
+  },
+  {
+   "id": 12,
+   "tur": "kod:title",
+   "metin": "TEREA ürünlerinizin orijinal olduğundan nasıl emin olabilirim?"
+  },
+  {
+   "id": 13,
+   "tur": "metin",
+   "metin": "Sitemizdeki tüm TEREA ve IQOS ILUMA ürünleri, belirtilen menşe ülkenin yetkili satıcılarından temin edilen %100 orijinal ürünlerdir. Kutuların üzerinde orijinal bandrol ve barkodlar bulunur ve tüm ürünler için orijinallik garantisi verilir."
+  },
+  {
+   "id": 14,
+   "tur": "kod:title",
+   "metin": "TEREA çubukları nasıl saklanmalı?"
+  },
+  {
+   "id": 15,
+   "tur": "metin",
+   "metin": "TEREA çubuklarının tazeliğini ve aromasını korumak için onları oda sıcaklığında, doğrudan güneş ışığı almayan ve nemsiz bir ortamda saklayın. Aşırı sıcaklık ve nem tütünün kalitesini olumsuz etkileyebilir."
+  },
+  {
+   "id": 16,
+   "tur": "kod:title",
+   "metin": "TEREA kartonları neden farklı menşe ülkelerden geliyor?"
+  },
+  {
+   "id": 17,
+   "tur": "metin",
+   "metin": "TEREA, Philip Morris International tarafından farklı ülkelerde piyasaya sunulur ve her pazara ait ürünlerin bandrol ile kutu tasarımı farklı olabilir. Size daha fazla seçenek sunabilmek için ürünlerimizi farklı pazarlardan tedarik ediyoruz."
+  },
+  {
+   "id": 18,
+   "tur": "metin",
+   "metin": "Ödeme ve İade Koşulları"
+  },
+  {
+   "id": 19,
+   "tur": "kod:title",
+   "metin": "Hangi ödeme yöntemleriyle sipariş verebilirim?"
+  },
+  {
+   "id": 20,
+   "tur": "metin",
+   "metin": "Sitemizde kartla ödeme alınmaz. İstanbul içindeki siparişlerde ödemeyi kapıda nakit olarak kuryeye, İstanbul dışındaki siparişlerde ise Havale/EFT ile yaparsınız; banka bilgileri sipariş sonrasında size iletilir."
+  },
+  {
+   "id": 21,
+   "tur": "kod:title",
+   "metin": "IQOS ILUMA cihazlarında garanti süreci nasıl işler?"
+  },
+  {
+   "id": 22,
+   "tur": "metin",
+   "metin": "IQOS ILUMA cihazları uluslararası garanti kapsamındadır. Cihazınızda bir üretim hatası tespit edilirse arıza ve değişim süreçlerinde size gerekli destek sağlanır. Garanti talebi için önce sipariş numaranızla bizimle iletişime geçmeniz yeterlidir."
+  },
+  {
+   "id": 23,
+   "tur": "kod:title",
+   "metin": "TEREA çubuklarında iade veya değişim yapılabilir mi?"
+  },
+  {
+   "id": 24,
+   "tur": "metin",
+   "metin": "Tütün ürünleri, açıldıktan ya da jelatini yırtıldıktan sonra sağlık ve hijyen kuralları gereği iade veya değişime kabul edilmez. Hatalı ya da yanlış bir ürün gönderildiyse paketi açmadan bizimle iletişime geçmeniz gerekir."
+  },
+  {
+   "id": 25,
+   "tur": "metin",
+   "metin": "Teknik Sorular ve Cihaz Uyumu"
+  },
+  {
+   "id": 26,
+   "tur": "kod:title",
+   "metin": "IQOS ILUMA cihazında eski HEETS çubukları kullanılabilir mi?"
+  },
+  {
+   "id": 27,
+   "tur": "metin",
+   "metin": "Hayır. IQOS ILUMA cihazları yalnızca TEREA SMARTCORE tütün çubuklarıyla çalışacak şekilde tasarlanmıştır. Eski IQOS modellerine ait HEETS çubuklarında TEREA’daki indüksiyonla ısınan özel metal şerit bulunmadığından bu çubuklar ILUMA cihazlarla uyumlu değildir ve kullanılamaz."
+  },
+  {
+   "id": 28,
+   "tur": "kod:title",
+   "metin": "TEREA çubukları IQOS 3 Duo gibi eski modellerde çalışır mı?"
+  },
+  {
+   "id": 29,
+   "tur": "metin",
+   "metin": "Hayır. TEREA çubukları yalnızca IQOS ILUMA serisi (ILUMA, ILUMA PRIME, ILUMA ONE ve ILUMA i modelleri) cihazlarla uyumludur. Çubukların iki ucu da kapalıdır; bıçaklı sistemle çalışan eski modellerde kullanılamaz ve cihaza zarar verebilir."
+  },
+  {
+   "id": 30,
+   "tur": "kod:title",
+   "metin": "Cihazımla ilgili sorun yaşarsam teknik destek alabilir miyim?"
+  },
+  {
+   "id": 31,
+   "tur": "metin",
+   "metin": "Evet. Cihaz kurulumu, kullanımı ya da şarj ve ışık uyarıları gibi sık karşılaşılan sorunlarla ilgili WhatsApp destek hattımızdan veya e-postayla teknik destek alabilirsiniz. Küçük sorunların çoğunu uzaktan çözebiliyoruz."
+  },
+  {
+   "id": 32,
+   "tur": "metin",
+   "metin": "Başka Sorunuz mu Var?"
+  },
+  {
+   "id": 33,
+   "tur": "metin",
+   "metin": "Aklınıza takılan her konuda bize yazabilirsiniz; sorularınızı yanıtlamaktan memnuniyet duyarız."
+  },
+  {
+   "id": 34,
+   "tur": "kod:text",
+   "metin": "Bize Ulaşın"
+  },
+  {
+   "id": 35,
+   "tur": "metin",
+   "metin": "IQOS Hakkında İnternette En Çok Aranan Sorular"
+  },
+  {
+   "id": 36,
+   "tur": "metin",
+   "metin": "Aşağıdaki başlıklar, arama motorlarında en sık sorulan sorulara göre hazırlanmıştır. Sağlık ve mevzuatla ilgili yanıtlar resmi kurumların açıklamaları esas alınarak özetlenmiştir."
+  },
+  {
+   "id": 37,
+   "tur": "kod:title",
+   "metin": "IQOS sigarası kaç TL?"
+  },
+  {
+   "id": 38,
+   "tur": "metin",
+   "metin": "IQOS bir sigara markası değil, tütünü yakmadan ısıtan cihazlardan oluşan bir ürün ailesidir. Cihaz fiyatları modele, ülkeye, vergilere ve satış kanalına göre farklılık gösterir. TEREA gibi tütün çubuklarının fiyatları da ülkeye ve vergi düzenlemelerine göre değiştiğinden tek ve sabit bir fiyat vermek doğru olmaz."
+  },
+  {
+   "id": 39,
+   "tur": "kod:title",
+   "metin": "1 IQOS kaç sigaraya bedel?"
+  },
+  {
+   "id": 40,
+   "tur": "metin",
+   "metin": "Bir IQOS cihazını “kaç sigaraya eşdeğer” diye hesaplamak bilimsel açıdan doğru değildir. Bir IQOS seansında genellikle tek bir uyumlu tütün çubuğu kullanılır; ancak nikotin alımı ve maruziyet kullanım biçimine, ürüne ve kişiye göre değişir. Bu yüzden bir TEREA çubuğunu sağlık ya da nikotin açısından “1 sigara = 1 TEREA” şeklinde eşitlemek yanlış olur."
+  },
+  {
+   "id": 41,
+   "tur": "kod:title",
+   "metin": "IQOS mu sigara mı daha zararlı?"
+  },
+  {
+   "id": 42,
+   "tur": "metin",
+   "metin": "Hiçbir tütün ürünü risksiz değildir. ABD Gıda ve İlaç Dairesi (FDA), bazı eski IQOS sistemleri için sigarayı tamamen bırakıp bu sisteme geçildiğinde belirli zararlı kimyasallara maruziyetin azalabileceğini belirten sınırlı bir “maruziyet azaltma” beyanına izin vermiştir; bu, IQOS’un güvenli olduğu ya da hastalık riskini azalttığının kanıtlandığı anlamına gelmez. CDC de ısıtılmış tütün ürünlerinin zararlı olduğunu ve sigarayı bırakma yöntemi olarak etkinliğinin kanıtlanmadığını vurgular."
+  },
+  {
+   "id": 43,
+   "tur": "kod:title",
+   "metin": "IQOS satışı neden yasak deniyor?"
+  },
+  {
+   "id": 44,
+   "tur": "metin",
+   "metin": "Türkiye’deki durum tek bir “IQOS yasağı” ifadesinden daha ayrıntılıdır. 25 Şubat 2020 tarihli ve 2149 sayılı Cumhurbaşkanı Kararı, ısıtılarak tüketilen bazı tütün mamulleri ile bunlarda kullanılan elektronik cihazların ithalatını yasaklayan hükümler içerir. Bunun yanında 4207 sayılı Kanun, tütün ürünlerinin internet gibi elektronik ortamlarda satışını ve satış amacıyla kargoyla taşınmasını yasaklar. Güncel durum için resmi mevzuat esas alınmalıdır."
+  },
+  {
+   "id": 45,
+   "tur": "kod:title",
+   "metin": "1 TEREA kaç sigara?"
+  },
+  {
+   "id": 46,
+   "tur": "metin",
+   "metin": "Bir TEREA çubuğu tek bir IQOS ILUMA kullanım seansı için tasarlanmıştır; ancak bunu “kaç sigaraya eşittir” şeklinde sağlık ya da nikotin eşdeğerine çevirmek doğru olmaz. Tütün ürünlerinde nikotin maruziyeti kullanım şekline ve ürüne göre farklılık gösterir."
+  },
+  {
+   "id": 47,
+   "tur": "kod:title",
+   "metin": "IQOS ömrü ne kadardır?"
+  },
+  {
+   "id": 48,
+   "tur": "metin",
+   "metin": "IQOS cihazları için herkes için geçerli sabit bir kullanım ömrü yoktur. Batarya kapasitesi zamanla azalabilir; kullanım sıklığı, şarj alışkanlıkları, aşırı sıcak ya da soğuk ortamlar ve fiziksel darbeler cihaz ömrünü etkiler. Garanti süresi ve servis koşulları ülkeye ve modele göre değiştiğinden kullandığınız modelin resmi garanti şartlarını kontrol etmelisiniz."
+  },
+  {
+   "id": 49,
+   "tur": "kod:title",
+   "metin": "1 paket TEREA ne kadar?"
+  },
+  {
+   "id": 50,
+   "tur": "metin",
+   "metin": "TEREA fiyatları ülkeye, vergilere, döviz kuruna ve satış kanalına göre değiştiği için kalıcı tek bir fiyattan söz edilemez. Türkiye’de tütün ürünlerinin internetten satışına ilişkin yasal kısıtlamalar bulunduğundan fiyat ve temin bilgilerini değerlendirirken güncel mevzuatı dikkate almak gerekir."
+  },
+  {
+   "id": 51,
+   "tur": "kod:title",
+   "metin": "IQOS ciğerlere zarar verir mi?"
+  },
+  {
+   "id": 52,
+   "tur": "metin",
+   "metin": "IQOS ve diğer ısıtılmış tütün ürünleri, nikotin ve çeşitli kimyasallar içeren bir aerosol oluşturur ve bu aerosol akciğerlere çekilir. CDC, ısıtılmış tütün ürünlerinin zararlı olduğunu ve uzun vadeli sağlık etkilerinin daha fazla araştırılması gerektiğini belirtir. “Duman çıkmıyor” olması “zararsız” olduğu anlamına gelmez."
+  },
+  {
+   "id": 53,
+   "tur": "kod:title",
+   "metin": "IQOS kaç dakikada kullanılır?"
+  },
+  {
+   "id": 54,
+   "tur": "metin",
+   "metin": "Süre, modele göre değişebilir. IQOS ILUMA i ONE’ın güncel resmi kullanım bilgilerine göre bir seans en fazla yaklaşık 6 dakika sürer. Çekim sayısı ise cihaza ve FlexPuff gibi özelliklere bağlı olarak değişebilir."
+  },
+  {
+   "id": 55,
+   "tur": "kod:title",
+   "metin": "IQOS almak mantıklı mı?"
+  },
+  {
+   "id": 56,
+   "tur": "metin",
+   "metin": "Tütün veya nikotin kullanmayan biri için en düşük riskli seçenek hiç başlamamaktır. Sigara kullananlar açısından IQOS onaylanmış bir sigara bırakma tedavisi değildir. Tütünü tamamen bırakmak isteyenler, kanıta dayalı bırakma yöntemleri için bir sağlık profesyonelinden destek alabilir."
+  },
+  {
+   "id": 57,
+   "tur": "kod:title",
+   "metin": "IQOS koku yapar mı?"
+  },
+  {
+   "id": 58,
+   "tur": "metin",
+   "metin": "IQOS yanma dumanı üretmez; ancak oluşan aerosol tamamen kokusuz değildir. Kullanım sırasında çevrede fark edilebilen bir koku oluşabilir ve ikinci el aerosol maruziyeti de söz konusudur. Kokunun yoğunluğu ortama, ürüne ve kişisel algıya göre değişir."
+  },
+  {
+   "id": 59,
+   "tur": "kod:title",
+   "metin": "IQOS en ucuz hangi ülkede?"
+  },
+  {
+   "id": 60,
+   "tur": "metin",
+   "metin": "Belirli bir ülkeyi kalıcı olarak “en ucuz” ilan etmek güvenilir olmaz; cihaz fiyatları vergi, döviz kuru, kampanyalar ve model stoklarına göre sık sık değişir. Karşılaştırma yapmak istiyorsanız güncel resmi yerel IQOS sitelerindeki fiyatları ve ilgili ülkenin yolcu/ithalat kurallarını birlikte değerlendirmelisiniz."
+  },
+  {
+   "id": 61,
+   "tur": "kod:title",
+   "metin": "IQOS hangi ülkenin markası?"
+  },
+  {
+   "id": 62,
+   "tur": "metin",
+   "metin": "IQOS, Philip Morris International (PMI) tarafından geliştirilen bir tütün ısıtma markasıdır. İlk ticari pilot uygulamalar 2014 yılında Japonya’nın Nagoya ve İtalya’nın Milano şehirlerinde yapılmıştır. Bu nedenle Japonya IQOS’un ilk ve en önemli pazarlarından biridir; ancak marka bir Japon şirketine ait değildir."
+  },
+  {
+   "id": 63,
+   "tur": "kod:title",
+   "metin": "IQOS 4 çizgi ne anlama gelir?"
+  },
+  {
+   "id": 64,
+   "tur": "metin",
+   "metin": "IQOS ILUMA ONE’ın resmi kullanım kılavuzuna göre dört durum ışığının yanması cihazın tamamen şarj olduğunu gösterir. Işıkların anlamı modelden modele değişebileceğinden farklı bir IQOS modeli kullanıyorsanız o modelin resmi kılavuzuna bakmanız gerekir."
+  },
+  {
+   "id": 65,
+   "tur": "kod:title",
+   "metin": "IQOS kaç çekimde biter?"
+  },
+  {
+   "id": 66,
+   "tur": "metin",
+   "metin": "Çekim sayısı modele ve etkin özelliklere göre değişir. Güncel ILUMA i serisinde temel kullanım belirli bir çekim ya da süre sınırıyla çalışır; FlexPuff özelliği kullanım şeklinize göre ek çekim sağlayabilir. Resmi IQOS kaynakları, ILUMA i ONE’da bir kullanımın en fazla yaklaşık 6 dakika sürdüğünü belirtir."
+  },
+  {
+   "id": 67,
+   "tur": "metin",
+   "metin": "Kaynaklar ve Mevzuat Notu"
+  },
+  {
+   "id": 68,
+   "tur": "metin",
+   "metin": "Sağlık bilgileri için"
+  },
+  {
+   "id": 69,
+   "tur": "metin",
+   "metin": "CDC ısıtılmış tütün ürünleri"
+  },
+  {
+   "id": 70,
+   "tur": "metin",
+   "metin": "ve"
+  },
+  {
+   "id": 71,
+   "tur": "metin",
+   "metin": "FDA IQOS maruziyet açıklaması"
+  },
+  {
+   "id": 72,
+   "tur": "metin",
+   "metin": "; teknik kullanım için"
+  },
+  {
+   "id": 73,
+   "tur": "metin",
+   "metin": "IQOS ILUMA i ONE resmi kullanım sayfası"
+  },
+  {
+   "id": 74,
+   "tur": "metin",
+   "metin": "esas alınmıştır."
+  },
+  {
+   "id": 75,
+   "tur": "metin",
+   "metin": "Türkiye’de ithalat hükümleri için"
+  },
+  {
+   "id": 76,
+   "tur": "metin",
+   "metin": "2149 sayılı Karar"
+  },
+  {
+   "id": 77,
+   "tur": "metin",
+   "metin": "; tütün ürünlerinin internetten satışına ilişkin hükümler için ise 4207 sayılı Kanun esas alınmalıdır."
+  },
+  {
+   "id": 78,
+   "tur": "metin",
+   "metin": "İlgili rehberler"
+  },
+  {
+   "id": 79,
+   "tur": "metin",
+   "metin": "TEREA Aroma Rehberi: çeşitler ve tat profilleri"
+  },
+  {
+   "id": 80,
+   "tur": "metin",
+   "metin": "IQOS ILUMA i ONE, i DUO ve i PRIME karşılaştırması"
+  },
+  {
+   "id": 81,
+   "tur": "metin",
+   "metin": "IQOS ILUMA bakım ve temizlik rehberi"
+  },
+  {
+   "id": 82,
+   "tur": "metin",
+   "metin": "Sigaradan IQOS ILUMA’ya geçiş hakkında bilinmesi gerekenler"
+  }
+ ]
+}

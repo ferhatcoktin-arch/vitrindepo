@@ -1,0 +1,635 @@
+{
+ "id": 1667,
+ "tur": "yazi",
+ "slug": "terea-aroma-rehberi-size-uygun-lezzeti-nasil-secersiniz",
+ "baslik": "TEREA Aroma Rehberi: Size Uygun Tadı Nasıl Seçersiniz?",
+ "rm": {},
+ "excerpt": "TEREA çeşitlerini tat karakteri, gövde, ferahlık ve menşeye göre karşılaştırın: klasik tütün, mentollü, Wave ve Pearl serileri için pratik seçim rehberi.",
+ "parcalar": [
+  {
+   "id": 0,
+   "tur": "metin",
+   "metin": "TEREA AROMA REHBERİ"
+  },
+  {
+   "id": 1,
+   "tur": "metin",
+   "metin": "TEREA Aroma Rehberi: Çeşitler, Tat Profilleri ve Doğru Seri Seçimi"
+  },
+  {
+   "id": 2,
+   "tur": "metin",
+   "metin": "TEREA çeşitleri ilk bakışta oldukça kalabalık görünebilir. Klasik tütün, mentol, meyvemsi Wave serileri, kapsüllü Pearl seçenekleri ve farklı menşeler arasında seçim yaparken yalnızca ürün adına bakmak çoğu zaman yetmez. Bu rehberde TEREA çeşitlerini tat karakteri, gövde, ferahlık ve seri yapısına göre karşılaştırabilir, size en yakın profili daha kolay bulabilirsiniz."
+  },
+  {
+   "id": 3,
+   "tur": "metin",
+   "metin": "Klasik tütün"
+  },
+  {
+   "id": 4,
+   "tur": "metin",
+   "metin": "Odunsu, kavruk, kremamsı ve dolgun tütün profilleri."
+  },
+  {
+   "id": 5,
+   "tur": "metin",
+   "metin": "Mentol ve ferah"
+  },
+  {
+   "id": 6,
+   "tur": "metin",
+   "metin": "Nane, mentol ve serin bitişli çeşitler."
+  },
+  {
+   "id": 7,
+   "tur": "metin",
+   "metin": "Wave ve Pearl"
+  },
+  {
+   "id": 8,
+   "tur": "metin",
+   "metin": "Meyvemsi, aromatik ve kapsüllü özel seriler."
+  },
+  {
+   "id": 9,
+   "tur": "metin",
+   "metin": "TEREA nedir, hangi cihazlarla kullanılır?"
+  },
+  {
+   "id": 10,
+   "tur": "metin",
+   "metin": "TEREA, IQOS ILUMA ailesi için üretilen tütün çubuklarının genel adıdır. Çubuklar, ILUMA cihazlarının indüksiyon sistemiyle çalışacak şekilde tasarlanmıştır; bu nedenle eski nesil bıçaklı IQOS cihazlarında kullanılamaz. Bir TEREA paketinde 20 çubuk, bir kartonda ise 10 paket ve toplam 200 çubuk bulunur. Ürün seçerken ilk bakmanız gereken şey aroma değil, cihaz uyumudur."
+  },
+  {
+   "id": 11,
+   "tur": "metin",
+   "metin": "Serileri topluca incelemek isterseniz"
+  },
+  {
+   "id": 12,
+   "tur": "metin",
+   "metin": "Avrupa TEREA Çeşitleri"
+  },
+  {
+   "id": 13,
+   "tur": "metin",
+   "metin": "Dubai TEREA Çeşitleri"
+  },
+  {
+   "id": 14,
+   "tur": "metin",
+   "metin": "Kıbrıs TEREA Çeşitleri"
+  },
+  {
+   "id": 15,
+   "tur": "metin",
+   "metin": "ve"
+  },
+  {
+   "id": 16,
+   "tur": "metin",
+   "metin": "Japonya TEREA Çeşitleri"
+  },
+  {
+   "id": 17,
+   "tur": "metin",
+   "metin": "sayfalarını ayrı ayrı karşılaştırabilirsiniz."
+  },
+  {
+   "id": 18,
+   "tur": "metin",
+   "metin": "Klasik tütün profilleri: hafiften dolguna"
+  },
+  {
+   "id": 19,
+   "tur": "metin",
+   "metin": "Meyve ya da yoğun mentol istemeyen kullanıcıların ilk baktığı grup klasik tütün serileridir. Bu grupta “sert mi, yumuşak mı?” sorusundan çok; kavrulmuş, odunsu, kremamsı ya da hafif baharatlı karakterlerden hangisinin size daha yakın olduğuna bakmak daha faydalıdır."
+  },
+  {
+   "id": 20,
+   "tur": "metin",
+   "metin": "Amber TEREA Avrupa"
+  },
+  {
+   "id": 21,
+   "tur": "metin",
+   "metin": ", odunsu ve kavrulmuş tütün gövdesini hafif kuruyemiş notalarıyla buluşturan dengeli bir başlangıç noktasıdır. Daha yoğun, kuru ve kavruk bir karakter isteyenler"
+  },
+  {
+   "id": 22,
+   "tur": "metin",
+   "metin": "Sienna TEREA Avrupa"
+  },
+  {
+   "id": 23,
+   "tur": "metin",
+   "metin": "çeşidiyle karşılaştırma yapabilir. Daha yumuşak, yuvarlak ve kremamsı bir profil için"
+  },
+  {
+   "id": 24,
+   "tur": "metin",
+   "metin": "Teak TEREA Avrupa"
+  },
+  {
+   "id": 25,
+   "tur": "metin",
+   "metin": "öne çıkar. Japonya serisinde ise"
+  },
+  {
+   "id": 26,
+   "tur": "metin",
+   "metin": "Regular TEREA Japonya"
+  },
+  {
+   "id": 27,
+   "tur": "metin",
+   "metin": "klasik ve dengeli tütün karakterini merkeze alan temel çeşitlerden biridir."
+  },
+  {
+   "id": 28,
+   "tur": "metin",
+   "metin": "Klasik grupta seçim yaparken yoğunluğu tek başına “daha iyi” olarak görmemek gerekir; daha dolgun bir profil herkese uygun olmayabilir. Gün boyu yumuşak bir çeşit tercih edenlerle kısa ama belirgin bir tütün tadı arayanların beklentileri birbirinden farklıdır."
+  },
+  {
+   "id": 29,
+   "tur": "metin",
+   "metin": "Mentollü TEREA çeşitleri: serinlik seviyesi nasıl değişir?"
+  },
+  {
+   "id": 30,
+   "tur": "metin",
+   "metin": "Mentollü TEREA’lar arasındaki fark yalnızca mentol miktarından ibaret değildir. Bazı çeşitlerde mentol tütün karakterinin önüne geçerken, bazılarında nane, narenciye ya da meyve notaları mentolü dengeler."
+  },
+  {
+   "id": 31,
+   "tur": "metin",
+   "metin": "Turquoise TEREA Avrupa"
+  },
+  {
+   "id": 32,
+   "tur": "metin",
+   "metin": ", temiz mentol hissini hafif narenciye notalarıyla tamamlayan dengeli bir profildir. Daha güçlü ve doğrudan bir mentol arayanlar Japonya serisindeki"
+  },
+  {
+   "id": 33,
+   "tur": "metin",
+   "metin": "Black Menthol TEREA"
+  },
+  {
+   "id": 34,
+   "tur": "metin",
+   "metin": "çeşidine göz atabilir. Daha klasik bir nane ve mentol karakteri için"
+  },
+  {
+   "id": 35,
+   "tur": "metin",
+   "metin": "Menthol TEREA Japonya"
+  },
+  {
+   "id": 36,
+   "tur": "metin",
+   "metin": "daha sade bir karşılaştırma noktası sunar."
+  },
+  {
+   "id": 37,
+   "tur": "metin",
+   "metin": "Mentollü bir çeşit seçerken “en soğuğu hangisi?” diye sormak yerine ferahlığın aromadan mı yoksa doğrudan mentolden mi gelmesini istediğinize karar vermek daha doğru sonuç verir. Narenciyeli ferahlık, doğal nane hissi ve yoğun buzlu mentol birbirinden oldukça farklı deneyimlerdir."
+  },
+  {
+   "id": 38,
+   "tur": "metin",
+   "metin": "Meyvemsi ve Wave serileri"
+  },
+  {
+   "id": 39,
+   "tur": "metin",
+   "metin": "Wave ailesinde tütün tabanının üzerine meyvemsi ve ferah katmanlar eklenir; bu yüzden klasik tütün grubundan açıkça ayrılırlar. Orman meyvesi, üzüm, narenciye ya da yaz meyveleri gibi notalar arayan kullanıcılar Wave serilerini kolayca ayırt eder."
+  },
+  {
+   "id": 40,
+   "tur": "metin",
+   "metin": "Purple Wave TEREA Avrupa"
+  },
+  {
+   "id": 41,
+   "tur": "metin",
+   "metin": ", üzüm ve orman meyvesi notalarını mentol ferahlığıyla buluşturan belirgin bir örnektir. Daha narenciyeli ve canlı bir karakter arıyorsanız"
+  },
+  {
+   "id": 42,
+   "tur": "metin",
+   "metin": "Zing Wave TEREA"
+  },
+  {
+   "id": 43,
+   "tur": "metin",
+   "metin": "çeşidine bakabilirsiniz. Wave ürünlerinde meyve ve ferahlık oranı çeşitten çeşide değiştiğinden, aynı “meyveli” grup içinde bile tat karakterleri oldukça farklı olabilir."
+  },
+  {
+   "id": 44,
+   "tur": "metin",
+   "metin": "Pearl ve patlatmalı TEREA nedir?"
+  },
+  {
+   "id": 45,
+   "tur": "metin",
+   "metin": "Pearl serileri, filtredeki aroma kapsülü sayesinde iki aşamalı bir tat sunar. Kapsül açılmadan daha sade bir tütün tabanı hissedilirken kapsül açıldığında çeşidin meyvemsi ya da ferah aroması belirginleşir. Bu grup, içim sırasında aromayı değiştirmek isteyenler için tasarlanmıştır."
+  },
+  {
+   "id": 46,
+   "tur": "metin",
+   "metin": "Yeşil elma ve mentol notalı"
+  },
+  {
+   "id": 47,
+   "tur": "metin",
+   "metin": "Abora Pearl TEREA"
+  },
+  {
+   "id": 48,
+   "tur": "metin",
+   "metin": ", kapsüllü meyvemsi bir profil arayanların değerlendirebileceği seçeneklerden biridir. Karışık meyve karakteri için"
+  },
+  {
+   "id": 49,
+   "tur": "metin",
+   "metin": "Starling Pearl TEREA"
+  },
+  {
+   "id": 50,
+   "tur": "metin",
+   "metin": "çeşidine bakabilirsiniz. Pearl ailesinin tamamı için"
+  },
+  {
+   "id": 51,
+   "tur": "metin",
+   "metin": "Patlatmalı Özel Seri TEREA"
+  },
+  {
+   "id": 52,
+   "tur": "metin",
+   "metin": "kategorisine, özel seriler için de"
+  },
+  {
+   "id": 53,
+   "tur": "metin",
+   "metin": "Premium Özel Seri TEREA"
+  },
+  {
+   "id": 54,
+   "tur": "metin",
+   "metin": "sayfasına göz atabilirsiniz."
+  },
+  {
+   "id": 55,
+   "tur": "metin",
+   "metin": "Avrupa, Dubai, Kıbrıs ve Japonya serileri arasındaki farklar"
+  },
+  {
+   "id": 56,
+   "tur": "metin",
+   "metin": "TEREA ürün adları farklı pazarlarda tekrar karşınıza çıkabilir. Aynı adı taşıyan ürünün menşei değiştiğinde ambalaj, bandrol, bulunabilirlik ve bazı kullanıcılara göre aroma algısı farklılaşabilir. Bu yüzden ürün sayfasındaki menşe bilgisini kontrol etmek önemlidir. Ancak tat algısı kişiden kişiye değiştiğinden, menşeler arasında kesin bir “daha iyi” sıralaması yapmak yerine aynı adlı serileri karşılaştırmak daha sağlıklıdır."
+  },
+  {
+   "id": 57,
+   "tur": "metin",
+   "metin": "Avrupa serisi geniş klasik ve aromatik çeşitleriyle öne çıkarken, Japonya kategorisinde Black Menthol, Regular, Pearl ve farklı mentollü profillerden oluşan daha geniş bir özel seri seçkisi bulunur. Dubai ve Kıbrıs serilerinde ise Amber, Sienna, Silver, Teak, Turquoise ve Purple Wave gibi temel çeşitlerin farklı pazar versiyonlarını bulabilirsiniz."
+  },
+  {
+   "id": 58,
+   "tur": "metin",
+   "metin": "Kararsız kaldıysanız karışık karton nasıl yardımcı olur?"
+  },
+  {
+   "id": 59,
+   "tur": "metin",
+   "metin": "Tek bir aroma seçmekte zorlanıyorsanız karışık kartonlar farklı profilleri aynı siparişte denemenizi kolaylaştırır. Örneğin"
+  },
+  {
+   "id": 60,
+   "tur": "metin",
+   "metin": "Avrupa TEREA Karışık Karton"
+  },
+  {
+   "id": 61,
+   "tur": "metin",
+   "metin": ", Avrupa serisinin klasik ve ferah çeşitlerinden farklı paketleri bir araya getirir. Karton içeriği stok dönemine göre değişebileceğinden ürün açıklamasındaki güncel bilgiye göz atmanız gerekir. Tüm karışık seçenekleri"
+  },
+  {
+   "id": 62,
+   "tur": "metin",
+   "metin": "Karışık TEREA Çeşitleri"
+  },
+  {
+   "id": 63,
+   "tur": "metin",
+   "metin": "kategorisinden inceleyebilirsiniz."
+  },
+  {
+   "id": 64,
+   "tur": "metin",
+   "metin": "Hangi TEREA size daha yakın? Hızlı seçim tablosu"
+  },
+  {
+   "id": 65,
+   "tur": "metin",
+   "metin": "Aradığınız profil"
+  },
+  {
+   "id": 66,
+   "tur": "metin",
+   "metin": "Örnek seri"
+  },
+  {
+   "id": 67,
+   "tur": "metin",
+   "metin": "Karakter"
+  },
+  {
+   "id": 68,
+   "tur": "metin",
+   "metin": "Dengeli klasik tütün"
+  },
+  {
+   "id": 69,
+   "tur": "metin",
+   "metin": "Amber / Regular"
+  },
+  {
+   "id": 70,
+   "tur": "metin",
+   "metin": "Odunsu, kavruk, dengeli"
+  },
+  {
+   "id": 71,
+   "tur": "metin",
+   "metin": "Daha yoğun tütün"
+  },
+  {
+   "id": 72,
+   "tur": "metin",
+   "metin": "Sienna"
+  },
+  {
+   "id": 73,
+   "tur": "metin",
+   "metin": "Dolgun, kuru, kavrulmuş"
+  },
+  {
+   "id": 74,
+   "tur": "metin",
+   "metin": "Yumuşak klasik profil"
+  },
+  {
+   "id": 75,
+   "tur": "metin",
+   "metin": "Teak"
+  },
+  {
+   "id": 76,
+   "tur": "metin",
+   "metin": "Kremamsı, kuruyemişli"
+  },
+  {
+   "id": 77,
+   "tur": "metin",
+   "metin": "Dengeli ferahlık"
+  },
+  {
+   "id": 78,
+   "tur": "metin",
+   "metin": "Turquoise"
+  },
+  {
+   "id": 79,
+   "tur": "metin",
+   "metin": "Mentol + narenciye"
+  },
+  {
+   "id": 80,
+   "tur": "metin",
+   "metin": "Yoğun mentol"
+  },
+  {
+   "id": 81,
+   "tur": "metin",
+   "metin": "Black Menthol"
+  },
+  {
+   "id": 82,
+   "tur": "metin",
+   "metin": "Güçlü ve uzun serinlik"
+  },
+  {
+   "id": 83,
+   "tur": "metin",
+   "metin": "Meyvemsi ferahlık"
+  },
+  {
+   "id": 84,
+   "tur": "metin",
+   "metin": "Purple Wave"
+  },
+  {
+   "id": 85,
+   "tur": "metin",
+   "metin": "Orman meyvesi + mentol"
+  },
+  {
+   "id": 86,
+   "tur": "metin",
+   "metin": "Kapsüllü meyvemsi"
+  },
+  {
+   "id": 87,
+   "tur": "metin",
+   "metin": "Abora / Starling Pearl"
+  },
+  {
+   "id": 88,
+   "tur": "metin",
+   "metin": "Kapsülle belirginleşen aroma"
+  },
+  {
+   "id": 89,
+   "tur": "metin",
+   "metin": "Aroma isimlerini okurken nelere dikkat etmeli?"
+  },
+  {
+   "id": 90,
+   "tur": "metin",
+   "metin": "TEREA ürün adları her zaman tek bir tat notasını ifade etmez. “Regular” ya da “Blend” gibi ifadeler genellikle tütün gövdesini öne çıkarırken “Menthol”, “Mint” ve benzeri adlar ferahlık tarafına işaret eder. “Wave” ve “Pearl” ise daha aromatik, meyvemsi ya da kapsüllü karakterleri anlatır. Bu nedenle yalnızca renge veya paket adına değil, ürün açıklamasındaki ana tat ailesine, ferahlık seviyesine ve kapsül bilgisine birlikte bakmak gerekir."
+  },
+  {
+   "id": 91,
+   "tur": "metin",
+   "metin": "Örneğin iki çeşidin ikisi de meyvemsi olabilir; ancak biri mentolü belirgin biçimde öne çıkarırken diğeri daha tatlı ya da yumuşak bir bitiş sunabilir. Benzer şekilde iki klasik tütün çeşidi de “yoğun” olarak tanımlansa bile birinde kuru kavruk notalar, diğerinde kremamsı ya da kuruyemişli tonlar baskın olabilir. Bu küçük farklar, özellikle birbirine benzeyen çeşitler arasında seçim yaparken önem kazanır."
+  },
+  {
+   "id": 92,
+   "tur": "metin",
+   "metin": "İlk kez TEREA seçecekler için karşılaştırma yöntemi"
+  },
+  {
+   "id": 93,
+   "tur": "metin",
+   "metin": "İlk seçimde onlarca ürünü aynı anda değerlendirmek yerine üç adımlı bir yöntem izlemek daha pratiktir. Önce ana aroma ailesini belirleyin: klasik tütün, mentol ya da aromatik/kapsüllü. Ardından bu grupta daha hafif mi yoksa daha belirgin bir profil mi istediğinize karar verin. Son olarak aynı aileden iki ya da üç çeşidi karşılaştırın. Böylece tüm kataloğu ezberlemek yerine dar bir seçenek havuzundan karar verebilirsiniz."
+  },
+  {
+   "id": 94,
+   "tur": "metin",
+   "metin": "Klasik grupta Amber, Teak ve Sienna; mentol grubunda Turquoise, Menthol ve Black Menthol; meyvemsi grupta ise Purple Wave, Zing Wave ve Pearl serileri iyi bir karşılaştırma zemini sunar. Bir ürünün açıklamasını okurken “aroma”, “gövde”, “ferahlık” ve “kapsül” başlıklarını ayrı ayrı değerlendirmek, yalnızca ürün adına göre seçim yapmaktan çok daha faydalıdır."
+  },
+  {
+   "id": 95,
+   "tur": "metin",
+   "metin": "TEREA seçerken 5 pratik ölçüt"
+  },
+  {
+   "id": 96,
+   "tur": "metin",
+   "metin": "Önce ana grubu belirleyin:"
+  },
+  {
+   "id": 97,
+   "tur": "metin",
+   "metin": "klasik tütün, mentol ya da meyvemsi/kapsüllü."
+  },
+  {
+   "id": 98,
+   "tur": "metin",
+   "metin": "Gövdeye karar verin:"
+  },
+  {
+   "id": 99,
+   "tur": "metin",
+   "metin": "hafif, orta ya da daha yoğun bir tütün karakteri mi istiyorsunuz?"
+  },
+  {
+   "id": 100,
+   "tur": "metin",
+   "metin": "Ferahlık seviyesini düşünün:"
+  },
+  {
+   "id": 101,
+   "tur": "metin",
+   "metin": "hafif nane ile yoğun mentol aynı deneyimi sunmaz."
+  },
+  {
+   "id": 102,
+   "tur": "metin",
+   "metin": "Menşeye bakın:"
+  },
+  {
+   "id": 103,
+   "tur": "metin",
+   "metin": "aynı ad Avrupa, Dubai, Kıbrıs ya da Japonya serisinde bulunabilir."
+  },
+  {
+   "id": 104,
+   "tur": "metin",
+   "metin": "Tek bir çeşitte karar veremiyorsanız karışık karton deneyin:"
+  },
+  {
+   "id": 105,
+   "tur": "metin",
+   "metin": "farklı aroma ailelerini karşılaştırmak kolaylaşır."
+  },
+  {
+   "id": 106,
+   "tur": "metin",
+   "metin": "Sık Sorulan Sorular"
+  },
+  {
+   "id": 107,
+   "tur": "metin",
+   "metin": "TEREA ile HEETS aynı ürün mü?"
+  },
+  {
+   "id": 108,
+   "tur": "metin",
+   "metin": "Hayır. TEREA, IQOS ILUMA cihazlarının indüksiyon sistemi için tasarlanmıştır. HEETS ise eski nesil bıçaklı IQOS cihazlarında kullanılan ayrı bir ürün ailesidir."
+  },
+  {
+   "id": 109,
+   "tur": "metin",
+   "metin": "En yoğun TEREA hangisidir?"
+  },
+  {
+   "id": 110,
+   "tur": "metin",
+   "metin": "“Yoğunluk” tütün gövdesi, mentol ya da aroma açısından farklı anlamlara gelebilir. Yoğun klasik tütün arayan biri Sienna gibi çeşitlere, güçlü mentol arayan biri ise Black Menthol gibi çeşitlere bakabilir. Bu yüzden genel bir yoğunluk sıralaması yerine aynı aroma ailesi içinde karşılaştırma yapmak daha doğrudur."
+  },
+  {
+   "id": 111,
+   "tur": "metin",
+   "metin": "Pearl kapsülünü kullanmak zorunlu mu?"
+  },
+  {
+   "id": 112,
+   "tur": "metin",
+   "metin": "Hayır. Pearl çeşitleri kapsül açılmadan da kullanılabilir. Kapsül açıldığında aroma karakteri daha belirgin hale gelir."
+  },
+  {
+   "id": 113,
+   "tur": "metin",
+   "metin": "Bir TEREA kartonunda kaç paket bulunur?"
+  },
+  {
+   "id": 114,
+   "tur": "metin",
+   "metin": "Bir kartonda 10 paket bulunur. Her pakette 20 çubuk olduğundan kartonda toplam 200 TEREA çubuğu yer alır."
+  },
+  {
+   "id": 115,
+   "tur": "metin",
+   "metin": "Hangi menşe daha iyi?"
+  },
+  {
+   "id": 116,
+   "tur": "metin",
+   "metin": "Bu tamamen kişisel tat algısına bağlıdır. Menşe; ambalajı ve bulunabilirliği etkileyebilir, ancak herkes için geçerli tek bir “en iyi menşe” yoktur. Aynı adı taşıyan çeşidin farklı menşelerini karşılaştırmak daha anlamlıdır."
+  },
+  {
+   "id": 117,
+   "tur": "metin",
+   "metin": "Tüm TEREA seçeneklerini karşılaştırın"
+  },
+  {
+   "id": 118,
+   "tur": "metin",
+   "metin": "Klasik, mentollü, meyvemsi, Pearl ve karışık karton seçeneklerini kategori bazında inceleyerek size en yakın profili kolayca bulabilirsiniz."
+  },
+  {
+   "id": 119,
+   "tur": "metin",
+   "metin": "Avrupa TEREA"
+  },
+  {
+   "id": 120,
+   "tur": "metin",
+   "metin": "Japonya TEREA"
+  },
+  {
+   "id": 121,
+   "tur": "metin",
+   "metin": "Patlatmalı TEREA"
+  },
+  {
+   "id": 122,
+   "tur": "metin",
+   "metin": "Karışık TEREA"
+  },
+  {
+   "id": 123,
+   "tur": "metin",
+   "metin": "Yasal bilgilendirme:"
+  },
+  {
+   "id": 124,
+   "tur": "metin",
+   "metin": "Tütün ve nikotin ürünleri bağımlılık yapar ve risksiz değildir. Bu içerik, yalnızca yetişkin kullanıcılara ürün çeşitlerini tanıtmak amacıyla hazırlanmıştır. 18 yaşından küçüklere satış yapılmaz."
+  }
+ ]
+}

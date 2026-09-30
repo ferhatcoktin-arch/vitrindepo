@@ -1,0 +1,355 @@
+{
+ "id": 2903,
+ "tur": "yazi",
+ "slug": "bir-karton-terea-ne-kadar-yeter-tuketim-hesabi",
+ "baslik": "Bir Karton TEREA Kaç Gün Yeter? Günlük Tüketim Hesabı",
+ "rm": {},
+ "excerpt": "Bir TEREA çubuğu ne kadar sürer, bir karton kaç gün dayanır? Günlük kullanıma göre tüketim tablosu, model seçimi ve aylık stok planı.",
+ "parcalar": [
+  {
+   "id": 0,
+   "tur": "metin",
+   "metin": "IQOS ILUMA’ya geçmeyi düşünenlerin en çok merak ettiği konulardan biri, bir karton TEREA’nın ne kadar dayanacağıdır. Bu yazıda bir çubuğun ne kadar sürdüğünü, günlük tüketimin nasıl hesaplandığını ve bir kartonun kaç gün yettiğini somut rakamlarla ele alıyoruz."
+  },
+  {
+   "id": 1,
+   "tur": "metin",
+   "metin": "Bir TEREA Çubuğu Ne Kadar Sürer?"
+  },
+  {
+   "id": 2,
+   "tur": "metin",
+   "metin": "ILUMA cihazları bir çubuğu"
+  },
+  {
+   "id": 3,
+   "tur": "metin",
+   "metin": "yaklaşık 6 dakika"
+  },
+  {
+   "id": 4,
+   "tur": "metin",
+   "metin": "ya da"
+  },
+  {
+   "id": 5,
+   "tur": "metin",
+   "metin": "14 nefes"
+  },
+  {
+   "id": 6,
+   "tur": "metin",
+   "metin": "boyunca ısıtır; bu ikisinden hangisi önce dolarsa kullanım sona erer. Bu süre, klasik bir sigaranın içim süresine oldukça yakındır."
+  },
+  {
+   "id": 7,
+   "tur": "metin",
+   "metin": "ILUMA i serisindeki"
+  },
+  {
+   "id": 8,
+   "tur": "metin",
+   "metin": "Duraklat"
+  },
+  {
+   "id": 9,
+   "tur": "metin",
+   "metin": "özelliği, ara vermeniz gerektiğinde ısıtmayı geçici olarak durdurur ve çubuğun boşa tükenmesini önler. İş yerinde ya da araç kullanırken içimi yarıda bırakmak zorunda kalanlar için oldukça pratik bir özelliktir."
+  },
+  {
+   "id": 10,
+   "tur": "metin",
+   "metin": "Paket ve Karton Hesabı"
+  },
+  {
+   "id": 11,
+   "tur": "metin",
+   "metin": "Temel rakamlar şunlardır:"
+  },
+  {
+   "id": 12,
+   "tur": "metin",
+   "metin": "1 paket TEREA ="
+  },
+  {
+   "id": 13,
+   "tur": "metin",
+   "metin": "20 çubuk"
+  },
+  {
+   "id": 14,
+   "tur": "metin",
+   "metin": "1 karton TEREA ="
+  },
+  {
+   "id": 15,
+   "tur": "metin",
+   "metin": "10 paket"
+  },
+  {
+   "id": 16,
+   "tur": "metin",
+   "metin": "200 çubuk"
+  },
+  {
+   "id": 17,
+   "tur": "metin",
+   "metin": "Bu düzen, klasik sigara paketi ve kartonuyla aynıdır. Yani günde bir paket sigara içen biri, kabaca günde bir paket TEREA tüketir."
+  },
+  {
+   "id": 18,
+   "tur": "metin",
+   "metin": "Günlük Kullanıma Göre Bir Karton Kaç Gün Yeter?"
+  },
+  {
+   "id": 19,
+   "tur": "metin",
+   "metin": "Günlük kullanım"
+  },
+  {
+   "id": 20,
+   "tur": "metin",
+   "metin": "1 paket (20 çubuk)"
+  },
+  {
+   "id": 21,
+   "tur": "metin",
+   "metin": "1 karton (200 çubuk)"
+  },
+  {
+   "id": 22,
+   "tur": "metin",
+   "metin": "5 çubuk"
+  },
+  {
+   "id": 23,
+   "tur": "metin",
+   "metin": "4 gün"
+  },
+  {
+   "id": 24,
+   "tur": "metin",
+   "metin": "40 gün"
+  },
+  {
+   "id": 25,
+   "tur": "metin",
+   "metin": "10 çubuk"
+  },
+  {
+   "id": 26,
+   "tur": "metin",
+   "metin": "2 gün"
+  },
+  {
+   "id": 27,
+   "tur": "metin",
+   "metin": "20 gün"
+  },
+  {
+   "id": 28,
+   "tur": "metin",
+   "metin": "15 çubuk"
+  },
+  {
+   "id": 29,
+   "tur": "metin",
+   "metin": "yaklaşık 1,5 gün"
+  },
+  {
+   "id": 30,
+   "tur": "metin",
+   "metin": "yaklaşık 13 gün"
+  },
+  {
+   "id": 31,
+   "tur": "metin",
+   "metin": "20 çubuk"
+  },
+  {
+   "id": 32,
+   "tur": "metin",
+   "metin": "1 gün"
+  },
+  {
+   "id": 33,
+   "tur": "metin",
+   "metin": "10 gün"
+  },
+  {
+   "id": 34,
+   "tur": "metin",
+   "metin": "30 çubuk"
+  },
+  {
+   "id": 35,
+   "tur": "metin",
+   "metin": "yaklaşık 16 saat"
+  },
+  {
+   "id": 36,
+   "tur": "metin",
+   "metin": "yaklaşık 7 gün"
+  },
+  {
+   "id": 37,
+   "tur": "metin",
+   "metin": "Tabloya göre günde bir paket kullanan biri için bir karton yaklaşık"
+  },
+  {
+   "id": 38,
+   "tur": "metin",
+   "metin": "10 gün"
+  },
+  {
+   "id": 39,
+   "tur": "metin",
+   "metin": "dayanır. Günde yarım paket kullananlarda ise aynı karton 20 güne kadar yeter."
+  },
+  {
+   "id": 40,
+   "tur": "metin",
+   "metin": "Cihaz Kaç Kullanım Sağlar?"
+  },
+  {
+   "id": 41,
+   "tur": "metin",
+   "metin": "Model seçiminde günlük tüketiminiz belirleyici olmalıdır:"
+  },
+  {
+   "id": 42,
+   "tur": "metin",
+   "metin": "IQOS ILUMA i ONE:"
+  },
+  {
+   "id": 43,
+   "tur": "metin",
+   "metin": "Tek parça gövdesiyle şarj arasında yaklaşık 20 kullanım sunar. Günde 10–15 çubuk kullanan ve cihazını akşamları şarja takabilen biri için yeterlidir."
+  },
+  {
+   "id": 44,
+   "tur": "metin",
+   "metin": "IQOS ILUMA i DUO:"
+  },
+  {
+   "id": 45,
+   "tur": "metin",
+   "metin": "Tutucu, cep şarj ünitesine takılmadan arka arkaya 2 kullanım sağlar. Gün içinde sık kullananlar için rahat bir düzendir."
+  },
+  {
+   "id": 46,
+   "tur": "metin",
+   "metin": "IQOS ILUMA i PRIME:"
+  },
+  {
+   "id": 47,
+   "tur": "metin",
+   "metin": "Serinin en geniş bataryasına sahip modeldir ve şarj ünitesiyle 20’ye yakın kullanım sunar. Yoğun kullananlar için en uygun seçenektir."
+  },
+  {
+   "id": 48,
+   "tur": "metin",
+   "metin": "Günlük kullanımınız 20 çubuğu aşıyorsa i ONE’ı gün ortasında şarj etmeniz gerekebilir; bu durumda i DUO ya da i PRIME daha konforlu bir tercih olur."
+  },
+  {
+   "id": 49,
+   "tur": "metin",
+   "metin": "Stok Planlaması Nasıl Yapılır?"
+  },
+  {
+   "id": 50,
+   "tur": "metin",
+   "metin": "Sık sık sipariş vermek yerine tüketiminize göre plan yapmak hem zamandan hem de kargo masrafından tasarruf sağlar. Basit bir formül:"
+  },
+  {
+   "id": 51,
+   "tur": "metin",
+   "metin": "Aylık ihtiyacınız = Günlük çubuk sayısı x 30 / 200 = kaç karton"
+  },
+  {
+   "id": 52,
+   "tur": "metin",
+   "metin": "Örneğin günde 12 çubuk kullanan biri için 12 x 30 = 360 çubuk eder; bu da ayda yaklaşık"
+  },
+  {
+   "id": 53,
+   "tur": "metin",
+   "metin": "1,8 karton"
+  },
+  {
+   "id": 54,
+   "tur": "metin",
+   "metin": ". Bu durumda ayda 2 karton almak mantıklı bir tercihtir."
+  },
+  {
+   "id": 55,
+   "tur": "metin",
+   "metin": "Aroma Çeşitliliğini Nasıl Yönetmeli?"
+  },
+  {
+   "id": 56,
+   "tur": "metin",
+   "metin": "Tek bir aromaya bağlı kalmak istemiyorsanız, aylık ihtiyacınızın bir bölümünü"
+  },
+  {
+   "id": 57,
+   "tur": "metin",
+   "metin": "karışık kartondan"
+  },
+  {
+   "id": 58,
+   "tur": "metin",
+   "metin": "karşılayabilirsiniz. Böylece alıştığınız tadı elinizde tutarken yeni çeşitleri de tam karton almadan denemiş olursunuz."
+  },
+  {
+   "id": 59,
+   "tur": "metin",
+   "metin": "Karışık kartonlar Avrupa, Dubai, Kıbrıs ve patlatmalı seriler için ayrı ayrı hazırlanır; denemek istediğiniz gruba göre seçim yapabilirsiniz."
+  },
+  {
+   "id": 60,
+   "tur": "metin",
+   "metin": "Saklama Koşulları"
+  },
+  {
+   "id": 61,
+   "tur": "metin",
+   "metin": "TEREA çubukları nemden ve sıcaklıktan etkilenir. Uzun süre saklayacaksanız şu noktalara dikkat edin:"
+  },
+  {
+   "id": 62,
+   "tur": "metin",
+   "metin": "Doğrudan güneş ışığı almayan, oda sıcaklığındaki bir yerde muhafaza edin."
+  },
+  {
+   "id": 63,
+   "tur": "metin",
+   "metin": "Açılmamış paketleri kartonun içinde bekletin."
+  },
+  {
+   "id": 64,
+   "tur": "metin",
+   "metin": "Buzdolabında ya da çok nemli ortamlarda saklamayın."
+  },
+  {
+   "id": 65,
+   "tur": "metin",
+   "metin": "Araç torpidosunda uzun süre bırakmayın; yaz aylarındaki sıcaklık aromayı bozar."
+  },
+  {
+   "id": 66,
+   "tur": "metin",
+   "metin": "Uygun koşullarda saklanan bir karton, tüketim hızınıza bağlı olarak aylarca tazeliğini korur."
+  },
+  {
+   "id": 67,
+   "tur": "metin",
+   "metin": "Tüketiminize uygun karton planı için IQOS Sepeti destek hattından yardım alabilirsiniz; kullanım alışkanlıklarınıza göre öneride bulunuyoruz."
+  },
+  {
+   "id": 68,
+   "tur": "metin",
+   "metin": "Yasal uyarı: Bu yazıda sözü edilen ürünler tütün ürünüdür ve bağımlılık yapan nikotin içerir. Tütün ısıtma sistemleri risksiz değildir; en doğru tercih tütün ve nikotin kullanmamaktır. 18 yaşından küçüklere satış yapılmaz."
+  }
+ ]
+}

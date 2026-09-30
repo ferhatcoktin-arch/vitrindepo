@@ -1,0 +1,50 @@
+{
+ "id": 46,
+ "tur": "sayfa",
+ "slug": "bize-ulasin",
+ "baslik": "Bize Ulaşın",
+ "rm": {},
+ "excerpt": "",
+ "parcalar": [
+  {
+   "id": 0,
+   "tur": "metin",
+   "metin": "İletişim ve Sipariş Hattı"
+  },
+  {
+   "id": 1,
+   "tur": "metin",
+   "metin": "Aklınıza takılan her konuda bize yazabilirsiniz; sorularınızı yanıtlamaktan memnuniyet duyarız."
+  },
+  {
+   "id": 2,
+   "tur": "metin",
+   "metin": "Satış Ekibimizle Görüşün"
+  },
+  {
+   "id": 3,
+   "tur": "metin",
+   "metin": "Ürünlerimiz hakkında bilgi almak ya da hızlıca sipariş vermek mi istiyorsunuz? Bizi hemen arayın veya WhatsApp’tan yazın."
+  },
+  {
+   "id": 4,
+   "tur": "metin",
+   "metin": "Teknik Destek"
+  },
+  {
+   "id": 5,
+   "tur": "metin",
+   "metin": "Cihazınızla ilgili küçük bir sorun mu yaşıyorsunuz? Endişelenmeyin, 7/24 yardım için buradayız."
+  },
+  {
+   "id": 6,
+   "tur": "kod:text",
+   "metin": "destek@iqossepeti.com"
+  },
+  {
+   "id": 7,
+   "tur": "metin",
+   "metin": "Bize Mesaj Gönderin"
+  }
+ ]
+}

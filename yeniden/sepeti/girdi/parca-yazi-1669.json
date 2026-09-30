@@ -1,0 +1,305 @@
+{
+ "id": 1669,
+ "tur": "yazi",
+ "slug": "iqos-iluma-bakim-ve-temizlik-rehberi-gercekten-temizlik-gerekiyor-mu",
+ "baslik": "IQOS ILUMA Bakım ve Temizlik Rehberi: Gerçekten Temizlik Gerekir mi?",
+ "rm": {},
+ "excerpt": "IQOS ILUMA gerçekten temizlik gerektirir mi? Bıçaksız tasarımın getirdiği kolaylıklar, günlük ve haftalık bakım rutini ve sık karşılaşılan sorunlara pratik çözümler.",
+ "parcalar": [
+  {
+   "id": 0,
+   "tur": "metin",
+   "metin": "✦ BAKIM REHBERİ"
+  },
+  {
+   "id": 1,
+   "tur": "metin",
+   "metin": "IQOS ILUMA Bakım ve Temizlik Rehberi: Gerçekten Temizlik Gerekir mi?"
+  },
+  {
+   "id": 2,
+   "tur": "metin",
+   "metin": "Kısaca yanıtlayalım: hayır, en azından eski nesil IQOS’lardan alışık olduğunuz şekilde değil. ILUMA’nın bıçaksız tasarımı işin en zahmetli kısmını zaten ortadan kaldırıyor. Yine de cihazınızı uzun süre sorunsuz kullanmak için birkaç basit alışkanlık fayda sağlar."
+  },
+  {
+   "id": 3,
+   "tur": "metin",
+   "metin": "İç Temizlik Gerekmez"
+  },
+  {
+   "id": 4,
+   "tur": "metin",
+   "metin": "Bıçaksız Tasarım"
+  },
+  {
+   "id": 5,
+   "tur": "metin",
+   "metin": "SMARTCORE INDUCTION sisteminde ısıtma bıçağı bulunmaz; kül ya da tütün kalıntısı cihazın içine dökülmez."
+  },
+  {
+   "id": 6,
+   "tur": "metin",
+   "metin": "Dış Yüzeyi Düzenli Silin"
+  },
+  {
+   "id": 7,
+   "tur": "metin",
+   "metin": "Kuru Bir Bez Yeterli"
+  },
+  {
+   "id": 8,
+   "tur": "metin",
+   "metin": "Tutucunun ve şarj ünitesinin dışını haftada bir kuru ya da hafif nemli bir bezle silmeniz yeterlidir."
+  },
+  {
+   "id": 9,
+   "tur": "metin",
+   "metin": "Şarj Alışkanlıklarına Dikkat"
+  },
+  {
+   "id": 10,
+   "tur": "metin",
+   "metin": "Bataryayı Koruyun"
+  },
+  {
+   "id": 11,
+   "tur": "metin",
+   "metin": "Cihazı aşırı sıcak ya da soğukta bırakmamak ve düzenli şarj etmek, batarya ömrünü uzatmanın en kolay yoludur."
+  },
+  {
+   "id": 12,
+   "tur": "metin",
+   "metin": "Eski IQOS Modellerinden Farkı Nedir?"
+  },
+  {
+   "id": 13,
+   "tur": "metin",
+   "metin": "Eski nesil IQOS’larda tütünü ısıtan bir"
+  },
+  {
+   "id": 14,
+   "tur": "metin",
+   "metin": "metal bıçak"
+  },
+  {
+   "id": 15,
+   "tur": "metin",
+   "metin": "bulunurdu ve bu bıçağın düzenli olarak temizlenmesi gerekirdi."
+  },
+  {
+   "id": 16,
+   "tur": "metin",
+   "metin": "ILUMA’da bıçak yoktur; TEREA çubuğunun"
+  },
+  {
+   "id": 17,
+   "tur": "metin",
+   "metin": "alt kısmı kapalı"
+  },
+  {
+   "id": 18,
+   "tur": "metin",
+   "metin": "olduğundan cihazın içine tütün dökülmez."
+  },
+  {
+   "id": 19,
+   "tur": "metin",
+   "metin": "Sonuç olarak kül ve katran birikmediği için"
+  },
+  {
+   "id": 20,
+   "tur": "metin",
+   "metin": "iç temizliğe gerek kalmaz"
+  },
+  {
+   "id": 21,
+   "tur": "metin",
+   "metin": "Bununla birlikte"
+  },
+  {
+   "id": 22,
+   "tur": "metin",
+   "metin": "dış yüzey ve şarj temas noktaları"
+  },
+  {
+   "id": 23,
+   "tur": "metin",
+   "metin": "için edineceğiniz birkaç basit alışkanlık cihazın ömrünü uzatır."
+  },
+  {
+   "id": 24,
+   "tur": "metin",
+   "metin": "Bakım Rutini"
+  },
+  {
+   "id": 25,
+   "tur": "metin",
+   "metin": "Günlük"
+  },
+  {
+   "id": 26,
+   "tur": "metin",
+   "metin": "Haftalık"
+  },
+  {
+   "id": 27,
+   "tur": "metin",
+   "metin": "Sorun mu Yaşıyorsunuz?"
+  },
+  {
+   "id": 28,
+   "tur": "metin",
+   "metin": "Her kullanımın ardından"
+  },
+  {
+   "id": 29,
+   "tur": "metin",
+   "metin": "Kullanım bittiğinde cihazın birkaç saniye soğumasını bekleyin, ardından kaldırın."
+  },
+  {
+   "id": 30,
+   "tur": "metin",
+   "metin": "Tutucuyu şarj ünitesine tam oturacak şekilde yerleştirin; tam oturmaması şarj sorunlarına neden olabilir."
+  },
+  {
+   "id": 31,
+   "tur": "metin",
+   "metin": "Gün içinde cihazı banyo ya da yağmur gibi nemli ve ıslak ortamlardan uzak tutun."
+  },
+  {
+   "id": 32,
+   "tur": "metin",
+   "metin": "Haftada bir kez"
+  },
+  {
+   "id": 33,
+   "tur": "metin",
+   "metin": "Tutucunun ve şarj ünitesinin dış yüzeyini, cihaz kapalıyken kuru ya da yalnızca suyla hafifçe nemlendirilmiş yumuşak bir bezle silin."
+  },
+  {
+   "id": 34,
+   "tur": "metin",
+   "metin": "USB-C şarj girişini kontrol edin; toz birikmişse nazikçe temizleyin."
+  },
+  {
+   "id": 35,
+   "tur": "metin",
+   "metin": "Darbelere karşı kılıf kullanıyorsanız kılıfın içini de kontrol edin; zamanla toz birikebilir."
+  },
+  {
+   "id": 36,
+   "tur": "metin",
+   "metin": "Sık karşılaşılan durumlar"
+  },
+  {
+   "id": 37,
+   "tur": "metin",
+   "metin": "Kırmızı ışık yanıyorsa:"
+  },
+  {
+   "id": 38,
+   "tur": "metin",
+   "metin": "Cihaz çoğunlukla aşırı ısınmış ya da soğumuştur; birkaç dakika dinlendirip oda sıcaklığına gelmesini bekleyin."
+  },
+  {
+   "id": 39,
+   "tur": "metin",
+   "metin": "Şarj ünitesi yanıt vermiyorsa:"
+  },
+  {
+   "id": 40,
+   "tur": "metin",
+   "metin": "Tüm ışıklar sönene kadar düğmeyi yaklaşık 10 saniye basılı tutarak cihazı yeniden başlatmayı deneyin."
+  },
+  {
+   "id": 41,
+   "tur": "metin",
+   "metin": "Şarj olmuyorsa:"
+  },
+  {
+   "id": 42,
+   "tur": "metin",
+   "metin": "USB-C kabloyu ve girişi kontrol edin; farklı bir kablo ya da adaptörle deneyin."
+  },
+  {
+   "id": 43,
+   "tur": "metin",
+   "metin": "❌ Kaçınılması Gerekenler"
+  },
+  {
+   "id": 44,
+   "tur": "metin",
+   "metin": "Cihazı suya batırmayın ve içini ıslak bezle silmeyin"
+  },
+  {
+   "id": 45,
+   "tur": "metin",
+   "metin": "Alkol içeren temizlik ürünleri ya da mendiller kullanmayın; iç bileşenlere zarar verebilir"
+  },
+  {
+   "id": 46,
+   "tur": "metin",
+   "metin": "Cihazı doğrudan güneş altında ya da aşırı sıcak veya soğuk ortamda bırakmayın"
+  },
+  {
+   "id": 47,
+   "tur": "metin",
+   "metin": "Temizlik sırasında fazla bastırmayın; hassas parçalar zarar görebilir"
+  },
+  {
+   "id": 48,
+   "tur": "metin",
+   "metin": "Sık Sorulan Sorular"
+  },
+  {
+   "id": 49,
+   "tur": "metin",
+   "metin": "IQOS ILUMA’nın içini temizlemem gerekir mi?"
+  },
+  {
+   "id": 50,
+   "tur": "metin",
+   "metin": "Hayır. ILUMA serisi bıçaksız SMARTCORE INDUCTION teknolojisiyle çalışır ve TEREA çubuğunun alt kısmı kapalı olduğundan cihazın içine kül ya da tütün kalıntısı dökülmez. Bu nedenle eski nesil bıçaklı IQOS modellerinin aksine düzenli iç temizlik gerektirmez."
+  },
+  {
+   "id": 51,
+   "tur": "metin",
+   "metin": "Cihazım kırmızı ışık yakıyor, ne yapmalıyım?"
+  },
+  {
+   "id": 52,
+   "tur": "metin",
+   "metin": "Bu genellikle cihazın aşırı ısındığını ya da soğuduğunu gösterir. Birkaç dakika dinlendirip oda sıcaklığına gelmesini bekleyin; sorun sürerse şarj ünitesinin düğmesini ışıklar sönene kadar yaklaşık 10 saniye basılı tutarak cihazı yeniden başlatın."
+  },
+  {
+   "id": 53,
+   "tur": "metin",
+   "metin": "Temizlik için alkollü mendil kullanabilir miyim?"
+  },
+  {
+   "id": 54,
+   "tur": "metin",
+   "metin": "Önerilmez. Alkol içeren temizlik ürünleri cihazın iç bileşenlerine ve yüzey kaplamasına zarar verebilir. Dış yüzey için cihaz kapalıyken kuru ya da yalnızca suyla hafifçe nemlendirilmiş yumuşak bir bez yeterlidir."
+  },
+  {
+   "id": 55,
+   "tur": "metin",
+   "metin": "Cihazınızı Yenilemeye Ne Dersiniz?"
+  },
+  {
+   "id": 56,
+   "tur": "metin",
+   "metin": "Tüm IQOS ILUMA i modelleri İstanbul içinde aynı gün teslimat ve kapıda ödeme kolaylığıyla kapınızda."
+  },
+  {
+   "id": 57,
+   "tur": "metin",
+   "metin": "Cihazları İnceleyin"
+  },
+  {
+   "id": 58,
+   "tur": "metin",
+   "metin": "TEREA Çeşitlerini İnceleyin"
+  }
+ ]
+}

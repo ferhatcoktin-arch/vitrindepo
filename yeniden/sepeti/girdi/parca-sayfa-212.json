@@ -1,0 +1,1345 @@
+{
+ "id": 212,
+ "tur": "sayfa",
+ "slug": "anasayfa",
+ "baslik": "Anasayfa",
+ "rm": {},
+ "excerpt": "",
+ "parcalar": [
+  {
+   "id": 0,
+   "tur": "metin",
+   "metin": "IQOS ILUMA Cihazları ve Tüm TEREA Çeşitleri"
+  },
+  {
+   "id": 1,
+   "tur": "metin",
+   "metin": "Orijinal IQOS ILUMA cihazları ve TEREA’nın tüm çeşitleri, güncel stok bilgisiyle IQOS Sepeti’nde. İstanbul içinde aynı gün moto kuryeyle, Türkiye’nin her yerine hızlı kargoyla teslimat."
+  },
+  {
+   "id": 2,
+   "tur": "oznitelik:alt",
+   "metin": "IQOS ILUMA i ONE Lacivert"
+  },
+  {
+   "id": 3,
+   "tur": "oznitelik:alt",
+   "metin": "IQOS ILUMA i ONE Turkuaz"
+  },
+  {
+   "id": 4,
+   "tur": "oznitelik:alt",
+   "metin": "IQOS ILUMA i ONE Mor"
+  },
+  {
+   "id": 5,
+   "tur": "metin",
+   "metin": "IQOS ILUMA i ONE"
+  },
+  {
+   "id": 6,
+   "tur": "metin",
+   "metin": "Tüm modelleri görüntüle →"
+  },
+  {
+   "id": 7,
+   "tur": "oznitelik:alt",
+   "metin": "IQOS ILUMA i DUO Turkuaz"
+  },
+  {
+   "id": 8,
+   "tur": "oznitelik:alt",
+   "metin": "IQOS ILUMA i DUO Mor"
+  },
+  {
+   "id": 9,
+   "tur": "oznitelik:alt",
+   "metin": "IQOS ILUMA i DUO Yeşil"
+  },
+  {
+   "id": 10,
+   "tur": "metin",
+   "metin": "IQOS ILUMA i DUO"
+  },
+  {
+   "id": 11,
+   "tur": "metin",
+   "metin": "Tüm modelleri görüntüle →"
+  },
+  {
+   "id": 12,
+   "tur": "oznitelik:alt",
+   "metin": "IQOS ILUMA i PRIME Turkuaz"
+  },
+  {
+   "id": 13,
+   "tur": "oznitelik:alt",
+   "metin": "IQOS ILUMA i PRIME Bordo"
+  },
+  {
+   "id": 14,
+   "tur": "oznitelik:alt",
+   "metin": "IQOS ILUMA i PRIME Gece Siyahı"
+  },
+  {
+   "id": 15,
+   "tur": "metin",
+   "metin": "IQOS ILUMA i PRIME"
+  },
+  {
+   "id": 16,
+   "tur": "metin",
+   "metin": "Tüm modelleri görüntüle →"
+  },
+  {
+   "id": 17,
+   "tur": "oznitelik:alt",
+   "metin": "IQOS ILUMA i ONE Lacivert ve TEREA"
+  },
+  {
+   "id": 18,
+   "tur": "oznitelik:alt",
+   "metin": "IQOS ILUMA i ONE Turkuaz ve TEREA"
+  },
+  {
+   "id": 19,
+   "tur": "oznitelik:alt",
+   "metin": "IQOS ILUMA i ONE Mor ve TEREA"
+  },
+  {
+   "id": 20,
+   "tur": "metin",
+   "metin": "ILUMA i ONE + TEREA"
+  },
+  {
+   "id": 21,
+   "tur": "metin",
+   "metin": "Kampanyalı paketler →"
+  },
+  {
+   "id": 22,
+   "tur": "oznitelik:alt",
+   "metin": "IQOS ILUMA i DUO Lacivert ve TEREA"
+  },
+  {
+   "id": 23,
+   "tur": "oznitelik:alt",
+   "metin": "IQOS ILUMA i DUO Turkuaz ve TEREA"
+  },
+  {
+   "id": 24,
+   "tur": "oznitelik:alt",
+   "metin": "IQOS ILUMA i DUO Mor ve TEREA"
+  },
+  {
+   "id": 25,
+   "tur": "metin",
+   "metin": "ILUMA i DUO + TEREA"
+  },
+  {
+   "id": 26,
+   "tur": "metin",
+   "metin": "Kampanyalı paketler →"
+  },
+  {
+   "id": 27,
+   "tur": "oznitelik:alt",
+   "metin": "IQOS ILUMA i PRIME Lacivert ve TEREA"
+  },
+  {
+   "id": 28,
+   "tur": "oznitelik:alt",
+   "metin": "IQOS ILUMA i PRIME Turkuaz ve TEREA"
+  },
+  {
+   "id": 29,
+   "tur": "oznitelik:alt",
+   "metin": "IQOS ILUMA i PRIME Yeşil ve TEREA"
+  },
+  {
+   "id": 30,
+   "tur": "metin",
+   "metin": "ILUMA i PRIME + TEREA"
+  },
+  {
+   "id": 31,
+   "tur": "metin",
+   "metin": "Kampanyalı paketler →"
+  },
+  {
+   "id": 32,
+   "tur": "oznitelik:alt",
+   "metin": "Amber TEREA"
+  },
+  {
+   "id": 33,
+   "tur": "oznitelik:alt",
+   "metin": "Blue TEREA"
+  },
+  {
+   "id": 34,
+   "tur": "oznitelik:alt",
+   "metin": "Mauve TEREA"
+  },
+  {
+   "id": 35,
+   "tur": "metin",
+   "metin": "Avrupa TEREA Çeşitleri"
+  },
+  {
+   "id": 36,
+   "tur": "metin",
+   "metin": "Kategoriyi görüntüle →"
+  },
+  {
+   "id": 37,
+   "tur": "oznitelik:alt",
+   "metin": "Amber TEREA Dubai"
+  },
+  {
+   "id": 38,
+   "tur": "oznitelik:alt",
+   "metin": "Silver TEREA Dubai"
+  },
+  {
+   "id": 39,
+   "tur": "oznitelik:alt",
+   "metin": "Sienna TEREA Dubai"
+  },
+  {
+   "id": 40,
+   "tur": "metin",
+   "metin": "Dubai TEREA Çeşitleri"
+  },
+  {
+   "id": 41,
+   "tur": "metin",
+   "metin": "Kategoriyi görüntüle →"
+  },
+  {
+   "id": 42,
+   "tur": "oznitelik:alt",
+   "metin": "Amber TEREA Kıbrıs"
+  },
+  {
+   "id": 43,
+   "tur": "oznitelik:alt",
+   "metin": "Silver TEREA Kıbrıs"
+  },
+  {
+   "id": 44,
+   "tur": "oznitelik:alt",
+   "metin": "Purple Wave TEREA Kıbrıs"
+  },
+  {
+   "id": 45,
+   "tur": "metin",
+   "metin": "Kıbrıs TEREA Çeşitleri"
+  },
+  {
+   "id": 46,
+   "tur": "metin",
+   "metin": "Kategoriyi görüntüle →"
+  },
+  {
+   "id": 47,
+   "tur": "oznitelik:alt",
+   "metin": "Black Menthol TEREA Japonya"
+  },
+  {
+   "id": 48,
+   "tur": "oznitelik:alt",
+   "metin": "Blossom Pearl TEREA Japonya"
+  },
+  {
+   "id": 49,
+   "tur": "oznitelik:alt",
+   "metin": "Regular TEREA Japonya"
+  },
+  {
+   "id": 50,
+   "tur": "metin",
+   "metin": "Japonya TEREA Çeşitleri"
+  },
+  {
+   "id": 51,
+   "tur": "metin",
+   "metin": "Kategoriyi görüntüle →"
+  },
+  {
+   "id": 52,
+   "tur": "oznitelik:alt",
+   "metin": "Starling Pearl TEREA"
+  },
+  {
+   "id": 53,
+   "tur": "oznitelik:alt",
+   "metin": "Sun Pearl TEREA"
+  },
+  {
+   "id": 54,
+   "tur": "oznitelik:alt",
+   "metin": "Tidal Pearl TEREA"
+  },
+  {
+   "id": 55,
+   "tur": "metin",
+   "metin": "Patlatmalı Özel Seri TEREA"
+  },
+  {
+   "id": 56,
+   "tur": "metin",
+   "metin": "Kategoriyi görüntüle →"
+  },
+  {
+   "id": 57,
+   "tur": "oznitelik:alt",
+   "metin": "Abora Pearl TEREA"
+  },
+  {
+   "id": 58,
+   "tur": "oznitelik:alt",
+   "metin": "Zing Wave TEREA"
+  },
+  {
+   "id": 59,
+   "tur": "oznitelik:alt",
+   "metin": "Oasis Pearl TEREA"
+  },
+  {
+   "id": 60,
+   "tur": "metin",
+   "metin": "Premium Özel Seri TEREA"
+  },
+  {
+   "id": 61,
+   "tur": "metin",
+   "metin": "Kategoriyi görüntüle →"
+  },
+  {
+   "id": 62,
+   "tur": "oznitelik:alt",
+   "metin": "Avrupa TEREA Karışık Karton"
+  },
+  {
+   "id": 63,
+   "tur": "oznitelik:alt",
+   "metin": "Dubai TEREA Karışık Karton"
+  },
+  {
+   "id": 64,
+   "tur": "oznitelik:alt",
+   "metin": "Kıbrıs TEREA Karışık Karton"
+  },
+  {
+   "id": 65,
+   "tur": "metin",
+   "metin": "Karışık Remix TEREA"
+  },
+  {
+   "id": 66,
+   "tur": "metin",
+   "metin": "Karışık kartonları görüntüle →"
+  },
+  {
+   "id": 67,
+   "tur": "oznitelik:alt",
+   "metin": "Avrupa TEREA Karışık Karton"
+  },
+  {
+   "id": 68,
+   "tur": "oznitelik:alt",
+   "metin": "Dubai TEREA Karışık Karton"
+  },
+  {
+   "id": 69,
+   "tur": "oznitelik:alt",
+   "metin": "Kıbrıs TEREA Karışık Karton"
+  },
+  {
+   "id": 70,
+   "tur": "metin",
+   "metin": "Karışık TEREA Çeşitleri"
+  },
+  {
+   "id": 71,
+   "tur": "metin",
+   "metin": "Karışık kartonları görüntüle →"
+  },
+  {
+   "id": 72,
+   "tur": "oznitelik:alt",
+   "metin": "IQOS ILUMA i ONE avantajlı paket"
+  },
+  {
+   "id": 73,
+   "tur": "oznitelik:alt",
+   "metin": "IQOS ILUMA i DUO avantajlı paket"
+  },
+  {
+   "id": 74,
+   "tur": "oznitelik:alt",
+   "metin": "IQOS ILUMA i PRIME avantajlı paket"
+  },
+  {
+   "id": 75,
+   "tur": "metin",
+   "metin": "Avantajlı Paketler"
+  },
+  {
+   "id": 76,
+   "tur": "metin",
+   "metin": "Paketleri görüntüle →"
+  },
+  {
+   "id": 77,
+   "tur": "kod:title",
+   "metin": "İstanbul İçi Aynı Gün Teslimat"
+  },
+  {
+   "id": 78,
+   "tur": "metin",
+   "metin": "İstanbul içindeki siparişleri kendi moto kurye ekibimizle aynı gün, şehir dışı siparişleri ise anlaşmalı kargo firmalarıyla en kısa sürede adresinize ulaştırıyoruz."
+  },
+  {
+   "id": 79,
+   "tur": "kod:title",
+   "metin": "Kapıda Ödeme Güvencesi"
+  },
+  {
+   "id": 80,
+   "tur": "metin",
+   "metin": "Sitemizde kartla ödeme alınmaz. İstanbul içinde ödemeyi kapıda nakit olarak, şehir dışında ise Havale/EFT ile kolayca yapabilirsiniz."
+  },
+  {
+   "id": 81,
+   "tur": "kod:title",
+   "metin": "7/24 Kesintisiz Destek"
+  },
+  {
+   "id": 82,
+   "tur": "metin",
+   "metin": "Satış öncesinde ve sonrasında aklınıza takılan her soru için yanınızdayız. +90 501 579 45 61 numaralı destek hattımızdan ya da e-postayla bize dilediğiniz zaman ulaşabilirsiniz."
+  },
+  {
+   "id": 83,
+   "tur": "kod:text",
+   "metin": "blog yazıları"
+  },
+  {
+   "id": 84,
+   "tur": "metin",
+   "metin": "IQOS ILUMA Nedir ve Nasıl Çalışır?"
+  },
+  {
+   "id": 85,
+   "tur": "metin",
+   "metin": "IQOS ILUMA, tütünü yakmadan kontrollü şekilde ısıtan bir tütün ısıtma sistemidir. Philip Morris International’ın geliştirdiği bu sistemde tütün çubuğu ateşle temas etmez; bu yüzden klasik sigaradaki kül ve yanma dumanı oluşmaz. Kullanıcı, ısıtma sırasında oluşan aerosolü solur."
+  },
+  {
+   "id": 86,
+   "tur": "metin",
+   "metin": "ILUMA serisini önceki nesillerden ayıran temel yenilik"
+  },
+  {
+   "id": 87,
+   "tur": "metin",
+   "metin": "indüksiyonlu ısıtma"
+  },
+  {
+   "id": 88,
+   "tur": "metin",
+   "metin": "teknolojisidir. Cihazda ısıtma bıçağı ya da ısıtma çubuğu yoktur; ısı, TEREA çubuğunun içindeki metal şeridin manyetik alanla ısıtılmasıyla üretilir. Bıçak olmadığı için cihazda tütün kalıntısı birikmez; bu da düzenli temizlik ihtiyacını büyük ölçüde ortadan kaldırır ve kırılma riskini yok eder."
+  },
+  {
+   "id": 89,
+   "tur": "metin",
+   "metin": "ILUMA cihazları yalnızca TEREA çubuklarıyla çalışır. Önceki nesle ait HEETS çubukları ILUMA serisiyle"
+  },
+  {
+   "id": 90,
+   "tur": "metin",
+   "metin": "uyumlu değildir"
+  },
+  {
+   "id": 91,
+   "tur": "metin",
+   "metin": "; HEETS sadece bıçaklı eski nesil cihazlarda kullanılabilir."
+  },
+  {
+   "id": 92,
+   "tur": "metin",
+   "metin": "IQOS ILUMA Modelleri Arasındaki Farklar Nelerdir?"
+  },
+  {
+   "id": 93,
+   "tur": "metin",
+   "metin": "ILUMA i ailesinde üç ana model bulunur. Hangisinin size uygun olduğu çoğunlukla arka arkaya kaç kullanım istediğinize ve cihazı nasıl taşımayı tercih ettiğinize bağlıdır."
+  },
+  {
+   "id": 94,
+   "tur": "metin",
+   "metin": "Model"
+  },
+  {
+   "id": 95,
+   "tur": "metin",
+   "metin": "Arka arkaya kullanım"
+  },
+  {
+   "id": 96,
+   "tur": "metin",
+   "metin": "Öne çıkan özellik"
+  },
+  {
+   "id": 97,
+   "tur": "metin",
+   "metin": "Kimin için uygun"
+  },
+  {
+   "id": 98,
+   "tur": "metin",
+   "metin": "IQOS ILUMA i ONE"
+  },
+  {
+   "id": 99,
+   "tur": "metin",
+   "metin": "Tek parça gövde, bir şarjla ~20 kullanım"
+  },
+  {
+   "id": 100,
+   "tur": "metin",
+   "metin": "Cebe sığan kompakt tek gövde, ayrı şarj ünitesi gerekmez"
+  },
+  {
+   "id": 101,
+   "tur": "metin",
+   "metin": "Günde az kullanan ve sadelik arayanlar"
+  },
+  {
+   "id": 102,
+   "tur": "metin",
+   "metin": "IQOS ILUMA i DUO"
+  },
+  {
+   "id": 103,
+   "tur": "metin",
+   "metin": "Şarj ünitesine takmadan arka arkaya 2 kullanım"
+  },
+  {
+   "id": 104,
+   "tur": "metin",
+   "metin": "Tutucu ve cep şarj ünitesi, dokunmatik ekran"
+  },
+  {
+   "id": 105,
+   "tur": "metin",
+   "metin": "Gün boyunca sık kullananlar"
+  },
+  {
+   "id": 106,
+   "tur": "metin",
+   "metin": "IQOS ILUMA i PRIME"
+  },
+  {
+   "id": 107,
+   "tur": "metin",
+   "metin": "Şarj ünitesiyle yaklaşık 20 kullanım"
+  },
+  {
+   "id": 108,
+   "tur": "metin",
+   "metin": "Deri dokulu kapak, en geniş batarya ve premium tasarım"
+  },
+  {
+   "id": 109,
+   "tur": "metin",
+   "metin": "Yoğun kullananlar ve tasarıma önem verenler"
+  },
+  {
+   "id": 110,
+   "tur": "metin",
+   "metin": "Üç modelde de"
+  },
+  {
+   "id": 111,
+   "tur": "metin",
+   "metin": "Akıllı Başlatma"
+  },
+  {
+   "id": 112,
+   "tur": "metin",
+   "metin": "ve"
+  },
+  {
+   "id": 113,
+   "tur": "metin",
+   "metin": "Duraklat"
+  },
+  {
+   "id": 114,
+   "tur": "metin",
+   "metin": "gibi ILUMA i serisine özgü özellikler vardır: çubuğu yerleştirdiğinizde ısıtma kendiliğinden başlar, ara verdiğinizde ise kullanım duraklatılarak çubuğun boşa harcanması önlenir."
+  },
+  {
+   "id": 115,
+   "tur": "metin",
+   "metin": "TEREA Nedir ve Hangi Çeşitleri Vardır?"
+  },
+  {
+   "id": 116,
+   "tur": "metin",
+   "metin": "TEREA, ILUMA cihazları için özel olarak üretilen tütün çubuğudur. Her pakette 20 çubuk, her kartonda 10 paket (200 çubuk) bulunur. Çubuğun içindeki metal şerit tütünün eşit ısınmasını sağlar, böylece aroma içim boyunca dengeli kalır."
+  },
+  {
+   "id": 117,
+   "tur": "metin",
+   "metin": "TEREA çeşitlerini kabaca şu gruplara ayırabiliriz:"
+  },
+  {
+   "id": 118,
+   "tur": "metin",
+   "metin": "Klasik tütün profilleri:"
+  },
+  {
+   "id": 119,
+   "tur": "metin",
+   "metin": "Amber, Sienna, Bronze, Yellow ve Silver gibi çeşitleri"
+  },
+  {
+   "id": 120,
+   "tur": "metin",
+   "metin": "Avrupa TEREA çeşitleri"
+  },
+  {
+   "id": 121,
+   "tur": "metin",
+   "metin": "Dubai TEREA çeşitleri"
+  },
+  {
+   "id": 122,
+   "tur": "metin",
+   "metin": "ve"
+  },
+  {
+   "id": 123,
+   "tur": "metin",
+   "metin": "Kıbrıs TEREA çeşitleri"
+  },
+  {
+   "id": 124,
+   "tur": "metin",
+   "metin": "sayfalarından karşılaştırabilirsiniz."
+  },
+  {
+   "id": 125,
+   "tur": "metin",
+   "metin": "Mentollü seriler:"
+  },
+  {
+   "id": 126,
+   "tur": "metin",
+   "metin": "Turquoise, Green, Blue ve Black Menthol gibi serin seçenekler için"
+  },
+  {
+   "id": 127,
+   "tur": "metin",
+   "metin": "Japonya TEREA çeşitleri"
+  },
+  {
+   "id": 128,
+   "tur": "metin",
+   "metin": "sayfasına ve Avrupa serisine göz atabilirsiniz."
+  },
+  {
+   "id": 129,
+   "tur": "metin",
+   "metin": "Patlatmalı (kapsüllü) seriler:"
+  },
+  {
+   "id": 130,
+   "tur": "metin",
+   "metin": "Pearl ve Wave ailesinden, kapsülle tat değiştiren ürünler için"
+  },
+  {
+   "id": 131,
+   "tur": "metin",
+   "metin": "Patlatmalı Özel Seri TEREA"
+  },
+  {
+   "id": 132,
+   "tur": "metin",
+   "metin": "ve"
+  },
+  {
+   "id": 133,
+   "tur": "metin",
+   "metin": "Premium Özel Seri TEREA"
+  },
+  {
+   "id": 134,
+   "tur": "metin",
+   "metin": "kategorilerini inceleyebilirsiniz."
+  },
+  {
+   "id": 135,
+   "tur": "metin",
+   "metin": "Karışık kartonlar:"
+  },
+  {
+   "id": 136,
+   "tur": "metin",
+   "metin": "Farklı profilleri tek kartonda denemek isterseniz"
+  },
+  {
+   "id": 137,
+   "tur": "metin",
+   "metin": "Karışık TEREA Çeşitleri"
+  },
+  {
+   "id": 138,
+   "tur": "metin",
+   "metin": "ve"
+  },
+  {
+   "id": 139,
+   "tur": "metin",
+   "metin": "Karışık Remix TEREA"
+  },
+  {
+   "id": 140,
+   "tur": "metin",
+   "metin": "sayfalarına bakabilirsiniz."
+  },
+  {
+   "id": 141,
+   "tur": "metin",
+   "metin": "Avrupa, Dubai ve Kıbrıs Serileri Arasındaki Farklar"
+  },
+  {
+   "id": 142,
+   "tur": "metin",
+   "metin": "Aynı adı taşıyan TEREA çeşitleri farklı menşelerde üretilebilir. Bu fark, ürünün orijinal olup olmamasıyla ilgili değildir; değişen yalnızca üretim tesisi, paket tasarımı ve bandrol uygulamasıdır."
+  },
+  {
+   "id": 143,
+   "tur": "metin",
+   "metin": "Avrupa serisi:"
+  },
+  {
+   "id": 144,
+   "tur": "metin",
+   "metin": "Avrupa tesislerinde üretilen ve en kolay bulunan seridir; aroma profilleri genellikle referans kabul edilir."
+  },
+  {
+   "id": 145,
+   "tur": "metin",
+   "metin": "Dubai serisi:"
+  },
+  {
+   "id": 146,
+   "tur": "metin",
+   "metin": "Orta Doğu pazarına yönelik üretilir. Bazı kullanıcılar bu serinin tütün gövdesini biraz daha dolgun bulur."
+  },
+  {
+   "id": 147,
+   "tur": "metin",
+   "metin": "Kıbrıs serisi:"
+  },
+  {
+   "id": 148,
+   "tur": "metin",
+   "metin": "Türkçe bandrollü paketlerden oluşur ve Türkiye’de en çok tercih edilen gruplardandır."
+  },
+  {
+   "id": 149,
+   "tur": "metin",
+   "metin": "Hangi menşeyin size uygun olduğundan emin değilseniz karışık kartonlarla başlamak en pratik yoldur; tek kartonda birkaç aromayı deneyerek tercihinizi netleştirebilirsiniz."
+  },
+  {
+   "id": 150,
+   "tur": "metin",
+   "metin": "Orijinal Ürün Nasıl Anlaşılır?"
+  },
+  {
+   "id": 151,
+   "tur": "metin",
+   "metin": "Piyasada taklit cihaz ve çubuklar bulunabiliyor. Ürünü teslim aldığınızda aşağıdaki noktaları kontrol etmeniz yeterlidir:"
+  },
+  {
+   "id": 152,
+   "tur": "metin",
+   "metin": "Paket baskısı net ve keskin olmalı, renk geçişlerinde bulanıklık görülmemelidir."
+  },
+  {
+   "id": 153,
+   "tur": "metin",
+   "metin": "Karton ve paketlerdeki seri numaraları birbiriyle uyumlu olmalıdır."
+  },
+  {
+   "id": 154,
+   "tur": "metin",
+   "metin": "Kıbrıs serisinde bandrol hasarsız ve okunaklı olmalıdır."
+  },
+  {
+   "id": 155,
+   "tur": "metin",
+   "metin": "Cihaz kutusunun içeriği eksiksiz olmalıdır: cihaz, şarj kablosu, temizlik aparatı ve garanti/kullanım kılavuzu."
+  },
+  {
+   "id": 156,
+   "tur": "metin",
+   "metin": "Cihaz gövdesindeki yazılar silik olmamalı, kapak mekanizmasında boşluk bulunmamalıdır."
+  },
+  {
+   "id": 157,
+   "tur": "metin",
+   "metin": "IQOS Sepeti’nde satılan tüm cihaz ve çubuklar orijinaldir. Teslimat sırasında ürünü inceleyerek kararınızı verebilirsiniz."
+  },
+  {
+   "id": 158,
+   "tur": "metin",
+   "metin": "Teslimat, Ödeme ve Müşteri Desteği"
+  },
+  {
+   "id": 159,
+   "tur": "metin",
+   "metin": "İstanbul içindeki siparişler kendi moto kurye ekibimizle"
+  },
+  {
+   "id": 160,
+   "tur": "metin",
+   "metin": "gün içinde"
+  },
+  {
+   "id": 161,
+   "tur": "metin",
+   "metin": "teslim edilir. Diğer illere gönderiler anlaşmalı kargo firmalarıyla yapılır ve çoğunlukla 1–3 iş günü içinde adresinize ulaşır."
+  },
+  {
+   "id": 162,
+   "tur": "metin",
+   "metin": "Sitemizde kartla ödeme alınmaz. İstanbul içinde ödemeyi kapıda nakit olarak yapabilir, şehir dışı siparişlerde Havale/EFT ile ödeyebilirsiniz. Stok durumu, aroma önerisi ya da cihaz seçimiyle ilgili sorularınız için WhatsApp destek hattımıza 7/24 yazabilirsiniz."
+  },
+  {
+   "id": 163,
+   "tur": "metin",
+   "metin": "TEREA Aroma Seçim Rehberi"
+  },
+  {
+   "id": 164,
+   "tur": "metin",
+   "metin": "Aroma seçimi kişiseldir; yine de daha önce içtiğiniz sigaranın karakterine yakın bir TEREA ile başlamak geçişi kolaylaştırır. Aşağıdaki tablo, en çok tercih edilen çeşitleri gövde ve aroma yoğunluğuna göre özetler."
+  },
+  {
+   "id": 165,
+   "tur": "metin",
+   "metin": "TEREA çeşidi"
+  },
+  {
+   "id": 166,
+   "tur": "metin",
+   "metin": "Aroma karakteri"
+  },
+  {
+   "id": 167,
+   "tur": "metin",
+   "metin": "Gövde"
+  },
+  {
+   "id": 168,
+   "tur": "metin",
+   "metin": "Mentol"
+  },
+  {
+   "id": 169,
+   "tur": "metin",
+   "metin": "Amber"
+  },
+  {
+   "id": 170,
+   "tur": "metin",
+   "metin": "Odunsu, kavrulmuş kuruyemiş"
+  },
+  {
+   "id": 171,
+   "tur": "metin",
+   "metin": "Dolgun"
+  },
+  {
+   "id": 172,
+   "tur": "metin",
+   "metin": "Yok"
+  },
+  {
+   "id": 173,
+   "tur": "metin",
+   "metin": "Sienna"
+  },
+  {
+   "id": 174,
+   "tur": "metin",
+   "metin": "Yoğun klasik tütün"
+  },
+  {
+   "id": 175,
+   "tur": "metin",
+   "metin": "Çok dolgun"
+  },
+  {
+   "id": 176,
+   "tur": "metin",
+   "metin": "Yok"
+  },
+  {
+   "id": 177,
+   "tur": "metin",
+   "metin": "Bronze"
+  },
+  {
+   "id": 178,
+   "tur": "metin",
+   "metin": "Kuruyemiş ve hafif kakao"
+  },
+  {
+   "id": 179,
+   "tur": "metin",
+   "metin": "Dolgun"
+  },
+  {
+   "id": 180,
+   "tur": "metin",
+   "metin": "Yok"
+  },
+  {
+   "id": 181,
+   "tur": "metin",
+   "metin": "Yellow"
+  },
+  {
+   "id": 182,
+   "tur": "metin",
+   "metin": "Yumuşak, dengeli tütün"
+  },
+  {
+   "id": 183,
+   "tur": "metin",
+   "metin": "Orta"
+  },
+  {
+   "id": 184,
+   "tur": "metin",
+   "metin": "Yok"
+  },
+  {
+   "id": 185,
+   "tur": "metin",
+   "metin": "Silver"
+  },
+  {
+   "id": 186,
+   "tur": "metin",
+   "metin": "Hafif, ferah otsu notalar"
+  },
+  {
+   "id": 187,
+   "tur": "metin",
+   "metin": "Hafif"
+  },
+  {
+   "id": 188,
+   "tur": "metin",
+   "metin": "Çok hafif"
+  },
+  {
+   "id": 189,
+   "tur": "metin",
+   "metin": "Turquoise"
+  },
+  {
+   "id": 190,
+   "tur": "metin",
+   "metin": "Mentol ve narenciye"
+  },
+  {
+   "id": 191,
+   "tur": "metin",
+   "metin": "Orta"
+  },
+  {
+   "id": 192,
+   "tur": "metin",
+   "metin": "Yüksek"
+  },
+  {
+   "id": 193,
+   "tur": "metin",
+   "metin": "Green"
+  },
+  {
+   "id": 194,
+   "tur": "metin",
+   "metin": "Keskin nane ferahlığı"
+  },
+  {
+   "id": 195,
+   "tur": "metin",
+   "metin": "Orta"
+  },
+  {
+   "id": 196,
+   "tur": "metin",
+   "metin": "Çok yüksek"
+  },
+  {
+   "id": 197,
+   "tur": "metin",
+   "metin": "Blue"
+  },
+  {
+   "id": 198,
+   "tur": "metin",
+   "metin": "Ferah mentol, hafif meyvemsi"
+  },
+  {
+   "id": 199,
+   "tur": "metin",
+   "metin": "Orta"
+  },
+  {
+   "id": 200,
+   "tur": "metin",
+   "metin": "Yüksek"
+  },
+  {
+   "id": 201,
+   "tur": "metin",
+   "metin": "Purple Wave"
+  },
+  {
+   "id": 202,
+   "tur": "metin",
+   "metin": "Orman meyveli, patlatmalı mentol"
+  },
+  {
+   "id": 203,
+   "tur": "metin",
+   "metin": "Orta"
+  },
+  {
+   "id": 204,
+   "tur": "metin",
+   "metin": "Kapsülle yüksek"
+  },
+  {
+   "id": 205,
+   "tur": "metin",
+   "metin": "Bright Wave"
+  },
+  {
+   "id": 206,
+   "tur": "metin",
+   "metin": "Narenciye ve tropik meyve, patlatmalı"
+  },
+  {
+   "id": 207,
+   "tur": "metin",
+   "metin": "Orta"
+  },
+  {
+   "id": 208,
+   "tur": "metin",
+   "metin": "Kapsülle orta"
+  },
+  {
+   "id": 209,
+   "tur": "metin",
+   "metin": "Abora Pearl"
+  },
+  {
+   "id": 210,
+   "tur": "metin",
+   "metin": "Yeşil elma, patlatmalı mentol"
+  },
+  {
+   "id": 211,
+   "tur": "metin",
+   "metin": "Hafif"
+  },
+  {
+   "id": 212,
+   "tur": "metin",
+   "metin": "Kapsülle yüksek"
+  },
+  {
+   "id": 213,
+   "tur": "metin",
+   "metin": "Sun Pearl"
+  },
+  {
+   "id": 214,
+   "tur": "metin",
+   "metin": "Tropik meyve, patlatmalı"
+  },
+  {
+   "id": 215,
+   "tur": "metin",
+   "metin": "Hafif"
+  },
+  {
+   "id": 216,
+   "tur": "metin",
+   "metin": "Kapsülle orta"
+  },
+  {
+   "id": 217,
+   "tur": "metin",
+   "metin": "Klasik sigaradan geçiyorsanız:"
+  },
+  {
+   "id": 218,
+   "tur": "metin",
+   "metin": "tam aromalı sigara içtiyseniz Sienna ya da Amber, hafif sigara içtiyseniz Yellow veya Silver çoğunlukla en yakın karşılıktır. Mentollü sigaradan gelenler için Turquoise ve Green en sık tercih edilen başlangıç çeşitleridir."
+  },
+  {
+   "id": 219,
+   "tur": "metin",
+   "metin": "Aroma değiştirmeyi sevenler için:"
+  },
+  {
+   "id": 220,
+   "tur": "metin",
+   "metin": "patlatmalı seriler tek çubukta iki ayrı deneyim sunar. Kapsül açılmadan tütün karakteri ön plandadır; kapsül açıldıktan sonra ise mentol ya da meyve notası baskınlaşır."
+  },
+  {
+   "id": 221,
+   "tur": "metin",
+   "metin": "Cihaz Bakımı ve Kullanım Ömrü"
+  },
+  {
+   "id": 222,
+   "tur": "metin",
+   "metin": "ILUMA cihazları normal kullanımda uzun ömürlüdür; birkaç basit alışkanlıkla performansını uzun süre koruyabilirsiniz:"
+  },
+  {
+   "id": 223,
+   "tur": "metin",
+   "metin": "Cihazın tamamen boşalmasını beklemeden, gün içinde fırsat buldukça şarj edin; bataryayı sürekli sıfıra düşürmek ömrünü kısaltır."
+  },
+  {
+   "id": 224,
+   "tur": "metin",
+   "metin": "Cihazı aşırı sıcak ya da soğuk ortamlarda bırakmayın; güneş altındaki araçta kalan cihazların batarya performansı düşer."
+  },
+  {
+   "id": 225,
+   "tur": "metin",
+   "metin": "Çubuğu yuvadan çıkarırken çevirmeden, düz şekilde çekin."
+  },
+  {
+   "id": 226,
+   "tur": "metin",
+   "metin": "Şarj ünitesinin iç kısmını ayda bir kuru bir bezle silin."
+  },
+  {
+   "id": 227,
+   "tur": "metin",
+   "metin": "Orijinal şarj kablosu ve adaptörü kullanın; yüksek amperli hızlı şarj adaptörleri bataryayı yıpratabilir."
+  },
+  {
+   "id": 228,
+   "tur": "metin",
+   "metin": "Neden IQOS Sepeti?"
+  },
+  {
+   "id": 229,
+   "tur": "metin",
+   "metin": "IQOS Sepeti, yalnızca IQOS ILUMA cihazları ve TEREA çeşitleri üzerine uzmanlaşmış bir satış noktasıdır. Tek bir ürün ailesine odaklandığımız için stoklarımızı güncel tutabiliyor, aroma önerilerimizi gerçek kullanım deneyimine dayandırabiliyoruz."
+  },
+  {
+   "id": 230,
+   "tur": "metin",
+   "metin": "Satılan tüm cihaz ve çubuklar orijinaldir."
+  },
+  {
+   "id": 231,
+   "tur": "metin",
+   "metin": "İstanbul içinde aynı gün moto kuryeyle teslimat ve kapıda nakit ödeme."
+  },
+  {
+   "id": 232,
+   "tur": "metin",
+   "metin": "Türkiye’nin her yerine anlaşmalı kargo ile gönderim."
+  },
+  {
+   "id": 233,
+   "tur": "metin",
+   "metin": "Sipariş öncesinde ve sonrasında WhatsApp’tan 7/24 destek."
+  },
+  {
+   "id": 234,
+   "tur": "metin",
+   "metin": "Cihazlar kutu içeriği eksiksiz olarak teslim edilir."
+  },
+  {
+   "id": 235,
+   "tur": "metin",
+   "metin": "Sık Sorulan Sorular"
+  },
+  {
+   "id": 236,
+   "tur": "metin",
+   "metin": "ILUMA cihazlarda HEETS kullanılabilir mi?"
+  },
+  {
+   "id": 237,
+   "tur": "metin",
+   "metin": "Hayır. ILUMA serisi indüksiyonla ısıtma yapar ve yalnızca içinde metal şerit bulunan TEREA çubuklarını ısıtabilir. HEETS çubukları bıçaklı eski nesil cihazlar için üretilmiştir."
+  },
+  {
+   "id": 238,
+   "tur": "metin",
+   "metin": "ILUMA cihazı temizlik gerektirir mi?"
+  },
+  {
+   "id": 239,
+   "tur": "metin",
+   "metin": "Cihazda ısıtma bıçağı olmadığından tütün kalıntısı birikmez. Çubuk yuvasının ağzını ve şarj ünitesinin içini zaman zaman kuru bir bezle silmeniz yeterlidir."
+  },
+  {
+   "id": 240,
+   "tur": "metin",
+   "metin": "Bir TEREA kartonunda kaç çubuk vardır?"
+  },
+  {
+   "id": 241,
+   "tur": "metin",
+   "metin": "Bir TEREA kartonunda 10 paket ve toplam 200 çubuk bulunur; her paket 20 çubuktan oluşur."
+  },
+  {
+   "id": 242,
+   "tur": "metin",
+   "metin": "Karışık karton nedir?"
+  },
+  {
+   "id": 243,
+   "tur": "metin",
+   "metin": "Karışık karton, birden fazla TEREA aromasını tek kartonda bir araya getiren pakettir. Yeni aromaları ayrı ayrı karton almadan denemek isteyenler için idealdir."
+  },
+  {
+   "id": 244,
+   "tur": "metin",
+   "metin": "Patlatmalı TEREA nasıl kullanılır?"
+  },
+  {
+   "id": 245,
+   "tur": "metin",
+   "metin": "Filtredeki kapsül, parmaklarınızla hafifçe sıkılarak açılır. Kapsül açıldığında aroma profili değişir; dilerseniz kapsülü hiç açmadan da kullanabilirsiniz."
+  },
+  {
+   "id": 246,
+   "tur": "metin",
+   "metin": "Kapıda ödeme tüm illerde geçerli mi?"
+  },
+  {
+   "id": 247,
+   "tur": "metin",
+   "metin": "Kapıda nakit ödeme, İstanbul içindeki moto kurye teslimatlarında geçerlidir. Şehir dışı gönderilerde ödeme Havale/EFT ile yapılır; ayrıntılar için sipariş öncesinde destek hattımıza ulaşabilirsiniz."
+  },
+  {
+   "id": 248,
+   "tur": "metin",
+   "metin": "Yasal uyarı:"
+  },
+  {
+   "id": 249,
+   "tur": "metin",
+   "metin": "Bu sayfadaki ürünler tütün ürünüdür ve bağımlılık yapan nikotin içerir. Tütün ısıtma sistemleri risksiz değildir; en doğru tercih tütün ve nikotin kullanmamaktır. 18 yaşından küçüklere satış yapılmaz; ürünler yalnızca halihazırda tütün kullanan yetişkinlere yöneliktir."
+  },
+  {
+   "id": 250,
+   "tur": "metin",
+   "metin": "IQOS Hakkında En Çok Merak Edilenler"
+  },
+  {
+   "id": 251,
+   "tur": "metin",
+   "metin": "IQOS ve TEREA ile ilgili en çok aranan kullanım, sağlık, teknik ve mevzuat sorularına kısa yanıtlar."
+  },
+  {
+   "id": 252,
+   "tur": "metin",
+   "metin": "IQOS mu sigara mı daha zararlı?"
+  },
+  {
+   "id": 253,
+   "tur": "metin",
+   "metin": "Hiçbir tütün ürünü risksiz değildir. Bazı IQOS ürünlerinde zararlı kimyasallara maruziyetin azalabileceğine dair düzenleyici değerlendirmeler bulunur; ancak bu, ürünün güvenli olduğu anlamına gelmez."
+  },
+  {
+   "id": 254,
+   "tur": "metin",
+   "metin": "IQOS kaç dakikada ve kaç çekimde biter?"
+  },
+  {
+   "id": 255,
+   "tur": "metin",
+   "metin": "Süre, modele ve özelliklere göre değişir. ILUMA i ONE’ın güncel resmi bilgilerine göre bir kullanım seansı en fazla yaklaşık 6 dakika sürer."
+  },
+  {
+   "id": 256,
+   "tur": "metin",
+   "metin": "1 TEREA kaç sigara?"
+  },
+  {
+   "id": 257,
+   "tur": "metin",
+   "metin": "Bir TEREA çubuğu tek bir ILUMA kullanım seansı için tasarlanmıştır; sağlık ya da nikotin açısından “bir sigaraya eşittir” demek doğru olmaz."
+  },
+  {
+   "id": 258,
+   "tur": "metin",
+   "metin": "IQOS hangi ülkenin markası?"
+  },
+  {
+   "id": 259,
+   "tur": "metin",
+   "metin": "IQOS, Philip Morris International’a ait bir markadır. İlk ticari pilot satışlar 2014 yılında Japonya’nın Nagoya ve İtalya’nın Milano şehirlerinde başlamıştır."
+  },
+  {
+   "id": 260,
+   "tur": "metin",
+   "metin": "IQOS 4 çizgi ne anlama gelir?"
+  },
+  {
+   "id": 261,
+   "tur": "metin",
+   "metin": "ILUMA ONE kullanım kılavuzuna göre dört durum ışığının yanması cihazın tamamen şarj olduğunu gösterir; diğer modeller için kendi kılavuzlarına bakılmalıdır."
+  },
+  {
+   "id": 262,
+   "tur": "metin",
+   "metin": "IQOS satışı neden yasak deniyor?"
+  },
+  {
+   "id": 263,
+   "tur": "metin",
+   "metin": "Türkiye’de ısıtılmış tütün ürünleri ve ilgili cihazların ithalatına yönelik kısıtlamalar ile tütün ürünlerinin internet üzerinden satışını yasaklayan düzenlemeler bulunmaktadır. Ayrıntılar için güncel resmi mevzuat esas alınmalıdır."
+  },
+  {
+   "id": 264,
+   "tur": "metin",
+   "metin": "Tüm IQOS sık sorulan soruları görüntüle →"
+  },
+  {
+   "id": 265,
+   "tur": "metin",
+   "metin": "&nbsp; | &nbsp;"
+  },
+  {
+   "id": 266,
+   "tur": "metin",
+   "metin": "TEREA Aroma Rehberi →"
+  }
+ ]
+}

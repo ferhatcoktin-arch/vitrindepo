@@ -1,0 +1,300 @@
+{
+ "id": 2901,
+ "tur": "yazi",
+ "slug": "iqos-iluma-sarj-sorunlari-hata-isiklari",
+ "baslik": "IQOS ILUMA Şarj Olmuyor mu? Hata Işıkları ve Adım Adım Çözümler",
+ "rm": {},
+ "excerpt": "ILUMA şarj olmuyor, ısıtmıyor ya da kırmızı ışık yakıyorsa ne yapmalı? Işıkların anlamı ve en sık yaşanan beş sorunun adım adım çözümü.",
+ "parcalar": [
+  {
+   "id": 0,
+   "tur": "metin",
+   "metin": "IQOS ILUMA cihazınız şarj olmuyorsa, ışıklar beklenmedik şekilde yanıp sönüyorsa ya da çubuğu ısıtmıyorsa endişelenmeyin. Bu sorunların çoğu basit nedenlerden kaynaklanır ve birkaç dakika içinde evde çözülebilir. Bu rehberde en sık karşılaşılan durumları ve çözüm adımlarını sırasıyla ele alıyoruz."
+  },
+  {
+   "id": 1,
+   "tur": "metin",
+   "metin": "Işıklar Ne Anlama Geliyor?"
+  },
+  {
+   "id": 2,
+   "tur": "metin",
+   "metin": "ILUMA serisinde cihazın durumu ışıklarla gösterilir. En sık karşılaşılan durumlar şunlardır:"
+  },
+  {
+   "id": 3,
+   "tur": "metin",
+   "metin": "Beyaz ışık yavaşça nefes alır gibi yanıp sönüyorsa:"
+  },
+  {
+   "id": 4,
+   "tur": "metin",
+   "metin": "Cihaz şarj oluyor; bu normaldir."
+  },
+  {
+   "id": 5,
+   "tur": "metin",
+   "metin": "Beyaz ışık sabit yanıyorsa:"
+  },
+  {
+   "id": 6,
+   "tur": "metin",
+   "metin": "Cihaz hazır ve kullanılabilir durumda."
+  },
+  {
+   "id": 7,
+   "tur": "metin",
+   "metin": "Titreşim ve ışık halkasının dolması:"
+  },
+  {
+   "id": 8,
+   "tur": "metin",
+   "metin": "Isıtma başladı; çubuk kullanıma hazırlanıyor."
+  },
+  {
+   "id": 9,
+   "tur": "metin",
+   "metin": "Turuncu ya da kehribar rengi ışık:"
+  },
+  {
+   "id": 10,
+   "tur": "metin",
+   "metin": "Bir uyarı olduğunu gösterir. Çoğunlukla sıcaklık ya da yazılım kaynaklı geçici bir durumdur."
+  },
+  {
+   "id": 11,
+   "tur": "metin",
+   "metin": "Kırmızı ışık ya da hızlı yanıp sönme:"
+  },
+  {
+   "id": 12,
+   "tur": "metin",
+   "metin": "Cihaz hata verdi; sıfırlanması gerekiyor."
+  },
+  {
+   "id": 13,
+   "tur": "metin",
+   "metin": "Hiç ışık yanmıyorsa:"
+  },
+  {
+   "id": 14,
+   "tur": "metin",
+   "metin": "Batarya tamamen bitmiş olabilir ya da şarj devresi çalışmıyor olabilir."
+  },
+  {
+   "id": 15,
+   "tur": "metin",
+   "metin": "Sorun 1: Cihaz Hiç Şarj Olmuyor"
+  },
+  {
+   "id": 16,
+   "tur": "metin",
+   "metin": "Aşağıdaki adımları sırasıyla deneyin:"
+  },
+  {
+   "id": 17,
+   "tur": "metin",
+   "metin": "Farklı bir kablo ve adaptör deneyin."
+  },
+  {
+   "id": 18,
+   "tur": "metin",
+   "metin": "En yaygın neden budur. Orijinal kablo dışında bir kablo kullanıyorsanız önce orijinal kabloyla deneyin."
+  },
+  {
+   "id": 19,
+   "tur": "metin",
+   "metin": "Şarj girişini kontrol edip temizleyin."
+  },
+  {
+   "id": 20,
+   "tur": "metin",
+   "metin": "Cepteki tüy ve tozlar USB-C girişinde birikerek teması engelleyebilir. Girişi kuru bir kürdan ya da basınçlı havayla nazikçe temizleyin; metal bir cisim sokmayın."
+  },
+  {
+   "id": 21,
+   "tur": "metin",
+   "metin": "Cihazı duvar prizinden şarj edin."
+  },
+  {
+   "id": 22,
+   "tur": "metin",
+   "metin": "Bilgisayarların USB portları ve bazı araç şarj soketleri yeterli akımı sağlamayabilir."
+  },
+  {
+   "id": 23,
+   "tur": "metin",
+   "metin": "Yüksek amperli hızlı şarj adaptörlerinden kaçının."
+  },
+  {
+   "id": 24,
+   "tur": "metin",
+   "metin": "Telefonlar için kullanılan güçlü adaptörler cihazın şarj devresini zorlayabilir."
+  },
+  {
+   "id": 25,
+   "tur": "metin",
+   "metin": "Cihazı 30 dakika şarjda bırakın."
+  },
+  {
+   "id": 26,
+   "tur": "metin",
+   "metin": "Tamamen boşalmış bir batarya ilk birkaç dakika hiç ışık göstermeyebilir."
+  },
+  {
+   "id": 27,
+   "tur": "metin",
+   "metin": "Sorun 2: Cihaz Çubuğu Isıtmıyor"
+  },
+  {
+   "id": 28,
+   "tur": "metin",
+   "metin": "ILUMA yalnızca TEREA çubuklarıyla çalışır. Isıtma başlamıyorsa şunları kontrol edin:"
+  },
+  {
+   "id": 29,
+   "tur": "metin",
+   "metin": "Doğru çubuğu kullandığınızı kontrol edin."
+  },
+  {
+   "id": 30,
+   "tur": "metin",
+   "metin": "HEETS çubukları ILUMA ile uyumlu değildir. HEETS, eski nesil bıçaklı cihazlar için üretilmiştir; ILUMA ise indüksiyonla çalışarak çubuğun içindeki metal şeridi ısıtır."
+  },
+  {
+   "id": 31,
+   "tur": "metin",
+   "metin": "Çubuğu yuvaya sonuna kadar yerleştirin."
+  },
+  {
+   "id": 32,
+   "tur": "metin",
+   "metin": "Yarıya kadar takılan çubuk cihaz tarafından algılanmaz."
+  },
+  {
+   "id": 33,
+   "tur": "metin",
+   "metin": "Batarya seviyesine bakın."
+  },
+  {
+   "id": 34,
+   "tur": "metin",
+   "metin": "Şarj seviyesi yetersizse ısıtma başlamaz."
+  },
+  {
+   "id": 35,
+   "tur": "metin",
+   "metin": "Cihazın aşırı soğuk olmadığından emin olun."
+  },
+  {
+   "id": 36,
+   "tur": "metin",
+   "metin": "Kışın dışarıda kalmış bir cihaz, oda sıcaklığına ulaşana kadar ısıtmayı başlatmayabilir."
+  },
+  {
+   "id": 37,
+   "tur": "metin",
+   "metin": "Sorun 3: Kırmızı Işık ya da Donma"
+  },
+  {
+   "id": 38,
+   "tur": "metin",
+   "metin": "Cihaz yanıt vermiyorsa sıfırlama yapın. ILUMA serisinde sıfırlama için cihazın yan tuşunu yaklaşık 10 saniye basılı tutun; ışıklar sönüp yeniden yandığında tuşu bırakın. Bu işlem ayarlarınızı silmez, yalnızca cihazı yeniden başlatır."
+  },
+  {
+   "id": 39,
+   "tur": "metin",
+   "metin": "Sıfırlamaya rağmen sorun sürüyorsa cihazı tamamen şarj edip bir kez daha deneyin. Yine de çözülmezse cihazın garanti kapsamında incelenmesi gerekir."
+  },
+  {
+   "id": 40,
+   "tur": "metin",
+   "metin": "Sorun 4: Batarya Çok Çabuk Bitiyor"
+  },
+  {
+   "id": 41,
+   "tur": "metin",
+   "metin": "Batarya ömrünü kısaltan başlıca nedenler şunlardır:"
+  },
+  {
+   "id": 42,
+   "tur": "metin",
+   "metin": "Cihazı her seferinde tamamen boşaltmak."
+  },
+  {
+   "id": 43,
+   "tur": "metin",
+   "metin": "Sıcak araç içinde ya da doğrudan güneş altında bırakmak."
+  },
+  {
+   "id": 44,
+   "tur": "metin",
+   "metin": "Uzun süre çok soğuk ortamda tutmak."
+  },
+  {
+   "id": 45,
+   "tur": "metin",
+   "metin": "Uygun olmayan bir adaptörle şarj etmek."
+  },
+  {
+   "id": 46,
+   "tur": "metin",
+   "metin": "Bataryayı yüzde 20’nin altına düşürmeden şarj etmek ve cihazı oda sıcaklığında tutmak, kullanım ömrünü önemli ölçüde uzatır."
+  },
+  {
+   "id": 47,
+   "tur": "metin",
+   "metin": "Sorun 5: Çubuk Yuvada Kalıyor ya da Zor Çıkıyor"
+  },
+  {
+   "id": 48,
+   "tur": "metin",
+   "metin": "Çubuğu çıkarırken çevirmeyin, düz bir şekilde yukarı çekin. Çevirerek çıkarmak tütün kısmının yuvada kalmasına neden olabilir. Yuvada kalıntı varsa cihazı ters çevirip hafifçe sallayın; ILUMA’da bıçak bulunmadığı için içeride kırılabilecek bir parça yoktur."
+  },
+  {
+   "id": 49,
+   "tur": "metin",
+   "metin": "Ne Zaman Servise Başvurmalı?"
+  },
+  {
+   "id": 50,
+   "tur": "metin",
+   "metin": "Aşağıdaki durumlarda cihaza kendiniz müdahale etmeyin:"
+  },
+  {
+   "id": 51,
+   "tur": "metin",
+   "metin": "Cihaz ısınıyor ancak gövde aşırı derecede sıcaklaşıyorsa."
+  },
+  {
+   "id": 52,
+   "tur": "metin",
+   "metin": "Şişme, şekil bozukluğu ya da koku fark ederseniz."
+  },
+  {
+   "id": 53,
+   "tur": "metin",
+   "metin": "Sıfırlamaya rağmen kırmızı ışık devam ediyorsa."
+  },
+  {
+   "id": 54,
+   "tur": "metin",
+   "metin": "Cihaz suyla temas ettiyse."
+  },
+  {
+   "id": 55,
+   "tur": "metin",
+   "metin": "Bu belirtiler batarya kaynaklı olabilir; cihazı kullanmayı bırakın ve yetkili servise başvurun."
+  },
+  {
+   "id": 56,
+   "tur": "metin",
+   "metin": "Sorununuzu çözemediyseniz IQOS Sepeti destek hattına yazabilirsiniz; hangi adımı denemeniz gerektiği konusunda size yol gösteriyoruz."
+  },
+  {
+   "id": 57,
+   "tur": "metin",
+   "metin": "Yasal uyarı: Bu yazıda sözü edilen ürünler tütün ürünüdür ve bağımlılık yapan nikotin içerir. Tütün ısıtma sistemleri risksiz değildir; en doğru tercih tütün ve nikotin kullanmamaktır. 18 yaşından küçüklere satış yapılmaz."
+  }
+ ]
+}
