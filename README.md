@@ -100,3 +100,9 @@ Flatsome üzerinde çalışan hafif bir eklenti, bağımlılığı yok.
 
 ### 28 Eyl 2026: iqosvitrin header zemini gökyüzü mavisi
 - Snippet 2953'e `ivg-header-gok` bloğu eklendi: `.header-bg-color` için #bfe7fc→#a6dcf8 geçişi. Logo yüksekliği masaüstünde 64px, 849px altında 54px; 480px altında 50px ve `left:46%` (kullanıcı ikonuna değmesin diye).
+
+## Google başlık/açıklama (30 Eyl 2026)
+- Ana sayfa (sayfa 212) Rank Math başlığı: `IQOS Terea Satın Al | IQOS Iluma ve IQOS Ürünleri Türkiye`
+- Açıklama: `Orijinal IQOS Terea ve IQOS Iluma ürünleri. Güncel modeller, Terea çeşitleri, hızlı teslimat ve güvenli ödeme seçenekleriyle hemen sipariş verin.`
+- Aynı değerler Facebook/WhatsApp ve Twitter başlık/açıklamasına da yazıldı; SG önbelleği temizlendi; Search Console'dan dizine ekleme istendi.
+- Önceki değerler: başlık `IQOS TEREA ILUMA Elektronik Sigara TÜRKİYE TESLİM`, açıklama `Orijinal IQOS ILUMA cihazları ve tüm TEREA çeşitleri güncel stokla IQOS Vitrin'de. İstanbul'da gün içi hızlı teslimat, kapıda ödeme imkanı.`
