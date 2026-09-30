@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Vitrin Arayüz
  * Description: iqosvitrin.com.tr için büyük arama kutusu ve ana sayfada kategori rafları (Çok Satanlar tasarımında, yavaşça kendiliğinden kayan, elle kaydırılabilen). Flatsome + mevcut WPCode snippet'leriyle çalışır; eklenti kapatılınca site eski haline döner.
- * Version: 1.5.7
+ * Version: 1.5.8
  * Author: IQOS Vitrin
  * Requires Plugins: woocommerce
  * Text Domain: vitrin-arayuz
@@ -10,7 +10,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'VA_VER', '1.5.7' );
+define( 'VA_VER', '1.5.8' );
 // SiteGround Optimizer küçültülmüş dosyayı tutamaç adıyla (handle.min.css) kaydediyor ve sorgu dizesini siliyor;
 // güncellemeden sonra eski dosya gelmesin diye tutamaç ve dosya adında sürüm var.
 define( 'VA_H', 'vitrin-arayuz-' . str_replace( '.', '', VA_VER ) );
@@ -194,7 +194,7 @@ add_filter( 'do_shortcode_tag', function ( $html, $tag ) {
 /* ------------------------------------------------------------------
  * 1.5.3: Ürün schema'sı (Search Console "Satıcı girişleri" uyarıları)
  * Rank Math'in Product verisine marka, kargo, iade politikası ve validFrom eklenir.
- * Sadece iqosvitrin.com.tr'de çalışır (kargo/iade bilgisi o sitenin).
+ * Sadece iqosvitrin.com.tr ve iqossepeti.com'da çalışır (iki sitenin kargo ücretleri aynı; iade: kabul edilmiyor).
  *  - Kargo: en ucuz genel ücret 300 ₺ (İstanbul kargo / il dışı), Türkiye geneli
  *  - İade: kabul edilmiyor (kullanıcı kararı, 30 Eyl 2026)
  * ---------------------------------------------------------------- */
@@ -202,7 +202,7 @@ add_filter( 'rank_math/json_ld', function ( $data ) {
 	if ( ! is_array( $data ) || ! function_exists( 'is_product' ) || ! is_product() ) {
 		return $data;
 	}
-	if ( 'iqosvitrin.com.tr' !== wp_parse_url( home_url(), PHP_URL_HOST ) ) {
+	if ( ! in_array( wp_parse_url( home_url(), PHP_URL_HOST ), array( 'iqosvitrin.com.tr', 'iqossepeti.com', 'www.iqossepeti.com' ), true ) ) {
 		return $data;
 	}
 	$urun = wc_get_product( get_queried_object_id() );
