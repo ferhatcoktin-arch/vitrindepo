@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Vitrin Arayüz
  * Description: iqosvitrin.com.tr için büyük arama kutusu ve ana sayfada kategori rafları (Çok Satanlar tasarımında, yavaşça kendiliğinden kayan, elle kaydırılabilen). Flatsome + mevcut WPCode snippet'leriyle çalışır; eklenti kapatılınca site eski haline döner.
- * Version: 1.5.8
+ * Version: 1.5.9
  * Author: IQOS Vitrin
  * Requires Plugins: woocommerce
  * Text Domain: vitrin-arayuz
@@ -10,7 +10,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'VA_VER', '1.5.8' );
+define( 'VA_VER', '1.5.9' );
 // SiteGround Optimizer küçültülmüş dosyayı tutamaç adıyla (handle.min.css) kaydediyor ve sorgu dizesini siliyor;
 // güncellemeden sonra eski dosya gelmesin diye tutamaç ve dosya adında sürüm var.
 define( 'VA_H', 'vitrin-arayuz-' . str_replace( '.', '', VA_VER ) );
@@ -264,6 +264,45 @@ add_filter( 'rank_math/json_ld', function ( $data ) {
 	}
 	return $data;
 }, 99 );
+
+/* ------------------------------------------------------------------
+ * 1.5.9: Google tarama temizliği (iki sitede de)
+ * Search Console'da binlerce "tarandı ama dizine eklenmedi" sayfa vardı:
+ * ürün etiketi sayfaları, feed'ler, sıralama parametreli liste sayfaları ve
+ * silinen puro/sigara ürünleri. Google zamanını gerçek sayfalara harcasın.
+ * ---------------------------------------------------------------- */
+// Ürün etiketi sayfaları: noindex, follow (bağlantılar izlenir, sayfa dizine girmez)
+add_filter( 'rank_math/frontend/robots', function ( $robots ) {
+	if ( is_tax( 'product_tag' ) || is_feed() ) {
+		$robots['index']  = 'noindex';
+		$robots['follow'] = 'follow';
+	}
+	return $robots;
+}, 99 );
+// ...ve site haritasından çıkar
+add_filter( 'rank_math/sitemap/exclude_taxonomy', function ( $exclude, $type ) {
+	return 'product_tag' === $type ? true : $exclude;
+}, 99, 2 );
+// robots.txt: feed ve sıralama/filtre parametreli sayfalar taranmasın
+add_filter( 'robots_txt', function ( $txt ) {
+	$ek = array( 'Disallow: /*/feed/', 'Disallow: /*?*orderby=', 'Disallow: /*?*filter_', 'Disallow: /*?*min_price=', 'Disallow: /*?*max_price=' );
+	$ek = array_filter( $ek, function ( $s ) use ( $txt ) { return false === strpos( $txt, $s ); } );
+	if ( ! $ek ) {
+		return $txt;
+	}
+	$satir = implode( "\n", $ek );
+	// "User-agent: *" bloğunun içine ekle; yoksa sona yeni blok aç
+	if ( preg_match( '/^User-agent:\s*\*\s*$/mi', $txt ) ) {
+		return preg_replace( '/^(User-agent:\s*\*\s*)$/mi', "$1\n" . $satir, $txt, 1 );
+	}
+	return rtrim( $txt ) . "\n\nUser-agent: *\n" . $satir . "\n";
+}, 99 );
+// Silinmiş ürün adresleri 404 yerine 410 (kalıcı olarak kaldırıldı) dönsün; Google daha çabuk bırakır
+add_action( 'template_redirect', function () {
+	if ( is_404() && 0 === strpos( wp_parse_url( $_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH ) ?: '', '/product/' ) ) {
+		status_header( 410 );
+	}
+}, 1 );
 
 /* ------------------------------------------------------------------
  * CSS / JS
