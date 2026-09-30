@@ -124,3 +124,13 @@ Flatsome üzerinde çalışan hafif bir eklenti, bağımlılığı yok.
 - 5 blog kapağı PNG → WebP (3205–3209 → 3290–3294). TEREA/marka şeridi 700px sürümleri (3295–3300, snippet 2946 slug'ları `-700`). `luxury-category-background.png` (2,2 MB) → `luxury-category-background-1280.webp` (217 KB, 3302); snippet 3279, 3165, 2944'te adres değişti. Eski medya silinmedi. Logo zaten 17 KB, dokunulmadı. Çift GA etiketi yok (sadece Site Kit GT-MKTBJ4RJ).
 - PageSpeed ana sayfa: önce Erişilebilirlik 84 → mobil 66 / 100 / 100 / 100, masaüstü 99 / 100 / 100 / 100.
 - Search Console: sepeti mülkü URL önekli (`https://iqossepeti.com/`), veriler hâlâ işleniyor; raporlar gelince doğrulama yapılacak.
+
+## Google sıralama turu (30 Eyl 2026 akşam) — ana site vitrin, sepeti metinleri baştan
+- **Sepeti tüm metinler yeniden yazıldı** (kullanıcı kararı): 132 ürün (ad, kısa/uzun açıklama, Rank Math başlık/açıklama/odak kelime), 31 kategori (ad, açıklama, Rank Math), 12 blog yazısı, 7 sayfa (ana sayfa, SSS, Hakkımızda, İletişim, Gizlilik, Şişli, Kadıköy), site sloganı, ana sayfa üst tanıtım kutusu (snippet 2942; h1 → div, tek H1 sayfada). URL/slug'lar değişmedi.
+  - Hat: `tools/sepeti_metin.py` (hazirla / kontrol / birlestir). Eski metinler: `yedek/sepeti-20260930/export.json`. Kurallar: `yeniden/sepeti/YAZIM-KURALLARI.md`. Yüklenen paket: `yeniden/sepeti/yukle.json`.
+  - Kontrol: eski metinle 6'lı kelime dizisi örtüşmesi ürünlerde ≤ %8 (çoğu %0–5), sayfalarda ≤ %3. Sağlık iddiası, iade, "Vitrin" yok.
+  - Sepeti SSS'deki iade sorusu kaldırıldı (iade kabul edilmiyor); "daha az zararlı / FDA maruziyet" ifadeleri sağlık iddiası sayılıp çıkarıldı.
+- **Vitrin:** ana sayfa başlığı rakiple aynı olmaktan çıkarıldı → `IQOS Terea & Iluma Satın Al – Aynı Gün Teslim | IQOS Vitrin`. 23 ürünlü kategoriye açıklamanın altına `<!-- vitrin-ek -->` işaretli ek bölüm (h2 + metin + liste + 3 SSS) ve Rank Math başlık/açıklama (`yeniden/vitrin/`). Kategori açıklaması sayfada ürünlerin altında görünüyor.
+- **vitrin-arayuz 1.5.9 (iki sitede):** ürün etiketi sayfaları noindex+follow ve site haritasından çıktı; robots.txt'ye feed / orderby / filter_ / min-max_price; silinen `/product/...` adresleri 410.
+- Search Console: iki ana sayfa için dizine ekleme istendi.
+- Açık kalanlar: sepeti'de snippet'lerden gelen ortak arayüz yazıları (üst kayan yazı, raf başlıkları, alt bilgi, ödeme penceresi) ve 369 görselin alt metinleri hâlâ vitrinle aynı. Kaynak çelişkisi: i DUO / i PRIME "art arda 2 mi 3 kullanım" — metinlerde 2 kullanıldı (i PRIME bazı yerlerde sayı verilmedi); UNLOCK (1188) modeli teyit edilmeli.
