@@ -106,3 +106,15 @@ Flatsome üzerinde çalışan hafif bir eklenti, bağımlılığı yok.
 - Açıklama: `Orijinal IQOS Terea ve IQOS Iluma ürünleri. Güncel modeller, Terea çeşitleri, hızlı teslimat ve güvenli ödeme seçenekleriyle hemen sipariş verin.`
 - Aynı değerler Facebook/WhatsApp ve Twitter başlık/açıklamasına da yazıldı; SG önbelleği temizlendi; Search Console'dan dizine ekleme istendi.
 - Önceki değerler: başlık `IQOS TEREA ILUMA Elektronik Sigara TÜRKİYE TESLİM`, açıklama `Orijinal IQOS ILUMA cihazları ve tüm TEREA çeşitleri güncel stokla IQOS Vitrin'de. İstanbul'da gün içi hızlı teslimat, kapıda ödeme imkanı.`
+
+## PageSpeed + Search Console turu (30 Eyl 2026)
+Ölçüm (ana sayfa, PageSpeed): mobil önce Performans 63 / Erişilebilirlik 87 / En İyi Uyg. 100 / SEO 100 → sonra 68 / 100 / 100 / 100 (LCP 13,3 sn → 4,5–7,9 sn, CLS 0). Masaüstü 83–94 / 100 / 100 / 100. Laboratuvar puanı her ölçümde ±10 oynuyor.
+- vitrin-arayuz 1.5.3 → 1.5.7:
+  - İlk raf (i ONE) sunucuda HTML olarak basılıyor (`va_ilk_raf_html`, veri `va_ilk_raf` transient 10 dk, ürün kaydında silinir); ilk iki görsel `<head>`'de preload + fetchpriority=high. JS bu rafı yeniden çizmez, sadece döngü + rozet ekler.
+  - Mobilde `#vr-raflar-yer` 170vh yer ayırır (diğer raflar eklenince alttaki tanıtım kutusu kaymasın, CLS).
+  - Erişilebilirlik: `.vr-ray` role=region, rozet/buton/küçük yazı kontrastları koyulaştırıldı, `span>a[href^=tel:]` dokunma alanı, ana sayfa içerik listesindeki bağlantılar altı çizili, blog kartı başlıkları h5→h4 (`do_shortcode_tag` blog_posts), ödeme bilgisi penceresi butonu #0369a1, masaüstü mavi menü yazıları tam beyaz, başlık aramasındaki kategori select'ine aria-label.
+  - Ürün schema (sadece iqosvitrin.com.tr): Rank Math Product'a brand (IQOS/TEREA/Vozol), offers.shippingDetails (TR, 300 ₺, 0–1 gün hazırlık, 0–3 gün kargo), hasMerchantReturnPolicy = MerchantReturnNotPermitted (kullanıcı kararı: iade yok), validFrom, açıklama 1–5000 karakter.
+- Görseller: 5 blog kapağı PNG → WebP (3205–3209 → 3266–3270, ~1,4 MB → ~80 KB); header logosu 344px sürümü (3273) + srcset (snippet 3237); TEREA/marka şeridi görselleri 700px sürümler (3276–3281, snippet 2946'da slug'lar `terea-slayt-N-700`). Eski medya silinmedi.
+- WPCode snippet 1203 (elle eklenmiş ikinci GA4 etiketi G-W4Y3G9RNRW) PASİF yapıldı: Site Kit'in GT-PHCGQVVZ etiketi aynı mülkü zaten yüklüyordu, sayfa görüntülemeleri çift sayılıyordu. Silinmedi.
+- Search Console'da doğrulama başlatıldı: Satıcı girişleri (image, hasMerchantReturnPolicy, shippingDetails, validFrom, gtin/marka, description), Ürün snippet'leri (offers/review/aggregateRating), Sayfa dizine ekleme (5xx). image/description/offers hataları 10 Eyl'de silinen puro/sigara sayfalarından geliyor; o sayfalar 404 olduğu için kendiliğinden düşecek.
+- Kalan (bilerek yapılmadı): aggregateRating/review uyarısı gerçek müşteri yorumu gerektirir (sahte yorum yok); Merchant Center/Alışveriş sekmesi tütün ürünlerine kapalı; mobil performansı asıl tutan Flatsome + jQuery + birleşik 215 KB CSS, trustindex yorum widget'ı ve Google etiketi.
